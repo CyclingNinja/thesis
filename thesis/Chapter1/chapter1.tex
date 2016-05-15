@@ -5,6 +5,48 @@
 \label{ch:Intro}
 \chapter{Introduction}  %Title of the First Chapter
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PAPER TEXT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{pycode}[chapter1]
 from __future__ import print_function
 
@@ -12,15 +54,40 @@ ch1 = texfigure.Manager(pytex, number=1, base_path='./Chapter1/')
 \end{pycode}
 
 \begin{pycode}[chapter1]
-fig = plt.figure(dpi=100)
+fig = plt.figure(dpi=100, figsize=texfigure.figsize(pytex, height_ratio=1.5))
 
 xx = np.linspace(0, 6*np.pi, 1000)
 plt.plot(xx, np.sin(xx))
 
 fig.tight_layout()
 fig.subplots_adjust(bottom=0.15)
-photosphere = ch1.save_figure('sin', fig)
+photosphere = ch1.save_figure('sin', fig, fext='.pgf')
 photosphere.caption = "Some sine wave."
 \end{pycode}
 
 \py[chapter1]|photosphere|
+
+
+
+Hello world, checkout \cref{fig:sin}.
+
+
+\begin{pycode}[chapter1]
+	
+multi = texfigure.MultiFigure(4,1)
+width = 0.9
+
+X = [[5,6], [7,8], [5,6], [7,8]]
+Y = [[1,2], [3,4], [1,2], [3,4]]
+
+for x,y in zip(X,Y):
+	fig = plt.figure(figsize=texfigure.figsize(pytex, scale=width))
+	plt.plot(x, y, 'o')
+	
+	Fig1 = ch1.save_figure('test', fig)
+	Fig1.subfig_width=r"{}\columnwidth".format(width)
+	multi.append(Fig1)
+\end{pycode}
+
+\py[chapter1]|multi[0:2]|
+\py[chapter1]|multi[2:4]|
