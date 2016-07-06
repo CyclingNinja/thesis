@@ -415,7 +415,20 @@ The 'receiver' is what have become known as the optical bench, here the light be
 SST has two such pipelines, one for the red end of the electromagnetic spectrum and another examining the blue end.
 CRisp Imaging SpectroPolarimeter (CRISP), focuses on the red end of the visible spectrum, where as, the soon to be updated instrument, Chromis analyses the blue end.
 The beam is split upon its arrival at the optical bench and sent to either of these instruments, however, before the beam reaches CRISP, there is a layer of correction known as adaptive optics.
+
 Adaptive optics, corrects for atmospheric scintillation, aberration and stabilises image motion.
+These cumulative effects results in an optical path difference of the light incident with the lens/mirror of the telescope.
+Given this information, it is crucial to know the atmospheric physics overlying and surrounding the telescope.
+It is for this reason, observatories such as the Big Bear Solar Observatory \citep{Cao2010} in Los Angeles, and the proposed new Chinese Giant Solar Telescopes \citep{Liu2014} are built on and by lakes, the reason being that the temperature will be lower, thus reducing heat haze, and therefore, atmospheric effects.
+The primary atmospheric parameters influencing the set up of the adaptive optics are the Fried parameter (which measures the quality of optical transmission), the Greenwood frequency (the bandwidth required for optimal correction) and the atmospheric turbulence profile (which allows a calculation of the refractive index of the atmosphere) as shown in \cite{Rimmele2011}.
+
+As a result of the above points, the images from the SST are extremely customisable.
+They are usually returned as data cubes, with the dimensions of which are time, wavelength, x and y.
+The resolution of these features are therefore changable dependant on the requirements of the observation.
+Cadence can be as low as $2.5$ s, the spectral increment, $0.2$, and spatial resolution of $0.12$ arcsec.
+A part of what makes this form of observation viable is the ability to directly download the received signal, which is a limitation of space borne instrumentation.
+Given the possibilities of ground based observations, the method is popular, with the aforementioned Big Bear Observatory joined by a plethora of other facilities, Richard B. Dunne solar telescope (DST) in New Mexico, Mauna Loa Solar Observatory on Hawii, which will shortly be joined by the Daniel K. Inouye Solar telescope (DKIST).
+DKIST promises to be the most powerful telescope ever created with a $4$ m mirror, enabling resolution of $10$ km per pixel and overcoming the quantity of photons issues at the limb for spectropolarimetry.
 
 
 
@@ -427,6 +440,8 @@ As a result, the volume of space based instrumentation as grown exponentially si
 The first solar mission to move on from imagers on space stations was the Solar Heliospheric Observatory (SoHO).
 Placed at the gravitationally stable lagrange point, L1, between the Sun and Earth, it affords constant viewing of the Sun.
 It was one of the first missions to comprehensively over the entire solar environment from dopplergrams of the photosphere, EUV imaging of the chromosphere and out to LASCO, monitoring the solar wind.
+
+
 
 \section{Plasma behaviour}
 
@@ -512,11 +527,12 @@ The model is based upon the flux emergence from the lower solar atmosphere.
 
 
 
+
 Jets
 Other than standard jet model Shibata
 Anenome Jets - Nishivuka
 A general discussion Archontis http://iopscience.iop.org/article/10.1086/497533/meta
-
+Stat study of network jets http://arxiv.org/abs/1604.06295
 
 
 Chromospheric Jets
