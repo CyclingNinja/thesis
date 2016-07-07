@@ -448,18 +448,35 @@ As a result of this, the scientific missions of ACE is heavily leant towards ins
 
 The Solar Wind Ion Mass Spectrometer (SWICS) and Solar Wind Ion Composition Spectrometer (SWICS) are used to measure these properties.
 SWICS was initially built for the ULYSSES \cite{Ulysses1992} mission which orbited the Sun in a novel slingshot orbit around jupiter, normal to the plane of orbit.
-The result of this was a full profile of the solar wind speed and particle composition.
 
 SWICS utilises a mechanical collimator to collect and direct the particles to an electrostatic deflecton array.
 Whereupon, the incoming ions are deflected in accordance with the Lorentz force, $F_L = q(v x B)$.
 Clearly therefore, particles incoming with higher velocities, or greater charge, will generate a larger Lorentz force, and therefore demonstrate a greater deflection when detected.
-The detection is managed by a solid state detector, a semi conductor, 
+The detection is managed by a solid state detector, a semi conductor, which is applied in a similar way to CCD's.
+When the particle interacts with the semiconductor, a 'charge carrier' is released.
+This charge carrier is an electron currently residing in the valence band of the semi conductor, which, as a result of the particle interaction, is exited into the conduction band.
+This leaves a 'hole' in the valence band, paired with the exited electron. 
+The pair then migrates to opposite electrodes at either end of the semiconductor as a result of a background electric field, whereupon, they instigate a pulse which can be measured.
+The amount of energy required to produce a given electron-hole pairs is known and so the particles can be inferred.
 
+The results this instrument produced one of the most iconic set of readings in the modern era of Solar Physics.
+As Ulysses completed its orbit, the radial velocity profile of the solar wind is found to vary over solar latitude.
+At lower latitutes, the solar wind was found to be of the order $200$-$400$ kms$^{-1}$, before getting to higher latitudes and a distinct transition to much higher velocities.
+At the time of this first orbit, the Sun was at a solar minimum, consequently, there were clear and distinct coronal holes and quiet Sun, matching with the fast and slow wind respectively.
 
+\begin{figure}
+	\includegraphics{Figs/ulysses_solar_wind.jpg}
+	\caption{\cite{McComas2003}}
+	\label{fig:ulysses_sw}
+\end{figure}
 
+The confirmation of this association between wind mode and magnetic environment came in the next orbit of Ulysses.
+In this orbit, the Sun was at maximum, therefore, was almost entirely constituted of quiet Sun magnetic environments.
+During this orbit, the solar wind was found to be uniformly chaotic.
+Velocities are found to climb as high as those found in a fast solar wind mode, however it is not the uniformly distributed fast mode emitted from the coronal holes, as evident in the solar minima readings.
 
-
-
+The Japanese Aerospace Exploration Agency have organised several solar missions, Solar-A, renamed Yohkoh upon its successful launch and commencement of observations, pre-dates SoHO.
+It covered soft and hard X-Ray ranges and spectrometers covering, specifically, the coronal Iron lines and a wide band spectrometer. 
 
 
 
