@@ -255,7 +255,7 @@ However this is not the full picture, as a result of the ever increasing complex
 It is at this point that the butterfly diagram moves from a narrow range of latitudes to a significantly wider one, therefore, the $11$ year cycles is actually two halves of a $22$ cycle in which the magnetic field flips and then returns to it initial configuration.
 
 \begin{figure}
-	\includegraphics{'Figs/ssn_yearly.jpg'}
+	\includegraphics{Figs/ssn_yearly.jpg}
 	\includegraphics{'Figs/bfly_recent.gif'}
 	\caption{http://solarscience.msfc.nasa.gov/SunspotCycle.shtml}
 	\label{fig:sunspot_count}
@@ -275,7 +275,7 @@ Of course, due to the limitations of technology at the time, these lines are all
 
 \begin{figure}
 	\includegraphics{'Figs/sun_spectrum.jpg'}
-	\includegrpahics{'Figs/ fraunhofer-lines.gif'}
+%	\includegrpahics{'Figs/ fraunhofer-lines.gif'}
 	\label{fig:fraunhofer}
 	\caption{http://media.radiosai.org/journals/Vol_05/01JAN07/04-musings.htm}
 \end{figure}
@@ -493,9 +493,8 @@ Building on the success of Yohkoh, a new mission was planned, sequentially named
 Hinodes launch in 2007 signified a significant move forward in space based solar observations, building from what was successful in Yohkoh.
 The mission introduced small wavelength increment spectroscopy to space based missions.
 The EUV Imaging Spectrometer (EIS) is designed to examine the chromospheric atmosphere using two specific imaging techniques.
-It is extremely flexible with 4 slit or slot positions, $1"$ pixel slit, $2"$ pixel slit, $40"$ pixel slot and $266"$ and two different modes spectroscopy.
-
-The spectroscopy mode 
+It is extremely flexible with 4 slit or slot positions, $1"$ pixel slit, $2"$ pixel slit, $40"$ pixel slot and $266"$ and two different modes of temporal cadence.
+The spectroscopy mode
  
 
 
@@ -664,7 +663,6 @@ What becomes clear is that these large scale jets can only be trigger by explosi
 
 Jets
 Other than standard jet model Shibata
-Anenome Jets - Nishivuka
 A general discussion Archontis http://iopscience.iop.org/article/10.1086/497533/meta
 Stat study of network jets http://arxiv.org/abs/1604.06295
 
@@ -676,12 +674,18 @@ Chromospheric Jets
 
 \subsection{Macrospicules}
 
-Macrospicules were first reported by \cite{Bohlin1975}, utilising the SkyLab II mission.
+<<<<<<< HEAD
+Macrospicules were first observed by \cite{Bohlin1975} using instruments based on the Skylab II misson.
 
 
 
 
 \subsection{Numerical Simulations}
+=======
+Macrospicules were first reported by \cite{Bohlin1975}, utilising the SkyLab II mission.
+
+
+>>>>>>> 41bfdedd07d46a6e2005594401f73756c1d5ceb9
 
 
 
