@@ -415,7 +415,20 @@ The 'receiver' is what have become known as the optical bench, here the light be
 SST has two such pipelines, one for the red end of the electromagnetic spectrum and another examining the blue end.
 CRisp Imaging SpectroPolarimeter (CRISP), focuses on the red end of the visible spectrum, where as, the soon to be updated instrument, Chromis analyses the blue end.
 The beam is split upon its arrival at the optical bench and sent to either of these instruments, however, before the beam reaches CRISP, there is a layer of correction known as adaptive optics.
+
 Adaptive optics, corrects for atmospheric scintillation, aberration and stabilises image motion.
+These cumulative effects results in an optical path difference of the light incident with the lens/mirror of the telescope.
+Given this information, it is crucial to know the atmospheric physics overlying and surrounding the telescope.
+It is for this reason, observatories such as the Big Bear Solar Observatory \citep{Cao2010} in Los Angeles, and the proposed new Chinese Giant Solar Telescopes \citep{Liu2014} are built on and by lakes, the reason being that the temperature will be lower, thus reducing heat haze, and therefore, atmospheric effects.
+The primary atmospheric parameters influencing the set up of the adaptive optics are the Fried parameter (which measures the quality of optical transmission), the Greenwood frequency (the bandwidth required for optimal correction) and the atmospheric turbulence profile (which allows a calculation of the refractive index of the atmosphere) as shown in \cite{Rimmele2011}.
+
+As a result of the above points, the images from the SST are extremely customisable.
+They are usually returned as data cubes, with the dimensions of which are time, wavelength, x and y.
+The resolution of these features are therefore changable dependant on the requirements of the observation.
+Cadence can be as low as $2.5$ s, the spectral increment, $0.2$, and spatial resolution of $0.12$ arcsec.
+A part of what makes this form of observation viable is the ability to directly download the received signal, which is a limitation of space borne instrumentation.
+Given the possibilities of ground based observations, the method is popular, with the aforementioned Big Bear Observatory joined by a plethora of other facilities, Richard B. Dunne solar telescope (DST) in New Mexico, Mauna Loa Solar Observatory on Hawii, which will shortly be joined by the Daniel K. Inouye Solar telescope (DKIST).
+DKIST promises to be the most powerful telescope ever created with a $4$ m mirror, enabling resolution of $10$ km per pixel and overcoming the quantity of photons issues at the limb for spectropolarimetry.
 
 
 
@@ -426,7 +439,88 @@ As a result, the volume of space based instrumentation as grown exponentially si
 
 The first solar mission to move on from imagers on space stations was the Solar Heliospheric Observatory (SoHO).
 Placed at the gravitationally stable lagrange point, L1, between the Sun and Earth, it affords constant viewing of the Sun.
-It was one of the first missions to comprehensively over the entire solar environment from dopplergrams of the photosphere, EUV imaging of the chromosphere and out to LASCO, monitoring the solar wind.
+It was one of the first missions to comprehensively over the entire solar environment, the instruments of which are described in \cite{StCyr}.
+The science covers dopplergrams of the photosphere, EUV imaging of the chromosphere and out to LASCO, monitoring the solar wind.
+
+Following SoHO, the Advanced Composition Explorer (ACE) \citep{Garrard1997} was placed near the L1 point as well.
+It was launched in $1997$ with a much more specified goal of anaylsing the contents of the solar wind, extremely pertinent as the constituents and energy inherent in the solar wind can have extensive effects at Earth.
+As a result of this, the scientific missions of ACE is heavily leant towards instrumentation which physically measures the energy and identity of a given particle.
+
+The Solar Wind Ion Mass Spectrometer (SWICS) and Solar Wind Ion Composition Spectrometer (SWICS) are used to measure these properties.
+SWICS was initially built for the ULYSSES \cite{Ulysses1992} mission which orbited the Sun in a novel slingshot orbit around jupiter, normal to the plane of orbit.
+
+SWICS utilises a mechanical collimator to collect and direct the particles to an electrostatic deflecton array.
+Whereupon, the incoming ions are deflected in accordance with the Lorentz force, $F_L = q(v x B)$.
+Clearly therefore, particles incoming with higher velocities, or greater charge, will generate a larger Lorentz force, and therefore demonstrate a greater deflection when detected.
+The detection is managed by a solid state detector, a semi conductor, which is applied in a similar way to CCD's.
+When the particle interacts with the semiconductor, a 'charge carrier' is released.
+This charge carrier is an electron currently residing in the valence band of the semi conductor, which, as a result of the particle interaction, is exited into the conduction band.
+This leaves a 'hole' in the valence band, paired with the exited electron. 
+The pair then migrates to opposite electrodes at either end of the semiconductor as a result of a background electric field, whereupon, they instigate a pulse which can be measured.
+The amount of energy required to produce a given electron-hole pairs is known and so the particles can be inferred.
+
+The results this instrument produced one of the most iconic set of readings in the modern era of Solar Physics.
+As Ulysses completed its orbit, the radial velocity profile of the solar wind is found to vary over solar latitude.
+At lower latitutes, the solar wind was found to be of the order $200$-$400$ kms$^{-1}$, before getting to higher latitudes and a distinct transition to much higher velocities.
+At the time of this first orbit, the Sun was at a solar minimum, consequently, there were clear and distinct coronal holes and quiet Sun, matching with the fast and slow wind respectively.
+
+\begin{figure}
+	\includegraphics{Figs/ulysses_solar_wind.jpg}
+	\caption{\cite{McComas2003}}
+	\label{fig:ulysses_sw}
+\end{figure}
+
+The confirmation of this association between wind mode and magnetic environment came in the next orbit of Ulysses.
+In this orbit, the Sun was at maximum, therefore, was almost entirely constituted of quiet Sun magnetic environments.
+During this orbit, the solar wind was found to be uniformly chaotic.
+Velocities are found to climb as high as those found in a fast solar wind mode, however it is not the uniformly distributed fast mode emitted from the coronal holes, as evident in the solar minima readings.
+
+Given that we now know that the solar wind and corona have significant reach and influence, a new mission was designed and initiated, the Transition Region and Coronal Explorer (TRACE) \cite{Gaeng1998}.
+As the name suggests, this instrument was designed with the specific intention on investigating the higher reaches of the solar atmosphere.
+Specifically, the aim of the mission was to investigate the three dimensional structure of the low plasma beta atmosphere.
+TRACE is a uniquely designed telescope, following the popular Cassegrain design, in which, the primary mirror is divided up into 4 quadrants with separate coatings in order to filter the incoming light.
+This method allows simple and efficient image co-aligning.
+Given that TRACE was to observe the high atmosphere, Extreme Ultra Violet lines (with the rest of the EM spectrum filtered at entrance to the detector) were selected for the imaging instruments, Fe IX $17.1$ nm, Fe XII $19.5$ nm and Fe XV $28.4$ nm.
+
+
+
+
+The Japanese Aerospace Exploration Agency have organised several solar missions, Solar-A, renamed Yohkoh, \cite{Tsuneta1992} upon its successful launch and commencement of observations, pre-dates SoHO.
+It covered soft and hard X-Ray ranges and spectrometers covering, specifically, the coronal Iron lines and a wide band spectrometer. 
+Yohkoh was particularly successful with respect to the detection of high energy events producing large amounts of energy and X-ray emission, such as coronal jets and solar flares.
+Building on the success of Yohkoh, a new mission was planned, sequentially named Solar-B and later to be renamed Hinode, sunrise in english, upon its successful launch and is presented in \cite{Kosugi2007}.
+ 
+Hinodes launch in 2007 signified a significant move forward in space based solar observations, building from what was successful in Yohkoh.
+The mission introduced small wavelength increment spectroscopy to space based missions.
+The EUV Imaging Spectrometer (EIS) is designed to examine the chromospheric atmosphere using two specific imaging techniques.
+It is extremely flexible with 4 slit or slot positions, $1"$ pixel slit, $2"$ pixel slit, $40"$ pixel slot and $266"$ and two different modes of temporal cadence.
+The spectroscopy mode
+ 
+
+
+Possibly the most adventurous mission to probe the solar environment is the STEREO mission (Solar TErrestrial RElations Observatory, quoted this way round due to the clear bacronym) presented in \cite{Kaiser2008}.
+As is suggested by the name of this mission, the primary focus was to form a more comprehensive picture of the solar atmosphere, by positioning two satellites in such an orientation to build a three dimensional picture.
+Consequently, two identical satellites were launched into \emph{solar} orbits, ahead and behind the orbit.
+There is an inherent differential in the angular velocity of the spacecraft, in order to move the spacecraft ever further around the orbit at approximately $45^\circ$ per year.
+The primary objective of this stage of the mission was to obtain the optimal angle to produce three dimensional images of the Sun using a tomographic technique.
+
+Given that STEREO was designed to give varying angles of the solar-earth  enviroment, the instruments on the mission are tailored to this need.
+SECCHI is a suite of 5 imagers, utilising white light chronographs, an extreme ultra violet imager and two wide angle Heliospheic Imagers (HI) designed to track CME's to $1$ AU.
+IMPACT detects solar wind electrons and in situ solar wind magnetic field strength and vector, while PLASTIC measures composition of heavy ions, alpha particles and protons. 
+Given the instumentation, STEREO is used extensively by space weather forecasters at NOAA, which, will increasingly become and essential part of our lives.
+
+Building on all of the above missions, the Solar Dynamic Observatory (SDO) mission begun in 2010 \cite{Kaiser2008}.
+The instruments are developments of concepts used on previous missions but expanding them to allow constant viewing of the entire solar disk.
+Consequently all instruments on SDO view the full solar disk, at all times, maintaining the same temporal cadence. 
+Therefore, the SDO mission produces significantly more raw data than any previous, from an purely engineering standpoint, the instruments were carefully selected to facilitate the downloading of the data.
+As such, SDO has three scientific aims; the Helioseismic and magnetic Imager (HmI) examining the solar variability and finer scale structure of the solar magnetic field; Extreme Ultraviolet Variability Experiment (EVE) measured the total solar irradiance in the Extreme Ultra Violet section of the spectrum and the Atmospheric Imaging Assembly (AIA) investigating the upper chromosphere and corona.
+
+AIA's imaging suite provides full disk images in $4096 \times 4096$ resolution and most importantly at $12$ second cadence.
+However, its distinguishing feature is the array of wavelengths analysing the atmosphere \cite{AIAspec} associated with various temperatures equivalent to the appropriate electron transitions.
+The instrument ranges through $170$, $30.4$, $160$, $17.1$, $19.3$, $21.1$, $33.5$, $9.4$ and $13.1$ nm providing a temperature range of $5000$ K to $1.6 \times 10^7$ K.
+
+
+
 
 \section{Plasma behaviour}
 
@@ -505,7 +599,63 @@ This work has formed the basis of much of the study of jet phenomena, however, t
 
 % possibly more required here
 
-What have become known as the standard model for the formation of solar jets is demonstrated by 
+What has become known as the standard model for the formation of solar jets is demonstrated  by \cite{Shibata1992}.
+Within this paper, the authors use the Soft X-Ray telescope on Yohkoh to examine $20$ jets, and present their spatial properties, very similar to those of \cite{Shimojo1996}, however, the authors go on to describe a possible formation schematic.
+The model is based upon the flux emergence from the lower solar atmosphere, and is backed up by data in the Solar Geophysical Data.
+The authors demonstrate that the observations reveal a void at the jet base, similar in appearance to voids observed in reconnection driven events such as flares and CME's.
+The authors proposed that the jets are based in the chromosphere based on an inspection of the emission measure, consequently it is likely that the mass is from the chromosphere.
+The authors propose that the undulating and meandering shape of the jet lends itself to a helically twisting magnetic structure, suggesting that the jet itself emanates from a relaxation of the magentic field along a global flux tube \cite{Shibata1986}.
+Such a reconnection event between twisted and untwisted magnetic field, would be capable of producing a jet of this size, lifetime, and more importantly, velocity.
+
+This model for the standard jet requires that there be open magnetic field lines, and a smaller scale, twisted, emgering flux loop to rise from the lower atmosphere in order to initiate a reconnection event.
+As a result of the reconnection event, material in the emerging loop is than transfered into the open magnetic field lines, 'sling shotting' around the loop it as formerly a part of and up the open field lines, thus revealing the collimated beam of plasma.
+The mechanism highlighted in this particular model produces exclusively narrow jets, a couple of mega meters in width.
+It also results in the dissipation of large amounts of energy which manifests as brightenings in may observations.
+From the source of the reconnection, energised plasma then dissipates down the loops highlighting the entire feature.
+The visual effect of the long collimated beam/plasma spire and the newly brightened loop of plasma, reveals an 'inverted - Y' shape or Eiffel tower like structure, similar to the 'cusp' shape observed in significantly larger features high in the corona round streamers and flares \cite{Vourlidas2006}.
+These terms have gained common usage in literature and will be used hereafter. 
+
+An excellent example of this type of formation is demonstrated in \cite{Nishizuka2011}.
+Within this work, the authors demonstrate what is refereed to as an Anemone jet, so called as the dome like bipole magnetic bubble, may be viewed as a feature similar to the sea creature.
+The model they build as a result of this is in three dimensions, consequently, the small scale loops of the standard model could be projected into $3$D as an anemone-like shape.
+The authors observed the jet in Ca II, it formed along an inclined line approximately $45^\circ$ away from normal, in the inverted-y format.
+With the jet forming in Ca II, we can conclude that this particular jet is formed in the upper chromosphere, with this particular jet the authors observe the formation loop itself.
+The jet feature is found to extend $14$ Mm into the atmosphere and its width, $6$ Mm, with maximum velocity observed at $100$ kms$^{-1}$, however, $10$ minutes into the evolution of the jet, contrary to what you might expect.
+
+The standard jet model accurately describes a prominent section of the jet population, however, those which it does not cover is highlighted in \cite{Moore2010}.
+The specific example that the standard jet model does not cover is the case where the width of the jet is more than that predicted by the standard model.
+\cite{Moore2010} utilise Hinode/XRT to look for X-ray jets occuring in the polar coronal holes, and where possible the authors observed the same features in EUVI as well.
+
+The initial magnetic field topology is largely similar to that of the standard jet, a small scale loop with open magnetic field extending upwards.
+The difference in these models is that the emerging bipole arch in the case of the standard jet, remains untwisted and without shear.
+In the case of blowout jets, this arch/loop is sufficiently twisted and sheared that it can drive an explosive eruption.
+In terms of the physical evolution, there is no difference between the two until the emerging flux element triggers a reconnection burst at the boundary between said emerging flux and the open magnetic field lines.
+
+The authors then go on to suggest two resolutions to the reconnection event; that the boundary becomes unstable on its own, and consequently reconnection begins on its own.
+This results in beakout reconnection, expelling the loops outer magnetic field, which lifts the restriction on sheared flux lower in the system; consequently allowing the core of the emerging flux to erupt upwards. 
+This forms a chain event, with emerging core events causing more reconnection and consequent releases and so on, similar to \cite{Antiochos1998}.
+The second permutation, is that the sheared core, begins to erupt before any reconnection takes place at the boundary.
+In this scenario, an instability in the emerging bipole causes the previously stable core to begin emerging.
+As a result, magnetic pressure at the boundary current sheet between the loop and open magnetic loop, eventually triggering breakout reconnection.
+
+This work clearly has impact on the current relationships between the various jets of scales larger than spicules (which clearly are their own feature.)
+The authors propose that the blowout jets correspond to the macrospicule features in the chromosphere, more on which later.
+As for implications with respect to the division of standard and blowout jets, observations of the formation mechanism would clarify the feature.
+Standard jets would have large originating loop spanning approximately $20$ Mm or not visible at temperatures lower than  $10^6$ K.
+Whereas, blowout jets need to produce strong signals in H$\alpha$ and He $30.4$, due to the cooler plasma thrown upwards from the unstable magnetic bipole emerging.
+
+One of the most comprehensive sets of jet observations is undertaken by \cite{Majarska2011}, in which, the authors observe a jet in an equatorial coronal hole.
+Utilising, SUMER on SoHO, EIS and XRT on Hinode and the EUVI instruments on the STEREO A and B.
+The authors find that the jet can be heated my microflares at the moment of reconnection, rising the temperature up to $12$ MK.
+This was obtained using a DEM technique integrating the emission from a range of spectral lines to estimate the temperature, and the density was approximated at $4 \times 10^9$ cm$^{-3}$ using a similar technique.
+http://www.aanda.org/articles/aa/pdf/2011/02/aa15269-10.pdf
+
+
+% This section may need to go else where
+What becomes clear is that these large scale jets can only be trigger by explosive reconnection events, therefore understanding this mechanism is essential to out understanding of solar jets.
+\cite{Archontis2005} demonstrate the mechanism governing the rules of this interaction.
+
+
 
 
 
@@ -515,7 +665,7 @@ Jets
 Other than standard jet model Shibata
 Anenome Jets - Nishivuka
 A general discussion Archontis http://iopscience.iop.org/article/10.1086/497533/meta
-
+Stat study of network jets http://arxiv.org/abs/1604.06295
 
 
 Chromospheric Jets
@@ -525,7 +675,7 @@ Chromospheric Jets
 
 \subsection{Macrospicules}
 
-Macrospicules were first observed by \cite{Bohlin1975} using instruments based on the Skylab II misson.
+Macrospicules were first reported by \cite{Bohlin1975}, utilising the SkyLab II mission.
 
 
 
