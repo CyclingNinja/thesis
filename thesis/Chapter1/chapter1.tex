@@ -525,7 +525,49 @@ The instrument ranges through $170$, $30.4$, $160$, $17.1$, $19.3$, $21.1$, $33.
 
 \section{Plasma behaviour}
 
+Stars are incredibly unique features, their behaviour is entirely unlike any planetary body, and has already been discussed, their inherent magnetic field makes their structure extremely complex.All of these affects can be traced back to the fact that the Sun consists of gas kept at high temperature and pressure, which causes it to form the $4^{th}$ state of matter, plasma.
+Plasma is defined as a gas in which the molecules reached an energy level that cause them to eject their outermost electrons and become Ions, causing the gas to be a neutral mixture of charged Ions and free electrons (produced from ionising the molecules).
+It can be formed in several situations, such as a discharge of current from the atmosphere to the ground, manifesting as lightening as the propagating current ionises the air.
+
+The motion and behaviour of a plasma can be defined on small scales but 3 factors; The plasma approximation, bulk interaction and the plasma frequency.
+The plasma approximation states that the particles must be close enough together such that any given particle must influence all particles within the Debye screening length.
+The length is dependant on the permittivity of free space, the Boltzmann constant, electron charge, temperatures of the Ions and electrons, density of electrons and density of an atomic species.
+
+\begin{equation}
+	\lambda_D = \sqrt{(\epsilon_0\kappa_BT_e)/(n_eq_e^2)}
+\end{equation}
+
+Bulk interaction refers to the statement that the Debye screening length is small compared to the overall scale of the plasma, this implies that the motion of the interior guides the characteristic behaviour, rather than motion at the edges.
+Lastly the plasma frequency refers to the oscillation of the elections within the plasma, which is valid if this frequency is higher than the collions between electrons and neutrals.
+In this case, the electrostatic interactions dominate over the standard, gas-like behaviour we would otherwise see.
+Of course, the case where all the molecules or atoms are ionised is the ideal case, however, in nature this is not always true.
+The degree of the ionisation is defined in terms of the ratio of ions to electrons, $\alpha = n_i/{n_i + n_n}$ where $i$ is the number density of ions and $n$ for neutrals.
+
+As is evident from the Debye screening length, the temperture of the plasma, can have a dominating effect on the characteristics of the plasma.
+The temperature is a measure of the thermal kinetic energy of the plasma, clearly higher kinetic energy therefore equates to a higher temperature of the plasma.
+However, electrons will reach a thermal equillibrium significantly faster than the ions and neutrals, in which situation the plasma will have two, or even three, populations.
+In the case where the plasmas electrons and ions in thermal equilibrium with the neutrals the plasma is termed, shockingly enough, thermal.
+In nonthermal plasmas, the electrons, whose temperatures raise quicker, will be at a higher temperature than the heavier ions and neutrals.
+The degree of ionisation of the plasma that results a thermal equilibrium us given by the following;
+
+\begin{equation}
+	x^2/{x - 1} = (2\pim_e)^{3/2}/h^3 (\kappa_BT)^{5/2}/p_{gas} exp(-{\chi/\kappa_BT}), \cite{Saha1920}
+\end{equation}
+
+Where $p_{gas}$ is the gas pressure, $m_e$ is the mass of the electron amd $\chi$ is the ionisation energy.
+This form of the Saha ionisation equation will hold for Hydrogen, however does not take into account multiple ionisation processes, as would be the case for a more complex atom or molecules.
+The result of this is that degree of ionisation in a gas will increase with increases in temperature.
+It therefore follows that not all plasmas are fully ionised, at lower temperatures, the heavier elements won't gain enough energy to ionise, sometimes despite the fact that the electrons are orders of magnitude higher in temperature.
+
+Given that plasma behaves differently, we therefore need a set of laws to define how the plasma  behaves on scales such as those applicable on the Sun and in the atmosphere.
+
+
 \subsection{MHD}
+
+Magnetohydrodynamics are the set of laws by which we describe the motion of plasma on scales.
+They were derived by \cite{Alfven1942}, an achievement for which, Alfv{\'e}n was awarded the nobel prize.
+The rules set up are a combination of the gas pressure equations and Maxwell's laws of electrodynamics.
+
 
 \subsection{Reconnection}
 
