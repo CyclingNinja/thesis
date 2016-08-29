@@ -2,6 +2,12 @@
 %*****************************************************************************************
 %*********************************** First Chapter ***************************************
 %*****************************************************************************************
+
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2 }}
+\newcommand{\td}[2]{\frac{d #1}{d #2 }}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\divv}[1]{\bigtriangledown{#1}}
+
 \label{ch:Intro}
 \chapter{Introduction}  %Title of the First Chapter
 
@@ -56,12 +62,9 @@ Clearly, there will be a set of environmental factors which will lead to the abo
 When the gas is completely ionised, the adiabatic gradient will be constant and convection, unimportant.
 In order to completely ionise a gas an extremely high temperature must me attained, therefore let us consider the case for Hydrogen, the dominant element in nearly all stars.
 At the temperature of $10,000$ K, Hydrogen will be totally ionised and convection will not occur, however less than this and an adiabatic gradient will become apparent.
-The pressure gradient will also impact the onset of the convection, if the scale height is greater, the further 
-
-
- 
-
- 
+The pressure gradient will also impact the onset of the convection, if the scale height is greater, the higher the fluid element will have to travel before it expands and cools.
+In the Sun these conditions are fullfilled when the temperature drops to $9,000$ K, this is due to this being the real world and not all the atoms and molecules are Hydrogen.
+As a result we get the transition from radiation zone to convection zone.
 
 The photosphere is the layer of the Sun which we can observe with the naked eye.
 The photosphere is so called, because this layer emits light in the visible spectrum, and has a temperature range of $6000$ K at the base, and $4700$ K at the top. 
@@ -197,12 +200,12 @@ All the elements of the solar wind that interact with the bow shock will be affe
 Ions and particles backstream off the bow shock, reflected by the potential barrier formed by the increase in magnetic field strength, and the solar wind magnetic field wraps around that of the Earth.
 Behind the bow shock we find the magneto sheath, a magnetically turbulent region comprising the 
 material that has managed to pass through the bow shock.
-The density of particles and the magnetic pressure decreases over the magnetosheath until the pressure from this region is balanced by the Earths magnetic pressure, whereby, the magnetopause is formed.
+The density of particles and the magnetic pressure decreases over the magnetosheath until the pressure from this region is balanced by the Earth's magnetic pressure, whereby, the magnetopause is formed.
 
-Given that this region of the Earths magnetosphere is heavily influenced by the solar wind, the exact structure of it is defined by the state of the solar wind.
+Given that this region of the Earth's magnetosphere is heavily influenced by the solar wind, the exact structure of it is defined by the state of the solar wind.
 As such, the fast solar wind will compress this region further as the magnetic pressure will be higher and events such as CME's which increase the particle density, also altering this region significantly.
 
-As the solar wind magnetic field wraps around this region, it will eventually come into contact with the open magnetic field lines at the Earths poles.
+As the solar wind magnetic field wraps around this region, it will eventually come into contact with the open magnetic field lines at the Earth's poles.
 This leads to a reconnection event, releasing the magnetic tension in the open fields lines and causing them to be dragged out behind the Earth, forming the magneto tail, and eventually reconnecting with magnetic field which has made the same journey on the opposite side of the Earth. 
 This forms a current sheet roughly in the equatorial plane, however, this will be impacted and changed by the solar wind and geomagnetic events in the same way as the magnetosheath.
 
@@ -383,11 +386,6 @@ It is a white light detector which makes use of the effect known as Thompson Sca
 The effect entails a photon colliding with a particle, and colliding with a free charged particle in a classical sense, as opposed to a quantum interaction.
 As a result of this interaction, the original photon remains unchanged in terms of energy and frequency, by this method, light from the Sun is scattered off the particles in the corona and it is this light that the coronograph detects.
 In order to ensure that the detector is not washed out by the light from the Sun, ans occulting disc is essential to an operational coronagraph.
-
-The LASCO instrument has such a wide angle view that it is used to track features propagating through the solar corona, it is widely used to track space weather events.
-
-% more here? or get rid of this bit
-
 
 
 \subsection{Technology}
@@ -584,6 +582,63 @@ Magnetohydrodynamics are the set of laws by which we describe the motion of plas
 They were derived by \cite{Alfven1942}, an achievement for which, Alfv{\'e}n was awarded the nobel prize.	
 The rules set up are a combination of the gas pressure equations and Maxwell's laws of electrodynamics, so let us now examine this relationship.
 
+When considering a plasma, it is important to remember that while the total charge of the plasma will be quasi-neutral, the ions and electrons which constitute the mixture still carry charge.
+Consequently, motions in the plasma will cause the charges to have a change in velocity.
+In accordance with Farady's law, a moving charge will cause a magnetic field to be induced and Ohms' law will also become a factor with charges moving through a magnetic field.
+As such, this can be an extremely complex problem, let us begin our discussion with Maxwell's equations;
+
+\begin{equation}
+	\divv \times \mb{E} = -\pd{\mb{B}}{t} & & \textnormal{Faradys}
+	
+	\divv \times \mu_0\mb{j} + \frac{1}{c^2}\pd{\mb{E}}{t} & & \textnormal{Amp{\`e}re}
+	
+	\divv{\mb{E}} = \frac{\tau}{\epsilon_0} & & \textnormal{Gauss'}
+	
+	\divv{\mb{B} = 0} & & \textnormal{Gauss' law of magnetism}
+\end{equation}
+
+where $\mb{E}$ is the electric field stength, $\mb{B}$ the magnetic field, $t$ is time, $c^2 = (\epsilon_0\mu_0)^{-1}$,$\epsilon_0$ is the vacuum permittivity, $\mu_0$ is the permeability of free space, $\mb{j}$ is the current density and $\tau$ is the charge density.
+Faraday's law describes how a changing magnetic field would induced an electric field, hence it is also known as the Induction equation.
+Amp{\`e}re's law describes the manner in which the magnetic field integrated around a closed loop, related to the electric current passing through said loop.
+Gauss' law for magnetism is also known as the Solenoidal condition and states that no magnetic monopoles exist and the eponymous law describes the resulting electric field caused by an electric charge.
+
+The second `half' of the magnetohydrodynamic equations are the laws for gas dynamics, expressed in terms of the partial derivatives;
+
+\begin{equation}
+	\pd{\rho}{t} + \divv{} \cdot (\rho\mb{v}) = 0 & & \textnormal{Equation of mass conservation}
+	
+	\pd{p}{t} + \mb{v\cdot}\divv{p} + \gamma p\divv{\cdot}\mb{v} = 0 & & \textnormal{Conservation of entropy}
+\end{equation}
+
+in Eulerian time-dervative reference frame, evaluated for a fixed position within the fluid.
+In the case of these two sets of equations, there is currently no link other than the velocity vector, $\mb{v}(\mb{r},t)$ which can be introduced through the equation of motion for a fluid element.
+The equation for the motion of the fluid element is derived from the rate of change of momentum equations 
+
+\begin{equation}
+	$\frac{d}{dt}\int_{V}^{}dV\rho\mb{v} = \int_{V}^{}dV\rho\td{\mb{v}}{t} = rate of change of momentum$
+\end{equation}
+
+In this case the rate if change of momentum will equal the net force on the fluid element, in accordance with newtons second law, therefore;
+
+\begin{equation}
+	\rho \td{\mb{v}}{f} = \rho\mb{g} + \divv{\cdot}[X]
+\end{equation}
+
+where X is the total of all forces exerted on the fluid element. 
+Therefore the equation which will incorporate all of these terms and calculate the acceletation on a fluid element is:
+
+\begin{equation}
+	\rho \td{\mb{v}}{t} = \mb{F} \equiv -\divv{p} + \rho\mb{g} + \mb{j} \times \mb{B + \tau\mb{E}} 
+\end{equation}
+
+As we are currently assuming that we have a totally ionised fluid, therefore the electric field is defined as
+
+\begin{equation}
+	\mb{E}' \equiv \mb{E} + \mb{v} \times \mb{B} = 0
+\end{equation}
+
+and therefore, $\mb{E}'$ in a co-moving frame will vanish.
+The last assumption we need to make, is that the velocity of the plasma is not relativistic $v \ll c$.
 
 
 
