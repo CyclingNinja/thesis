@@ -7,6 +7,7 @@
 \newcommand{\td}[2]{\frac{d #1}{d #2 }}
 \newcommand{\mb}[1]{\mathbf{#1}}
 \newcommand{\divv}[1]{\bigtriangledown{#1}}
+\newcommand{\del}{\bigtriangledown}
 
 \label{ch:Intro}
 \chapter{Introduction}  %Title of the First Chapter
@@ -605,7 +606,7 @@ Gauss' law for magnetism is also known as the Solenoidal condition and states th
 The second `half' of the magnetohydrodynamic equations are the laws for gas dynamics, expressed in terms of the partial derivatives;
 
 \begin{equation}
-	\pd{\rho}{t} + \divv{} \cdot (\rho\mb{v}) = 0 & & \textnormal{Equation of mass conservation}
+	\pd{\rho}{t} + \del \cdot (\rho\mb{v}) = 0 & & \textnormal{Equation of mass conservation}
 	
 	\pd{p}{t} + \mb{v\cdot}\divv{p} + \gamma p\divv{\cdot}\mb{v} = 0 & & \textnormal{Conservation of entropy}
 \end{equation}
@@ -639,6 +640,40 @@ As we are currently assuming that we have a totally ionised fluid, therefore the
 
 and therefore, $\mb{E}'$ in a co-moving frame will vanish.
 The last assumption we need to make, is that the velocity of the plasma is not relativistic $v \ll c$.
+
+This allows us to make some assertions as to the scale of the terms in Amp{\`e}re's equation, the length scales of $l_0$ and $t_0$ are shown such that $v = l_0/t_0$.
+This means we can negelect the displacement current from Amp{\`e}re's and define the current $\mb{j}$ purely in terms of \mb{B}:
+
+\begin{equation}
+	\mb{j} = \frac{1}{\mu_0}\del \times \mb{B}
+\end{equation}
+
+As a result of which, we can neglect the effects of space charge on the plasma.
+Additionally, the non-relativistic assumption means that we can also make a simplification to the acceleration of a fluid element equation as the electrostatic acceleration is small, as well, Gauss' can be dropped through lack of need.
+As such the electric field can expressed merely in terms of the velcoity and magneticfield vectors:
+
+\begin{equation}
+	\mb{E} = -\mb{v} \times \mb{B}
+\end{equation}
+
+But applying the above assumptions, and substituteing in for $\mb{E}$ and $\mb{j}$, we obtain the basic equations of ideal magnetohydrodynamics.
+
+\begin{equation}
+	\pd{\rho}{t} + \del\cdot(\rho\mb{v}) = 0
+	
+	\rho(\pd{\mb{v}}{t} + \mb{v}\cdot\divv{\mb{v}}) + \divv{p} - \rho\mb{g} - \frac{1}{\mu_0}(\del \times \mb{B}) \times \mb{B} = 0
+	
+	\pd{p}{t} + \mb{v}\cdot\divv{p} + \gammap\del\cdot\mb{v} = 0
+	
+	\pd{\mb{B}}{t} - \del \times (\mb{v} \times \mb{B}) = 0
+	
+	\del\cdot\mb{B}
+\end{equation}
+
+
+
+
+
 
 
 
