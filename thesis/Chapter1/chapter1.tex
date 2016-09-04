@@ -656,7 +656,7 @@ As such the electric field can expressed merely in terms of the velcoity and mag
 	\mb{E} = -\mb{v} \times \mb{B}
 \end{equation}
 
-But applying the above assumptions, and substituteing in for $\mb{E}$ and $\mb{j}$, we obtain the basic equations of ideal magnetohydrodynamics.
+But applying the above assumptions, and substituteing in for $\mb{E}$ and $\mb{j}$, we obtain the basic equations of ideal magnetohydrodynamics (MHD).
 
 \begin{equation}
 	\pd{\rho}{t} + \del\cdot(\rho\mb{v}) = 0
@@ -670,13 +670,30 @@ But applying the above assumptions, and substituteing in for $\mb{E}$ and $\mb{j
 	\del\cdot\mb{B}
 \end{equation}
 
-These equations are therefore applicable to the case where; 1) the plasma is strongly collisional, such that the time scale of the colliosion between the particles is much smaller that the characteristic time scales of the entire system.
-2) The resistivity of these collisions is small \emph{i.e.} the magnetic diffusion time scale much be longer than any other process occuring within the plasma.
-3) The time scale must be greater than that of the kinetic processes occuring within the plasma, such as ion gyration, Landau damping and ion skin depth.
+These equations are therefore applicable to the case where; 1) the plasma is strongly collisional, such that the time scale of the collision between the particles is much smaller that the characteristic time scales of the entire system.
+2) The resistivity of these collisions is small \emph{i.e.} the magnetic diffusion time scale much be longer than any other process occurring within the plasma.
+3) The time scale must be greater than that of the kinetic processes occuring within the plasma, such as ion gyration, Landau damping and length scales longer than the ion skin depth and Larmor radius.
 
+By making choices with respect to the units for length, mass and time, the MHD equations can be made dimensionless.
+A typical length scale can be chosen such as $l_0$ to be something sensible and $\rho_0$ and $B_0$ are chosen from a representative point in the plasma and the time unit can be inffered from a basic speed of the plasma, \emph{e.g.} the sound speed or Alf{\`e}n speed.
 
+\begin{equation}
+	v_0 \equiv v_{A,0} \equiv \frac{B_0}{\sqrt{\mu_0\rho_0}} \textnormal{which leads to} t_0 \equiv \frac{l_0}{v_0} 
+\end{equation}
 
+The density, velocity, magnetic field etc. are then used to define new dimensionless parameters and substituted back into the MHD equations, which remain unchanged but npow a have an operator for these variables instead of the variable themselves.
+the crucial outcome here is that equations are not dependent on the size of the plasma evaluated, the magnetic field strength, the density or the time scale.
+After scaling $l_0$, $B_0$ and $t_0$, the pressure term becomes of vital importance and is linked to the ratio between the kinetic pressure of the plasma and magnetic pressure.
+This ratio is commonly referred to as the plasma beta, and is defined:
 
+\begin{equation}
+	\beta \equiv \frac{2\mu_0p_0}{B_0^2}
+\end{equation} 
+
+This is and extremely useful flag when considering the behaviour of a plasma at a less precise level, as it indicates the forces dominant in a region.
+If $\beta \gg 1$ the pressure terms are dominant, meaning that the kinetic motions of the plasma will determine its overall behaviour, such as in the photosphere and below.
+Whereas, in the chromosphere and upwards, the balance more favours the magnetic field and the gas movement is determined by magnetic effects.
+Which leads us to another important result of ideal MHD, the frozen in condition.
 
 
 
@@ -836,30 +853,30 @@ Hence the boundary behaviour changed from the current sheet to a tangential disc
 The authors present evidence of continuous reconnection at the boundary, the work demonstrates that the first line undergoing reconnection, instead of passing through the boundary of the other end of the flux tube, it passes directly into the coronal region.
 The end point of the field line is then travelling at a new velocity, different to that of the local plasma at the new boundary.
 The implication of this is that field lines at he boundary between the two regions, undergoes continuous reconnection, however, once it has passed though integrates into the coronal plasma.
-Clearly the heliclally twisted nature of the jet allows for multiple reconnection instances from the same flux rope, as the field line is released from one end of the emerging rope, it remains attach at the other causing a whipping of that line over the arch before travelling back through the photosphere, below the tube and back into the corona before eventually returning the the solar interior. 
+The helically twisted nature of the flux tube, allows for multiple reconnection instances.
+Consider looking at the end of the flux rope as a cross sectional area, when the reconnection occurs, a magnetic field line reconnects with the magnetic field in the corona, and is draw straight into the corona while the rest of the line remains attached to the flux tube instead of the entire line detaching.
+As a result of this gradual detachment and the twist, the end of the field line traces out a circular motion in our cross section; first reaching into the coronal then being draw around and through the transition region, underneath the tube, back through the atmosphere and into the corona before lastly returning to the solar interior.
 
 Importantly, high speed jets are observed at the reconnection site, the plasma blasts through the current sheet before interacting with the higher pressure gas above it, therefore guiding it along the inclined magnetic field lines.
 In this case, the jets are observed as curves, and as such, disappear when observed on a horizontal plane.
 The authors then relate this th H$\alpha$ filaments and brightenings or jets in solt X-ray, the energy required to cause brightening is X-ray would be supplied by the interaction of these two flux systems, they also calculate a temperature increase to $10^7$ K.
 
+Recent studies have demonstrated the prevalence of smaller scale jets at the magnetic network boundaries.
+\cite{Tian02014}, and later built on by \cite{Nagrang2016}, highlighted these features using the most recent addition to the solar observational tools available to us.
+The network boundaries are regions where there is a great deal of magnetic complexity and strong field values, and almost certainly a large amount of reconnection will be apparent.
+These strong fluxes emminate from the boundaries of the granules, and therefore, convection cells.
+The evidence of this is apparent when imaging the transition region, the bright lanes approximately $20$ Mm in size, it is possible that these regions appear bright in the transition region due to the heating as a result of reconnective events. 
 
- 
- 
+The authors find explosive upflows in the direct images from IRIS with velocities of $80-250$ kms$^{-1}$ and using the superior resolution of IRIS idenify jet-like features developing from the bright networks.
+These jets are long and thin features,$4$-$15$ Mm in length and ~$0.3$ Mm in width, and demonstrate just upflows, no downflows a evident.
+These events are extremely shortlived, with lifetimes measured at $20$-$80$ seconds, however, there is recurrence observed with jets forming repeatedly in the same location, with time scales in the range $2$-$15$ mins.
 
+Observations using the spectral lines leads them to the conclusion that the jet like features heat to temperatures of the order $10^5$ kms$^{-1}$, in this case the temperature of Si IV $139.377$ nm.
+This Si IV line also allows an analysis of the line broadening which could possibly be due to the field aligned jets, as is proposed in \cite{Archontis2005}.
+The jets are also shown to be an intermittent but effectively continuous source of mass, and therefore energy, into the solar wind.
+As such, the author propse these network jets as new mechanisms for generating the solar wind.
 
-
-
-
-
-
-Jets
-Other than standard jet model Shibata
-Anenome Jets - Nishivuka
-A general discussion Archontis http://iopscience.iop.org/article/10.1086/497533/meta
-Stat study of network jets http://arxiv.org/abs/1604.06295
-
-
-Chromospheric Jets
+Chromospheric Jets?
 
 
 
