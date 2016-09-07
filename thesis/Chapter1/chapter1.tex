@@ -814,7 +814,33 @@ Usually, the total magnetic field on the current sheet will be zero, and we assu
 	\frac{B_2^2}{2\mu} = p_c = \frac{B_1^2}{2\mu}
 \end{equation}
 
-Where $B_1$ and $B_2$ are the magnetic fields either side and the 
+Where $B_1$ and $B_2$ are the magnetic fields either side of the current sheet and $p_c$ is the gas pressure at the current sheet.
+It follows that the magnetic field undergoes an exact reversal in the magnetic field.
+If it is the case that the magnetic field within the sheet is parallel to the $y$ axis and varies in $x$, is defined $\mb{B} = B_y(x)\hat{\mb{y}}$, subsequently applying Amp{`e}re's law can give us the current density in $z$:
+
+\begin{equation}
+	j_z = \frac{1}{\mu}\frac{dB_y}{dx}
+\end{equation}
+
+This means that when we get a steep gradient in $B_y$ with respect to $x$, produces a strong current along the current sheet, perpendicular to the field lines.
+This is the current sheet that lies at the heart of reconnection models, however the tangential discontinuity is susceptible to instabilities.
+Now that we have the null point between the two magnetic fields, the current sheet that forms as a result, we have the environment necessary to begin the reconnection of magnetic field lines.
+
+Let us consider the induction equation again defining how the magnetic field changes with respect to the magnetic field,
+
+\begin{equation}
+	\pd{\mb{B}}{t} = \del \times (\mb{v} \times \mb{B}) + \eta\del^2\mb{B}
+\end{equation} 
+
+with the first term representing the advection and the second, the diffusivity of the magnetic field.
+The ratio of these two terms can be represented by the magnetic Reynolds number, $\Re_m = {den}LV/\lambda$, and of course, this value will dictate the evolution of the of the induction.
+The diffusion term dominates in the case where $\Re_m \ll 1$.
+In this situation, the magnetic field diffuses to even out then temperature gradient as a result of the current sheet.
+
+
+
+
+
 
 
 \section{Jet and Macrospicules}
