@@ -255,7 +255,7 @@ However this is not the full picture, as a result of the ever increasing complex
 It is at this point that the butterfly diagram moves from a narrow range of latitudes to a significantly wider one, therefore, the $11$ year cycles is actually two halves of a $22$ cycle in which the magnetic field flips and then returns to it initial configuration.
 
 \begin{figure}
-	\includegraphics{Figs/ssn_yearly.jpg}
+	\includegraphics{'Figs/ssn_yearly.jpg'}
 	\includegraphics{'Figs/bfly_recent.gif'}
 	\caption{http://solarscience.msfc.nasa.gov/SunspotCycle.shtml}
 	\label{fig:sunspot_count}
@@ -275,7 +275,7 @@ Of course, due to the limitations of technology at the time, these lines are all
 
 \begin{figure}
 	\includegraphics{'Figs/sun_spectrum.jpg'}
-%	\includegrpahics{'Figs/ fraunhofer-lines.gif'}
+	\includegrpahics{'Figs/ fraunhofer-lines.gif'}
 	\label{fig:fraunhofer}
 	\caption{http://media.radiosai.org/journals/Vol_05/01JAN07/04-musings.htm}
 \end{figure}
@@ -493,8 +493,9 @@ Building on the success of Yohkoh, a new mission was planned, sequentially named
 Hinodes launch in 2007 signified a significant move forward in space based solar observations, building from what was successful in Yohkoh.
 The mission introduced small wavelength increment spectroscopy to space based missions.
 The EUV Imaging Spectrometer (EIS) is designed to examine the chromospheric atmosphere using two specific imaging techniques.
-It is extremely flexible with 4 slit or slot positions, $1"$ pixel slit, $2"$ pixel slit, $40"$ pixel slot and $266"$ and two different modes of temporal cadence.
-The spectroscopy mode
+It is extremely flexible with 4 slit or slot positions, $1"$ pixel slit, $2"$ pixel slit, $40"$ pixel slot and $266"$ and two different modes spectroscopy.
+
+The spectroscopy mode 
  
 
 
@@ -661,8 +662,11 @@ What becomes clear is that these large scale jets can only be trigger by explosi
 
 
 
+
+
 Jets
 Other than standard jet model Shibata
+Anenome Jets - Nishivuka
 A general discussion Archontis http://iopscience.iop.org/article/10.1086/497533/meta
 Stat study of network jets http://arxiv.org/abs/1604.06295
 
@@ -674,18 +678,65 @@ Chromospheric Jets
 
 \subsection{Macrospicules}
 
+
+The subject of this thesis is a clarification of the classification of macrospicules. 
+They are features not dissimilar to jets, however they have been distinguished from the population of jets in the current literature, which will now be discussed below.
+
+Macrospicules were first reported by \cite{Bohlin1975}, utilising the SkyLab mission.
+This was undertaken using $30.4$ nm instrument making observations of the polar coronal holes.
+The initial images were taken as raw light through particular filters over the lens, the images were also over exposed in order accentuate the appearance of the solar limb.
+The authors found that the newly named macrospicule was visible in He II $30.4$, however was not apparent in Ne VII $46.5$ nm or Mg IX $36.8$ nm, observing the transition region and corona respectively.
+The authors then classify macrospuicules accornding to 3 observables; that the macrospicules are confined to the coronal holes; that the macrospicules increasingly inclined away from normal proportionally to their distance from the solar pole and the authors link this to the supposedly weak, inclined magnetic field again; and lastly that they are only visible in $30.4$ nm.
+ 
+% possibly wack in a frame of the 'frames'
+
+The authors specifically differentiate between the H$\alpha$ spicules previously observed, stating that these new features have no counterpart in that line, citing work by Engvold and Beckers 1975 unable to find a correlation between the two lines by direct observation or numerical correlation.
+Having said this, they make the caveat that there is a possibility that the formations of the two features, could be largely similar.
+
+With the limitations of the observations at the time, there was much debate as to whether this was actually the case. 
+Following up on the work by Bohlin, \cite{LaBonte79} utilised the Big Bear Solar Observatory to examine the 'limb surges' in H$\alpha$ and Deuterium 3 (D$_3$).
+The authors found that the macrospicules in H$\alpha$ had considerable complexity in their structure, with 'knots, twists and loops' within the confines of the feature.
+But in D$_3$, the authors only observe the brightest parts of the macrospicule, usually at the base of the structure apparent in H$\alpha$.
+Differently in this case, the authors also observe features on the disk and define three categories, the macrospicules appearing similar to filament eruptions, surge-like macrospicules and a flare brightening type.
+Lastly the paper finds that the rate of occurrence of macrospicules to be of the order $~1400$ per solar day. 
+This discussion as to the possible links between the two features goes on to this day, more on which later.
+
+The next seminal work on macrospicules was published in \cite{Dere89}, again using an early space station, SpaceLab 2, as the platform for space based observations.
+In this case a Gregorian telescope was used to take a series of broadband UV observing at the solar limb.
+As a result of this set up the images are a convolution of the intensities from the solar continuum, therefore, differentiating between structures is not possible.
+This means that only macrospicules spactial extent be observed, and specifically those which appeared above the limb, with no study of their onset.
+Consequently, this study is statistical in its focus with the aim being to ascertain the basic spacial properties of the population.
+
+The authors then go on to compare the values obtained in this study to the two previously mentioned. The papers are generally in agreement, specifically Dere and LaBonte, citing lengths ranging between $5$ - $33$ arcsec and similar widths, although Dere et al. find $3$ - $9$ arcsec and LaBonte $0.7$ - $6$.
+The question of velocities is also raised, values quoted as $20$ - $50$ kms${^{-1}}$ from Dere et al. and $\leq60$ kms${^{-1}}$ from LaBonte.
+Although these values should possibly be taken with a pinch of salt as the temporal resolution for Dere and Labonte was $20$ or $60$ s and $1$ min respectively, which will greatly influence the measurement of the velocity.
+However, Bohlin et al. find more extreme values for all of the studies.
+Some of the lengths they find, extend as far as $60$ arc sec, greater widths, $5$ - $15$ arcsec and velocities reaching $150$ kms${^{-1}}$, although, again the temporal resolution is poor, $\geq~180$ s.
+Although this early work had its limitations, the groundwork was laid here in order to be more precise when more sophisticated missions would be undertaken in the mid $90$'s with a focus on detail and less so on statistical properties.
+
+With the launch of SoHO in 1996, the community now had continuous viewing of the solar disk, meaning that consistent observations of macrospicules is now possible.
 <<<<<<< HEAD
-Macrospicules were first observed by \cite{Bohlin1975} using instruments based on the Skylab II misson.
+On of the first studies utilising the new instruments was undertaken by \cite{Pike1997} using the Coronal Diagnostic Spectrometer (CDS).
+In this case, the instrument scanned from north to south pole, using a mosaic of rastered images, using the He I $58.433$ nm, O V $62.973$ nm and Mg IX $36.806$ lines, corresponding to temperatures of $20,000$, $250,000$ and $1,000,000$ K.
 
 
-
-
-\subsection{Numerical Simulations}
 =======
-Macrospicules were first reported by \cite{Bohlin1975}, utilising the SkyLab II mission.
+One of the first studies utilising the new instruments was undertaken by \cite{Pike1997}
 
 
->>>>>>> 41bfdedd07d46a6e2005594401f73756c1d5ceb9
+Building on the work done by Pike, \cite{Parenti2002} undertook an extremely detailed case study of a macrospicule observed in CDS.
+>>>>>>> b2ef71191ded5c8def5d0f259bf8e04d085d5e15
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 

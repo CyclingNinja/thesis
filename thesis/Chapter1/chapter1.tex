@@ -7,6 +7,7 @@
 \newcommand{\td}[2]{\frac{d #1}{d #2 }}
 \newcommand{\mb}[1]{\mathbf{#1}}
 \newcommand{\divv}[1]{\bigtriangledown{#1}}
+\newcommand{\del}{\bigtriangledown}
 
 \label{ch:Intro}
 \chapter{Introduction}  %Title of the First Chapter
@@ -243,7 +244,7 @@ This was clearly the photosphere, due to its emissions being in the visible spec
 The most prominent feature of the photosphere are the Sunspots appearing at the surface, therefore, the early telescopes allowed significant study of this feature.
 
 \begin{figure}
-	\includegraphics{'Figs/galileo_sunspot.gif'}
+	\includegraphics{Figs/galileo_sunspot.gif}
 	\label{fig:gali_sp}
 \end{figure}
 
@@ -479,7 +480,7 @@ At lower latitutes, the solar wind was found to be of the order $200$-$400$ kms$
 At the time of this first orbit, the Sun was at a solar minimum, consequently, there were clear and distinct coronal holes and quiet Sun, matching with the fast and slow wind respectively.
 
 \begin{figure}
-	\includegraphics{Figs/ulysses_solar_wind.jpg}
+	\includegraphics{Figs/ulysses\_solar\_wind.jpg}
 	\caption{\cite{McComas2003}}
 	\label{fig:ulysses_sw}
 \end{figure}
@@ -510,7 +511,7 @@ The EUV Imaging Spectrometer (EIS) is designed to examine the chromospheric atmo
 It is extremely flexible with 4 slit or slot positions, $1"$ pixel slit, $2"$ pixel slit, $40"$ pixel slot and $266"$ and two different modes spectroscopy.
 
 The spectroscopy mode 
- 
+% finish of discussion on EIS 
 
 
 Possibly the most adventurous mission to probe the solar environment is the STEREO mission (Solar TErrestrial RElations Observatory, quoted this way round due to the clear bacronym) presented in \cite{Kaiser2008}.
@@ -605,7 +606,7 @@ Gauss' law for magnetism is also known as the Solenoidal condition and states th
 The second `half' of the magnetohydrodynamic equations are the laws for gas dynamics, expressed in terms of the partial derivatives;
 
 \begin{equation}
-	\pd{\rho}{t} + \divv{} \cdot (\rho\mb{v}) = 0 & & \textnormal{Equation of mass conservation}
+	\pd{\rho}{t} + \del \cdot (\rho\mb{v}) = 0 & & \textnormal{Equation of mass conservation}
 	
 	\pd{p}{t} + \mb{v\cdot}\divv{p} + \gamma p\divv{\cdot}\mb{v} = 0 & & \textnormal{Conservation of entropy}
 \end{equation}
@@ -640,9 +641,226 @@ As we are currently assuming that we have a totally ionised fluid, therefore the
 and therefore, $\mb{E}'$ in a co-moving frame will vanish.
 The last assumption we need to make, is that the velocity of the plasma is not relativistic $v \ll c$.
 
+This allows us to make some assertions as to the scale of the terms in Amp{\`e}re's equation, the length scales of $l_0$ and $t_0$ are shown such that $v = l_0/t_0$.
+This means we can negelect the displacement current from Amp{\`e}re's and define the current $\mb{j}$ purely in terms of \mb{B}:
+
+\begin{equation}
+	\mb{j} = \frac{1}{\mu_0}\del \times \mb{B}
+\end{equation}
+
+As a result of which, we can neglect the effects of space charge on the plasma.
+Additionally, the non-relativistic assumption means that we can also make a simplification to the acceleration of a fluid element equation as the electrostatic acceleration is small, as well, Gauss' can be dropped through lack of need.
+As such the electric field can expressed merely in terms of the velcoity and magneticfield vectors:
+
+\begin{equation}
+	\mb{E} = -\mb{v} \times \mb{B}
+\end{equation}
+
+But applying the above assumptions, and substituteing in for $\mb{E}$ and $\mb{j}$, we obtain the basic equations of ideal magnetohydrodynamics (MHD).
+
+\begin{equation}
+	\pd{\rho}{t} + \del\cdot(\rho\mb{v}) = 0
+	
+	\rho(\pd{\mb{v}}{t} + \mb{v}\cdot\divv{\mb{v}}) + \divv{p} - \rho\mb{g} - \frac{1}{\mu_0}(\del \times \mb{B}) \times \mb{B} = 0
+	
+	\pd{p}{t} + \mb{v}\cdot\divv{p} + \gammap\del\cdot\mb{v} = 0
+	
+	\pd{\mb{B}}{t} - \del \times (\mb{v} \times \mb{B}) = 0
+	
+	\del\cdot\mb{B}
+\end{equation}
+
+These equations are therefore applicable to the case where; 1) the plasma is strongly collisional, such that the time scale of the collision between the particles is much smaller that the characteristic time scales of the entire system.
+2) The resistivity of these collisions is small \emph{i.e.} the magnetic diffusion time scale much be longer than any other process occurring within the plasma.
+3) The time scale must be greater than that of the kinetic processes occuring within the plasma, such as ion gyration, Landau damping and length scales longer than the ion skin depth and Larmor radius.
+
+By making choices with respect to the units for length, mass and time, the MHD equations can be made dimensionless.
+A typical length scale can be chosen such as $l_0$ to be something sensible and $\rho_0$ and $B_0$ are chosen from a representative point in the plasma and the time unit can be inffered from a basic speed of the plasma, \emph{e.g.} the sound speed or Alf{\`e}n speed.
+
+\begin{equation}
+	v_0 \equiv v_{A,0} \equiv \frac{B_0}{\sqrt{\mu_0\rho_0}} \textnormal{which leads to} t_0 \equiv \frac{l_0}{v_0} 
+\end{equation}
+
+The density, velocity, magnetic field etc. are then used to define new dimensionless parameters and substituted back into the MHD equations, which remain unchanged but npow a have an operator for these variables instead of the variable themselves.
+the crucial outcome here is that equations are not dependent on the size of the plasma evaluated, the magnetic field strength, the density or the time scale.
+After scaling $l_0$, $B_0$ and $t_0$, the pressure term becomes of vital importance and is linked to the ratio between the kinetic pressure of the plasma and magnetic pressure.
+This ratio is commonly referred to as the plasma beta, and is defined:
+
+\begin{equation}
+	\beta \equiv \frac{2\mu_0p_0}{B_0^2}
+\end{equation} 
+
+This is and extremely useful flag when considering the behaviour of a plasma at a less precise level, as it indicates the forces dominant in a region.
+If $\beta \gg 1$ the pressure terms are dominant, meaning that the kinetic motions of the plasma will determine its overall behaviour, such as in the photosphere and below.
+Whereas, in the chromosphere and upwards, the balance more favours the magnetic field and the gas movement is determined by magnetic effects.
+Which leads us to another important result of ideal MHD, the frozen in condition.
+
+We must first discuss the magnetic Reynolds number, which gives a dimensionless value to the ratio between the induction and diffusion taking place within the plasma.
+It can be defined, therefore, as a ratio of the two.
+
+\begin{equation}
+	\Re_m = z\frac{VB/L}{\lambda B/L^2} = \frac{LV}{\lambda} 
+\end{equation}
+
+Where $B$ is the typical magnetic field, $V$ is the typical velocity, $L$ is the typical length and $\lambda = c^2/{4\pi\sigma}$ is the magnetic diffusivity \citep{Choudhuri1998}.
+We can conclude that the Reynolds number depends significantly on the overall size of the plasma, and is therefore almost always large for astrophysical plasmas.
+We can now apply this to the induction equation in the context of said large scale astrophysical plasma.
+Here he will examine the ideal MHD limit, which states that the plasma will be infinitely conductive, we can therefore write;
+
+\begin{equation}
+	\frac{\mb{B}}{t} = \del \times (\mb{v} \times \mb{B})
+\end{equation}
+
+Then using the identity $\frac{\mb{Q}}{t} = \del \times (\mb{v} \times \mb{Q})$, which is applicable to the above equation and results in;
+
+\begin{equation}
+	\pd{}{t} \int_(S)}^{} \mb{B}.d\mb{S}
+\end{equation}
+
+We discuss this equation in terms of the Lagrangian operator, as we wish to follow integrated surface, as applied to the plasma, as a fluid element and examine the variations in time.
+We can therefore deduce that the plasma will move with the magnetic field lines, this is known as Alfv{\`e}ns theorem of flux freezing.
+Take a large scale plasma such as those that originates in solar active regions, when a reconnection event occurs, magnetic fields can become detached from the solar atmosphere and be ejected into the solar wind.
+The frozen in condition implies that the plasma which was on those field lines, will be carried with it.
+Alternatively, in a situation where the gas pressure is dominant low in the atmosphere, a gas perturbation will cause the magnetic field to wave as well.
+ 
+
 
 
 \subsection{Reconnection}
+
+The above processes are considered to be ideal cases for energy emission, for example, the dissipation of MHD waves is an ideal solution to the problem, converting magnetic energy into kinetic energy.
+The process is referred to as ideal, as it fulfils the conditions we highlighted above, that the plasma obeys Alfv{\`e}ns theorem of frozen in flux, and that 3 premises of effects of a kinetic scale are obeyed.
+However, in the reconnection process the frozen in condition is violated, as two plasma blobs which were connected by a field line, will now no longer be.
+It also, impinges on the assumption that the magnetic diffusion occurs on time scales significantly greater than the dynamic phenomena within the plasma, as reconnection takes place on much shorter time scales.
+This means that the reconnection mechanism itself is non-ideal.
+In such processes, the magnetic energy is converted to kinetic energy and heat, more on which later.
+
+Reconnection was first proposed as a mechanism for magnetic X-type null points, such as those found in solar flares as demonstrated in  \cite{Giovanelli1946}.
+The null point is considered to be the point at which the magnetic field vector has a resultant vector equal to zero, something which regularly occurs when two magnetic fields are interacting, for example flux emergence.
+Subsequently followed up by \cite{Dungey1953} demonstrating that collapse of the magnetic field near an X-type null point would lead to the formation of a current sheet.
+He also proposes the concept of breaking the magnetic field lines.
+He demonstrated that small perturbations in the gas pressure near to the null point, would cause and explosive formation of the current sheet, which then enhances the plasma motions causing a feedback type effect.
+A current sheet if defined as the region in which the magnetic field changes either direction or magnitude, resulting in a thin layer in which the current may be carried.
+Clearly, in order for a current to be carried, the medium in which this magnetic field change occurs must be a conductor.
+Fortunately, plasma is a conductor so we can carry on. 
+
+The first MHD model to describe a reconnection event, was the Sweet-Parker model \citep{Sweet1958, Parker1957}, where the phrase, 'reconnection of field lines' was first utilised.
+Although, the model was flawed, the reconnection it predicted was insufficiently quick to describe a solar flare and subsequent massive release of energy.
+In the Sweet-Parker model, the current sheet that forms as a result of the interacting magnetic fields is on the global scale of the system, whereas \cite{Petschek1964}, utilised a current sheet many orders of magnitude smaller than that of Sweet-Parker.
+Because of this much smaller current sheet, the reconnection rate vastly increased and was able to predict the energy generation expected in a solar flare. 
+Petschek's model went on to become known as fast reconnection, with the Sweet-Parker referred to as slow.
+
+In order for us to build a model for a reconnective event, we will need a few components, the magnetic field equations that describe the null point and a description of the current flowing over the change in magnetic field.
+Let us begin our discussion with the null points, we can define the magnetic field in terms of it behaviour in X and Y by Taylor series expansion;
+
+\begin{equation}
+	B_X = bX + 2cY
+	B_Y = -2a + dY
+\end{equation}
+
+where $a, b, c$ and $d$ are constants.
+Gauss' law of magnetism, $\del \cdot \mb{B}$, implies that $d = -b$.
+The magnetic field can then be defined with respect to the magnetic flux function, $\Phi$,
+
+\begin{equation}
+	B_X = \pd{\Phi}{Y'}, B_Y = \pd{\Phi}{X'}
+\end{equation}  
+
+and by applying this to the original Taylor expansion and integrating (choosing a constant of integration that allows $\Phi$ to disappear at the origin), we obtain:
+
+\begin{equation}
+	\Phi = aX^2 + bXY + cY^2
+\end{equation}
+
+We cam simplify vie the means of a rotation of the $xy$-axis, defining $X$ and $Y$ such that $X = xcos\theta - y sin\theta$ and $ Y = y sin\theta + y cos\theta$.
+Substituting into the equation for the magnetic flux, and then choosing an angle for $\theta$ to remove the excess constants, $tan(2\theta) = \frac{b}{a - c}$, the $xy$ terms vanished and reveals a flux function of:
+
+\begin{equation}
+	\Phi = \frac{B_0}{2L_0}(y^2 - \bar{\alpha}^2x^2)
+\end{equation}
+
+where $L_0$ is the scale over which the magnetic field is varying and: 
+
+\begin{equation}
+	\frac{B_0}{L_0} = (a + c) - \sqrt{b^2 + (a - c)^2}
+	
+	\bar{\alpha}^2 = \frac{\sqrt{b^2 + (a - c)^2} + (a +_c)}{\sqrt{b^2 + (a - c)^2} - (a +_c)}
+\end{equation}
+
+Which then gives the following field components where $B_x$ vanishes on the $x$-axis and $B_y$ vanishes on the $y$-axis and field lines are the curves in the case where $Phi$ is constant:
+
+\begin{equation}
+	B_x = B_0\frac{y}{L_0}, B_y = B_0\bar{\alpha}^2\frac{x}{L_0}
+\end{equation}
+
+So, when $\bar{\alpha}^2$ is less than $0$ the magnetic flux function traces out elliptical field lines, and is sensibly named a O-type neutral point.
+In the situation where $\bar{\alpha}^2 > 0$, the field lines are hyperbolic and we have an X-type neutral point, of the type applied to the solar flare problem by the authors above, with the limiting field lines being $y = \bar{\alpha}x$.
+These lines go through the origin, and are known as separatrices, and form the characteristic 'X-type' null point. 
+The $\bar{\alpha}$ value, which defines the angle between said separatrices, is related to the current density.
+Which we can calculate by taking the curl of the magnetic field
+
+\begin{equation}
+	\mb{j} = -\frac{B_0}{\mu_0L_0}(1 - \bar{\alpha}^2)\hat{\mb{z}}
+\end{equation}
+
+Where $\hat{\mb{z}}$ points out of the $xy$ plane.
+Now we have reached the point where the current density can be discussed with respect to the null point.
+
+The current sheet typically appears at neutral points where there is a tangential discontinuity, in which case the the magnetic field is tangential and the plasma flow across the current sheet is zero.
+When the system is in equilibrium, the plasma either side of the sheet, and in the sheet itself, are in pressure balance.
+Usually, the total magnetic field on the current sheet will be zero, and we assume that the ambient pressures vanish, we can say that the magnetic pressure either side of the sheet is equal to the gas pressure on it:
+
+\begin{equation}
+	\frac{B_2^2}{2\mu} = p_c = \frac{B_1^2}{2\mu}
+\end{equation}
+
+Where $B_1$ and $B_2$ are the magnetic fields either side of the current sheet and $p_c$ is the gas pressure at the current sheet.
+It follows that the magnetic field undergoes an exact reversal in the magnetic field.
+If it is the case that the magnetic field within the sheet is parallel to the $y$ axis and varies in $x$, is defined $\mb{B} = B_y(x)\hat{\mb{y}}$, subsequently applying Amp{`e}re's law can give us the current density in $z$:
+
+\begin{equation}
+	j_z = \frac{1}{\mu}\frac{dB_y}{dx}
+\end{equation}
+
+This means that when we get a steep gradient in $B_y$ with respect to $x$, produces a strong current along the current sheet, perpendicular to the field lines.
+This is the current sheet that lies at the heart of reconnection models, however the tangential discontinuity is susceptible to instabilities.
+Now that we have the null point between the two magnetic fields, the current sheet that forms as a result, we have the environment necessary to begin the reconnection of magnetic field lines.
+
+Let us consider the induction equation again defining how the magnetic field changes with respect to the magnetic field,
+
+\begin{equation}
+	\pd{\mb{B}}{t} = \del \times (\mb{v} \times \mb{B}) + \eta\del^2\mb{B}
+\end{equation} 
+
+with the first term representing the advection and the second, the diffusivity of the magnetic field.
+The ratio of these two terms can be represented by the magnetic Reynolds number, $\Re_m = {den}LV/\lambda$, and of course, this value will dictate the evolution of the of the induction.
+The diffusion term dominates in the case where $\Re_m \ll 1$, however me must be aware that this condition will not apply on large scales in the solar atmosphere, altough may be true on very small scales.
+The magnetic field an be defined in terms of a convection equation, $\pd{B}{t} = \eta\frac{\partial^2B}{\partial x^2}$, describing the way the field diffuses away.
+We are assuming a thin current sheet in this case, with the magnetic field diffusing at a rate of $\eta/l$, where $l$ is the width of the sheet amd changes with $(\eta t)^{1/2}$, increasing with time.
+Whereby the magnetic field at a fixed position decreases, leading to the conclusion that it has been annihilated.
+
+The second mechanism for the changing of the magnetic field lines is advection, under the condition $\Re_m \gg 1$, and we drop the diffusive term from the induction equation.
+On these scales the frozen in condition applies, and the plasma is free to move up and down the magnetic field lines.
+In this scenario we define the velocity field lines to trace out a hydrodynamic stagnation point flow.
+This causes the field lines to flow inwards, and accumulate at $x = 0$ at which point the magnetic field increases significantly.
+We also find that when the induction equation is considered in $y$, there is also a build up of field at $x = 0$, growing exponentially with time.
+
+Examining the current sheet, and the accompanying increase in magnetic field stengths leads to a problem; on small scales of $X$, the diffusivity terms take over.
+Therefore there must exist a balance at which the rate of plasma transporting magnetic field in, must be balanced by the rate of diffusion away from $x = 0$, producing a steady state.
+Consequently, at $x = 0$ we have the two magnetic fields meeting and cancelling, and in the case where resistivity is small, the magnetic gradient will be large, causing increasing amounts of magnetic energy to be converted to kinetic.
+While the magnetic field lines will disappear, the plasma which was formerly hosted on them will not, the result of this is that it will flow out of the system in $z$.
+
+One of the first papers to demonstrate this in action at the solar surface was \cite{Innes1997}.
+The authors use the SUMER instrument to examine the Si IV $139.3$ nm in two $90$ minute observing windows with rastering consisting of $5$ s exposures.
+The authors capture a $4$ minute explosive event, $90$ s after the onset of the feature the doppler shifts maximise, and the events has doubled in size in the east-west direction.
+They find that the asymmetries in the emission line, mirror those expected of a bidirectional the flow axis of which is away from the line of sight and the centre of the two flows is paired with the origin of the jet.
+The velocity is calculated from the doppler shift, and given as $100$ kms$^{-1}$.
+The apparent length of the jet $0.4$ Mm, giving a true jet length of $1.2$-$2.4$ Mm, therefore the jet stretches across the chromosphere and possibly encroached on the corona.
+This length falls in the lower end for macrospicules, however its lifetime is $3$ minutes, which is a little low for a macrospicule.
+
+
+%Moore2010 reconnetion, look in biblio
+
 
 \section{Jet and Macrospicules}
 
@@ -764,29 +982,74 @@ One of the most comprehensive sets of jet observations is undertaken by \cite{Ma
 Utilising, SUMER on SoHO, EIS and XRT on Hinode and the EUVI instruments on the STEREO A and B.
 The authors find that the jet can be heated my microflares at the moment of reconnection, rising the temperature up to $12$ MK.
 This was obtained using a DEM technique integrating the emission from a range of spectral lines to estimate the temperature, and the density was approximated at $4 \times 10^9$ cm$^{-3}$ using a similar technique.
-http://www.aanda.org/articles/aa/pdf/2011/02/aa15269-10.pdf
+The feature was found during a period of observing brightenings in the quiet Sun and coronal holes, where the subject appeared as a jet-like feature emanating from a pre-existing coronal bright point.
+The authors demonstrate an unequivocal shaping of the origin akin to that of the Shibata standard model.
+The event began with an increase in intensity at the original bright point, extending to a $3$ - $4$ arcsec$^2$ area, which the authors identify as a micro-flare.
+As a result od difference imaging, the authors then conclude that there were several reconnection events during this brightening phase.
+The expanding plasma in the BP is shown to have a multi-thermal structure, with the first blue shifting material spotted in hotter emission lines a full minute before the cooler material appears.
+These reconnection events continue to deposit energy into the jet-like feature, and upon each delivery of energy, sustains an outflow after the initialisation of it with the first reconnection event.
+The slowing down of the outflow also coincides with visible down flows in the underlying BP.
+During these accelerations, the plasma was shown to have a maximum velocity of $310$ kms$^{-1}$, while no red shifted down flow was observed at the same time as the energy deposits which would suggest that this is not a case of a bidirectional jet.
+The jet is seen to last for $18$ minutes, however the first energy deposit occured $27$ minutes before the spire of the jet was visible.
+The authors note that their observations fit particualrly well with the model presented by \cite{Moreno2008}, in which a current sheet is shown to form at the boundaries of the jet.
 
 
 % This section may need to go else where
-What becomes clear is that these large scale jets can only be trigger by explosive reconnection events, therefore understanding this mechanism is essential to out understanding of solar jets.
+What becomes clear is that these large scale jets can only be triggered by explosive reconnection events, therefore understanding this mechanism is essential to out understanding of solar jets.
 \cite{Archontis2005} demonstrate the mechanism governing the rules of this interaction.
+Essential to any useful numerical simulation is a reasonable set of initial conditions which succinctly defines the environment of the feature.
+In the case of the authors define a background stratification of the gases \emph{i.e.} non-magnetic; a horizontal magnetic tube which is inherently twisted and buoyant; a uniform horizontal magnetic field in the corona and transition region.
+The exact parameters of the background stratification and magnetic tube are defined in \cite{Fan2001}.
 
+The 'box' which contains the simulation, incorporates the top of the solar interior, to a depth of $3.74$ Mm from the photosphere, the bottom of which is set as 0 and extends to $1.7$ Mm, represented as an isothermal zone.
+Over the next $3.7$ Mm of height, the temperature rises steeply mimicking the effects of the transitions region.
+Lastly there is a second isothermal region which extends to a distance of $11.9$ Mm from the photosphere.
 
+The horizontal magnetic tube, which will eventuality emerge through the atmosphere, field is a Gaussian distribution, symmetrical about the longitude and the field lines are helically twisted in a uniform fashion around the central axis.
+The issue with this set-up is that in the case of kink-unstable cases, the model will supress onset of internal current sheets. 
+The stratification of the background gas is applied to the tube by applying a perturbation in the gas pressure, such that the stress tensor has zero divergence and vanished in the case $r/R \gg 1$.
 
+The gas density was within the tube is not however symmetrical about the 'latitudinal' direction.
+In order to illicit a rising response from the magnetic tube, the centre region is given a density $1/\beta$ lower than the region around it as a result of the density perturbations.
+The causes the tube to undertake a transformation into the characteristic $\Omega$-loop shape which emerges into the atmosphere.
+Lastly the coronal magnetic field is straight horizontal and space filling, it is highest in the corona and reduces through the transition region and photosphere.
 
+The simulations show that reconnection is immediate when the two flux objects come into contact, with the current sheet forming between them aligned with the direction of the axis of the flux tube.
+This is greatly accentuated by the horizontal field above, however, once the flux tube magnetic field and the coronal magnetic field are equal, the reconnection lessens to a smaller constant volume. 
+At the current sheet region, the magnetic field lines of the flux tube is anti parallel to those of the coronal magnetic.
+As the outer regions of the flux tube are cancelled away, however, the field in the tube rotates away from anti parallel as is the nature of a twisted flux tubes.
+Hence the boundary behaviour changed from the current sheet to a tangential discontinuity and finally to a rotational one.
 
+The authors present evidence of continuous reconnection at the boundary, the work demonstrates that the first line undergoing reconnection, instead of passing through the boundary of the other end of the flux tube, it passes directly into the coronal region.
+The end point of the field line is then travelling at a new velocity, different to that of the local plasma at the new boundary.
+The implication of this is that field lines at he boundary between the two regions, undergoes continuous reconnection, however, once it has passed though integrates into the coronal plasma.
+The helically twisted nature of the flux tube, allows for multiple reconnection instances.
+Consider looking at the end of the flux rope as a cross sectional area, when the reconnection occurs, a magnetic field line reconnects with the magnetic field in the corona, and is draw straight into the corona while the rest of the line remains attached to the flux tube instead of the entire line detaching.
+As a result of this gradual detachment and the twist, the end of the field line traces out a circular motion in our cross section; first reaching into the coronal then being draw around and through the transition region, underneath the tube, back through the atmosphere and into the corona before lastly returning to the solar interior.
 
+Importantly, high speed jets are observed at the reconnection site, the plasma blasts through the current sheet before interacting with the higher pressure gas above it, therefore guiding it along the inclined magnetic field lines.
+In this case, the jets are observed as curves, and as such, disappear when observed on a horizontal plane.
+The authors then relate this th H$\alpha$ filaments and brightenings or jets in solt X-ray, the energy required to cause brightening is X-ray would be supplied by the interaction of these two flux systems, they also calculate a temperature increase to $10^7$ K.
 
+Recent studies have demonstrated the prevalence of smaller scale jets at the magnetic network boundaries.
+\cite{Tian02014}, and later built on by \cite{Nagrang2016}, highlighted these features using the most recent addition to the solar observational tools available to us.
+The network boundaries are regions where there is a great deal of magnetic complexity and strong field values, and almost certainly a large amount of reconnection will be apparent.
+These strong fluxes emminate from the boundaries of the granules, and therefore, convection cells.
+The evidence of this is apparent when imaging the transition region, the bright lanes approximately $20$ Mm in size, it is possible that these regions appear bright in the transition region due to the heating as a result of reconnective events. 
 
+The authors find explosive upflows in the direct images from IRIS with velocities of $80-250$ kms$^{-1}$ and using the superior resolution of IRIS idenify jet-like features developing from the bright networks.
+These jets are long and thin features,$4$-$15$ Mm in length and ~$0.3$ Mm in width, and demonstrate just upflows, no downflows a evident.
+These events are extremely shortlived, with lifetimes measured at $20$-$80$ seconds, however, there is recurrence observed with jets forming repeatedly in the same location, with time scales in the range $2$-$15$ mins.
 
-Jets
-Other than standard jet model Shibata
-Anenome Jets - Nishivuka
-A general discussion Archontis http://iopscience.iop.org/article/10.1086/497533/meta
-Stat study of network jets http://arxiv.org/abs/1604.06295
+Observations using the spectral lines leads them to the conclusion that the jet like features heat to temperatures of the order $10^5$ kms$^{-1}$, in this case the temperature of Si IV $139.377$ nm.
+This Si IV line also allows an analysis of the line broadening which could possibly be due to the field aligned jets, as is proposed in \cite{Archontis2005}.
+The jets are also shown to be an intermittent but effectively continuous source of mass, and therefore energy, into the solar wind.
+As such, the author propse these network jets as new mechanisms for generating the solar wind.
 
+Short secyion on sims
+Moreno-Insertis 2008
+Wilhelm 2000
 
-Chromospheric Jets
 
 
 
@@ -871,6 +1134,7 @@ With respect to the X-ray jet behaviour, the velocity is measured at $320 \pm 30
 The authors also highlight the regression of the material back to the limb causing an enhancement in He II, a phenomena they propose is caused by either heating in the upper part of the feature or a result of the density increase caused by the down flow of plasma.
 
 The helical motion of macrospicules is observed in multiple papers, \cite{Curdt2011} present observations of macrospicules in the transition region.
+<<<<<<< Updated upstream
 In this case the authors present two examples of 'explosive events', in one case the feature is on the disk and in the second is above the limb.
 The discussion at the heart of the paper is differentiating between RRE/RBE pairs and helical motion, due to the fact that they can be misinterpreted in the data. 
 In this case, the rotational velocity evident in the doppler images demonstrates symmetrical flow of the order $40$ kms${^{-1}}$ for both examples.
@@ -885,6 +1149,9 @@ The development of spectosopic analysis in the most recent generation of solar o
 
 
 
+=======
+In this case the feature is  
+>>>>>>> Stashed changes
 
 
 
