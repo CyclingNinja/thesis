@@ -1,312 +1,304 @@
 % !TeX root = ../thesis.tex
 %*****************************************************************************************
-%*********************************** Third Chapter ***************************************
+%*********************************** Second Chapter ***************************************
 %*****************************************************************************************
 
-\chapter{On the Statistic of Macrospicules \label{ch:3}}  %Title of the Second Chapter
 
-\section{Introduction}
-Macrospicules have been the subject of much investigation recently, \emph{e.g.}, \citealt{Sterling2010}, \citealt{Madjarska2011}, \citealt{Murawski2011}. Interest in them goes back to the SKYLAB mission and observations of the chromosphere in Helium $30.4$ nm. Initial observations were taken by \citealt{Bohlin1975} using $30.4$ nm spectroheliographs to examine the chromosphere at the corresponding line formation temperature $8 \times 10^4$ K. The basic physical properties of macrospicules were established as: lengths of $5$-$60\ \textrm{arcsec}$, widths between $5$-$30\ \textrm{arcsec}$ and a lifetime range of $5$-$40\ \textrm{min}$. \citealt{Bohlin1975} named these EUV macrospicules. \citealt{LaBonte79} built on this previous work, investigating macrospicules using H$\alpha$ and D$_3$ lines. \citealt{Dere89} moved forward examining these features utilising the Spacelab $2$ mission. Their investigation found a similar range of values to those found in \citealt{Bohlin1975}, but some of the more extreme examples of the length and lifetime were not found in this latter sample.
 
-With the launch of the Solar Heliospheric Observatory (SoHO) in $1996$, higher resolution and constant view of the Sun were made available allowing studies to be conducted in a great deal more detail. \citealt{Pike_Harrison1997} thereby began more thorough examinations through the various spectral lines available with the Coronal Diagnostic Spectrometer (CDS) on-board SoHO in order to examine macrospicules in multiple wavelengths. They also present the concept of a multi-thermal structure; macrospicules with a cool core and a hot sheath. This work has been expanded by \citealt{Parenti2002}. 
+\label{ch:Chap2}
+\chapter{Jets and Macrospicules}
 
-Macrospicules have also been proposed as a possible source for solar wind acceleration by \citealt{Pike_Mason1998}. With the increasing number of instruments observing the Sun perennially, with improving resolution and an array of observational lines, our understanding of the spectroscopic structure of macrospicules has begun to advance greatly. For an example of spectroscopic examination of a macrospicule see \citealt{Scullion2010} and for some reviews on the topic of localised jets see \cite{Sterling2000} and \cite{Zaqara_Erdelyi2009}.
+The appearance of thin, explosive features with a relatively short lifespan has always been a part of solar physics.
+Spicules were first observed in 1877 by a Vatican observer, Angelo Secchi.
+This was aided by their sheer ubiquity, they were distinctly visible at the solar limb nearly all the time.
+However the larger-scale, more infrequent jets are more difficult to observe, particularly with early techniques.
 
-The work presented in this article comes at an opportune time. With the new generation of space telescopes boasting higher resolution and cadence, it is now possible to re-examine the properties of macrospicules and improve the picture yielded in previous studies \emph{e.g.} \citealt{Bohlin1975} and \citealt{Dere89}. Furthermore, macrospicules are chromospheric objects which project upwards into the transition region, hence understanding macrospicules could enhance our knowledge of the region from the chromosphere up into the corona. We also need to confirm the features' place amongst the plethora of solar ejecta; jets, surges, rapid blue, or red, extensions, ordinary spicules to name a few \citep{Tsiropoula2012}.
+\section{The ejecta zoo}
 
-The focus of this paper is an observational discussion of what a macrospicule is; we present a set of characteristic spatial properties for the population of macrospicules investigated as well as the evolution of the structures, and also an inquiry into whether the properties of the macrospicules have any proxies to the solar cycle.
 
-In order to analyse any potential relations over a solar cycle the sample of macrospicules will be taken over a time span of many years. Hence, we will use the $30.4\ \textrm{nm}$ bandpass from the Atmospheric Imaging Assembly (AIA) camera on-board the Solar Dynamics Observatory (SDO) \citep{AIAspec}\, which has been in place and operating since June $2010$. As this was the epoch of the last solar minimum, we will take the sample through from this date until the end of $2012$. This range will capture the ramp from solar minimum to the period which is estimated to be close to the solar maximum. In order to gain a significant sample size we will take two samples of two hours for each month during this period.
+\subsection{Spicules}
+Jets and jet-like features are observed throughout the solar atmosphere, and as such a review of the topic is in order.
+As has already been discussed, spicules are the smallest jets formed in the solar atmosphere. 
+Most easily observed at the limb, they are long thin structures appearing brightly at the solar limb \citep{Beckers1972}.
+Spicules are found in the chromosphere, regularly observed in the H$\alpha$, He II $30.4$ nm, Ca II and Si IV.
+Work by \cite{DePontieu} divided spicules into two populations, Type-1 and Type-2, with Type-1 being long lived while Type-2 have distinctly shorter lifetimes but are significantly more explosive and grow to much higher lengths.
+Type-1 spicules have an uprising speed of approximately $20$ kms$^{-1}$ and extend to $1$ Mm in height, whereas the Type-2 spicules have been shown to extend approximately $5$ Mm into the atmosphere and last for an average of $10$ minutes. % How long do Type-1 spicules last?
+The most comprehensive difference between the two is in the overall evolution of the feature.
+Type-1 spicules are observed to have a parabolic evolution, \emph{i.e.} their tip traces out a ballistic arc when plotted against time.
+Conversely, Type-2 spicules are observed to dissipate or vanish as they evolve, and are primarily observed in the quiet Sun and coronal holes.
+Type-1 develop in active regions, and as such Type-2 are far more numerous when recorded in a study such as \cite{Pereira2012}.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.3]{Figs/polar_demo.pdf}
-	\caption{\small The location of the samples of macrospicules displayed at the limb, indicated by the crosses.}
-	\label{fig:polar-sample}
+\begin{figure}
+	\includegaphics{'Figs/spicules_at_limb.jpg'}
+	\caption{http://www.nasa.gov/sites/default/files/images/751917main_highres4_full.jpg Spicules as observed by Hinode}
 \end{figure}
 
-
-In section 2 we present the relevant techniques used to take the measurements and the instrument utilised. Section 3 presents the results of the study and discusses the consequences, specifically, with respect to the general spatial properties, followed by finding patterns over the sample time period and, then, a study of their evolution. Section 4 contains our conclusions.   
-
-
-\section{Observations}    
-The AIA instrument on-board SDO delivers $4096 \times 4096$ pixel images with $0.6$ arcsec/pixel spatial resolution and a $12\ \textrm{s}$ cadence \citep{AIAspec}. Raw images were processed into a flattened-out limb such that the horizontal axis is the azimuthal angle and vertical is radius from the centre of the field of view. This allows a better measurement of the spatial properties of macrospicules.
-
-
-The macrospicules were selected based on satisfying the following criteria: 
-\begin{itemize}
-	\item{ The evolution of the macrospicule is visible, \emph{i.e.} the extension from the chromospheric surface to its maximum height and consequent regression back to the limb. This excludes examples which appear to disintegrate at some point during its evolution or the retraction of which is not visible.}
-	\item{The footpoint of the macrospicule was exactly on the limb, rather than inside of or behind the limb. Avoiding the macrospicules which were too far inside the limb was aided by a limb indicating line, drawn based on information from the fits header files. Those events visibly crossing that line were not measured. It was harder to determine whether the macrospicules were behind the limb, but we made our best effort to ensure that the measured macrospicules were in the plane of sky, based on our inspection of the $30.4$ nm movies.}
-	\item{The objects were no longer than $200\ \textrm{arcsec}$; there are values for maximum length quoted in \citealt{Bohlin1975} and \citealt{Dere89}, however, we would like to test the length limits of macrospicules in order to more accurately define these phenomena. There is also a lower limit imposed upon us by the data itself. The so called 'forest of spicules' at the solar limb prevents us from measuring any features with a maximum length of less then $5z\ \textrm{Mm}$. We also call into question whether the features observed by those earlier authors were actually macrospicules, there is certianly significant overlap in the lower percentiles of the population of spicules and macrospicules.}
-\end{itemize}
-
-
-\begin{figure*}[t!]
-	\centering
-	\includegraphics[width=0.49\textwidth, height=0.24\textheight]{Figs/vel_hist.pdf}
-	\includegraphics[width=0.49\textwidth, height=0.24\textheight]{Figs/len_hist.pdf}\\
-	
-	\includegraphics[width=0.49\textwidth, height=0.24\textheight]{Figs/width_hist.pdf}
-	\includegraphics[width=0.49\textwidth, height=0.24\textheight]{Figs/lt_hist.pdf}	
-	\caption{\small Histograms of properties of macrospicules. In each bin counts from the 3 solar regions are displayed separatley. Blue indicates coronal hole macrospicules, green represents coronal hole boundary macrospicules and red are occurrences in the quiet Sun. a) top left. Histogram detailing the values of maximum velocity over the sample period. General grouping around the mean for all regions, $109.7\ \textrm{km/s}$, and an absence of clear distributions is evident, particularly in the quiet Sun, top left. b) top right. Detailing the maximum lengths, separate behaviour is found for all regions, quiet Sun displaying a distinctly lower peak, top right. c) bottom left. Maximum width of the macrospicules, irregular distibutions are clear with very little difference between the regions, bottom left. d) The lifetimes again show little difference in range, however macrospicules at the coronal hole boundary have a slightly higher mean, bottom right.}
-	\label{fig:basic-prop}
-\end{figure*}
-
-
-Each $30.4\ \textrm{nm}$ image was analysed separately and the length of the macrospicule in question is measured, defined here as the distance between the foot and tip of the macrospicule. We then took the mid point of the line between the foot and tip, and consequently used the mid point as a reference point for measuring the width. We used the bottom of the macrospicule brightening as $l_0$ and in situations where there was none, we used the lowest point at which plasma motion was initially observed. Using this method, we obtained information on the macrospicule with $12\ \textrm{s}$ cadence. Within the stated sample period we took $2$-hour samples on the $1$st and $15$th of each and every month.
-
-Having undertaken the study, the distribution of the locii of macrospicule events measured along the solar limb is displayed in Fig.~\ref{fig:polar-sample}. There are $101$ examples in this study. Note that there is some ambiguity in measuring spatial properties of features near the limb due to line-of-sight integration. However, without using data observing the macrospicules from multiple directions, the best approximation is that macrospicules are generated in the plane-of-sky, despite the potential uncertainties inherent in measuring at the limb.
-
-
-
-\section{Results and Discussions}
-Following the analysis of the macrospicules as described above, the properties and, therefore, statistics for the sample of macrospicules are found. Of the sample we find that $30.5\%$ of macrospicules occured in polar coronal holes, $20.0\%$ occurred at the coronal hole boundaries and $49.5\%$ were found in the quiet Sun. The coronal hole boundary is defined loosely as the region where the coronal hole and quiet Sun meet. It is evident in the $30.4\ \textrm{nm}$ images that the coronal hole is significantly dimmer than the quiet Sun. There are $10\ \textrm{Mm}$ where the transition between the two regions takes place. If a macrospicule is neither clearly in the quiet Sun or coronal hole in this region and within this region, it is defined as being in the coronal hole boundary.
-
-Macrospicules generated near complex magnetic regions were not measured, due to the possibility of these regions influencing the measurement or of falsely identifying a feature as a macrospicule. Since active regions qualify as regions of complex magnetic field, macrospicules forming in their proximity were excluded.
-
-
-\subsection{General Properties}
-%fixing all the references to figure
-We begin with constructing the histograms for the individual properties, \emph{i.e.}, distribution of velocities, lengths, widths and lifetimes. Examining these general properties, we will consider each property in terms of the magnetic environments.
-
-Beginning with the maximum velocities in Fig.~\ref{fig:basic-prop}a, note the almost uniform distribution of macrospicules found in the quiet Sun between $50$-$150\ \textrm{km/s}$ falling steeply after. The outlier in the $300$-$350\ \textrm{km/s}$ band is a value which may have errors. The respective range and mean values are, for the quiet Sun: $54.1$-$335.1\ \textrm{km/s}$ and $105.2\ \textrm{km/s}$, for coronal holes: $58.3$-$181.0\ \textrm{km/s}$ and $113.4\ \textrm{km/s}$, and for coronal hole boundaries: $66.8$-$236.0\ \textrm{km/s}$ and $114.5\ \textrm{km/s}$. These values are quoted with an error on each value of $\pm2.2\ \textrm{km/s}$.
-
-
-We observe similar maximum velocity mean values for coronal holes and coronal hole boundaries while the quiet Sun has a lower average maximum velocity. This could imply different generation processes for macrospicules in the coronal holes and at coronal hole boundaries, where reconnection is evident \citep{Patsourakos1999} and is a possible source for macrospicules (see \citealt{Heggland2009}). However, there is not enough evidence to conclude that macrospicules are produced differently in other magnectic environments. Within the coronal hole it has been proposed that a collection of smaller spicules forms a macrospicule \citep{Scullion2009}, which would explain similar mean maximum velocities.
-
-Where the maximum velocity occurs over the trajectory of the macrospicule is important, particularly for future modelling. We find that the maximum velocity of the macrospicule occurred within the first $19\%$ of the macrospicule's evolution in $68\%$ of cases.
-
-Fig.~\ref{fig:basic-prop}b shows the maximum lengths of all macrospicule instances. Investigation reveals ranges and means as follows, with errors of $\pm1.5\ \textrm{Mm}$; coronal hole lengths range of $17.3$-$69.8\ \textrm{Mm}$ with a mean $31.9\ \textrm{Mm}$, at coronal hole boundary the range is $16.1$-$60.2\ \textrm{Mm}$ with a mean $30.2\ \textrm{Mm}$ and for the quiet Sun the range is $14$-$45.3\ \textrm{Mm}$ with a mean of $25.4\ \textrm{Mm}$. 
-
-We observe similar means and ranges for the lengths of the coronal hole and coronal hole boundary populations. This is unsurprising due to the open field nature of both regions allowing extension up the field lines. Whereas, in the quiet Sun, the mean value is $18\%$ less than those observed in the coronal hole/boundary. We draw attention to the narrower range in the quiet Sun as well. These values could be the consequence of the more complex magnetic field above the feature not allowing as much growth. 
-
-From examining Fig.~\ref{fig:basic-prop}c, detailing the maximum width of each macrospicule, it is evident that there are no distinct peaks in any of the populations in the coronal hole/boundary regions. After investigating the means, very similar values are revealed, $7.2$, $7.9$ and $7.8$ Mm for coronal holes, coronal hole boundaries and quiet Sun, respectively. The mean value for the quiet Sun coincides with the peak, but again, has no mathematically definable distribution. Of interest is the ratio between the width and length of macrospicules, particularly useful in reference to modelling. Values found are; for coronal holes, $0.24$, for coronal hole boundaries, $0.26$ and for quiet Sun $0.32$, demonstrating that the width is small compared to the length of the macrospicule. Finally, it is evident that macrospicules in the coronal hole/boundary regions have a lower ratio value than instances in the quiet Sun regions.
-
-The lifetimes (Fig.~\ref{fig:basic-prop}d) have a similar lack of difference between the populations seen in the width distribution. Ranges and means are as follows; for coronal hole $7.8$-$28.6\ \textrm{min}$ and mean $13.4\ \textrm{min}$, for coronal hole boundary $9.8$-$22.0\ \textrm{min}$ and mean $14.4\ \textrm{min}$, and for quiet Sun $5.6$-$30.6\ \textrm{min}$ and mean $13.6\ \textrm{min}$. The values obtained show similar ranges for coronal hole and quiet Sun instances but a smaller range for macrospicules at the boundary. However we suspect that these are insignificant as the error in lifetime is $\pm1.1\ \textrm{min}$, implying that the means are similar for all three magnetic environments.
-
-These values, found during the present analysis, are in-between the sets of values put forward by \citealt{Bohlin1975} and \citealt{Dere89}.
-
-\subsection{Inclination} 
-From previous studies it has been noted that macrospicules have inherent inclination. \citealt{Bohlin1975} noted that the further from the pole of the Sun the greater the inclination of the macrospicule. It is worth noting here that they did not in fact consider any macrospicules outside of the coronal holes. 
-
-We plotted the macrospicules according to latitude and magnetic environment, Fig.~\ref{fig:tilt-lat}. This graph shows the latitudes of each macrospicule instance against the degree of inclination; there are clear indicators where the coronal holes are. What is noticeable at this point is the fact that lower inclinations are associated with the ordinary coronal hole features but that macrospicules occurring at the coronal hole boundary have a greater inclination, with no events which have a value lower than $15^{\circ}$. Quiet Sun events have an almost uniform distribution even appearing to occur in a coronal hole, but this is an artefact of the size of the coronal hole changing with the solar cycle and becoming very small as the Sun nears the solar maximum. 
-
-
-\begin{figure}[t!]
-	\centering
-	\includegraphics[width=\columnwidth]{Figs/tilt_vs_lat.pdf}	
-	\caption{\small Macrospicule events are plotted in terms of latitude and inclination. Inclination is defined here as the angle away from the normal to the limb of the Sun. The latitude is defined from due east and traces out anticlockwise. The red circles here are instances in the coronal hole, blue squares are at coronal hole boundaries and the green triangles are quiet Sun.}
-	\label{fig:tilt-lat}
-\end{figure}
-
-
-\subsection{Relation between macrospicule properties}
-It is worth investigating whether the properties, discussed earlier, have any empirical relation to each other. Fig.~\ref{fig:prop-rel} shows the relationships between the maximum length, maximum velocity and lifetime of each macrospicule observation. Inspecting Fig.~\ref{fig:prop-rel}a, reveals a clear correlation between the maximum length and the maximum velocity, as indicated by the least-squared regression, 
-
-\begin{equation}
-v = 61.3(1 + 0.28L),
-\end{equation}
-
-\noindent where $v$ [Mm/s] is velocity and $L$ [Mm] is the maximum length, the normal residual of which is $0.43$, indicating a significant fit. There is a particular exception in the top left of the plot which may have some errors and has altered the slope of the regression line quite distinctly.
-
-There is a similar pattern to be reported in Fig.~\ref{fig:prop-rel}b, where the lifetime and maximum length have been plotted against each other.
-
-\begin{equation}
-L = 10.39(1 + 0.12T),
-\end{equation}
-
-\noindent where $L$ length in Mm and $T$ is the lifetime in min and normal residual value $0.66$. This value is small compared the average maximum length, therefore the fit is reliable. Again, there are a few extreme instances which may not be a part of the overall macrospicule population, such as the instance in the bottom right with a short maximum length but long lifetime. 
-
-Lastly, Fig.~\ref{fig:prop-rel}c, shows the relationship between the maximum velocity and the lifetime of macrospicules, defined,
-
-\begin{equation}
-v = 88.9(1 + 0.016T).
-\end{equation}
-
-Incongruously, relationship between the maximum velocity and the lifetime of the macrospicules is unclear. A shallow trend is apparent in the scaling factor, $0.016$, which is inconclusive as to whether a relationship exists between the two properties, however it is unlikely.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\columnwidth]{Figs/length_max_vs.pdf}
-	\includegraphics[width=\columnwidth]{Figs/lifetime_vs_length.pdf}
-	\includegraphics[width=\columnwidth]{Figs/velocity_vs_lt.pdf}
-	\caption{\small Properties of macrospicules features plotted with respect to each other. a) Top: The max length against the max velocity for each individual instance. The least-squares fit shows a distinct correlation. b) Middle: The lifetime vs max length graph shows a similar degree of correlation between these two properties, middle. c) Bottom: In the case of max velocity and lifetime, there is no such relation, as is indicated by the least squares fit and scaling equation (below). Error bars associated with the least squares fit are omitted as the standard error is small compared to the range of values.}
-	\label{fig:prop-rel}	
-\end{figure}
-
-
-\subsection{How the macrospicule general properties change over the sample period}
-The investigated sample period is a proxy for the process by which the Sun's activity increases from solar minimum in $2010$ up to solar maximum at the end of $2012$. Therefore, examining the macrospicule properties over the sample period is a worthy exercise and may give insight into the cause of macrospicules. Fig~\ref{fig:sol-cyc-rels} illustrates how the general properties alter over the sample time period. Examining first the maximum length, Fig.~\ref{fig:sol-cyc-rels}a, shows a relationship over the entire sample period, with some instances where the maximum length values do not appear to be part of the overall population. 
-
-However, these examples, which are over $50\ \textrm{Mm}$, are not necessarily too extreme to be classed as macrospicules. Upon visual examination of the five most extreme examples there are no discernible differences in the four instances between $50\ \textrm{Mm}$ and $60\ \textrm{Mm}$ in height. The most extreme example, $69.8\ \textrm{Mm}$, does appear separate from the population. It is wider than average and the structure is less defined and more fractious. This can be removed from the sample. The mathematical relation of the fitted line, using least squares, reflects the general trend upwards over the sample time period, 
-
-\begin{equation}
-L = 24.9(1 + 0.11t),
-\end{equation}
-
-\noindent where $L$ is the maximum length of a macrospicule and $t$ is the point in time. The gradient value is small, but is a result of the long period over which the sample has been taken.
-
-Studying the lifetime property of the macrospicules over the solar cycle in Fig.~\ref{fig:sol-cyc-rels}b we, again, notice an increase over the sample-time period, though the gradient is not as steep as that of the fit for the maximum lengths, 
-
-\begin{equation}
-T = 12.7(1 + 0.074t),
-\end{equation}
-
-\noindent where $T$ [min] is the lifetime of a macrospicule and $t$ is the time [years]. There seems to be a general population close to the fit with only a few extreme examples, e.g. one below the general population and 3 above $25\ \textrm{min}$. We closely examined the extreme examples in this case as well. Only the macrospicule with the longest lifetime showed any particular differentiation from the rest of the population. Greater width is observed alongside apparent separate structures within the macrospicule, therefore this instance is eliminated from the study.
-
-The most interesting result here is that when inspecting the maximum velocity over the sample period, see Fig.~\ref{fig:sol-cyc-rels}c. We notice that the maximum velocity changes very little, the magnitude of the gradient is indicative of a small decline, 
-
-\begin{equation}
-V = 113.03(1 - 0.025t),
-\end{equation}
-
-\noindent where $V$ is the maximum velocity in Mm/s. Given that we found that in Fig.~\ref{fig:sol-cyc-rels}c, the maximum length and maximum velocity are related, one would naturally expect the maximum velocity to show a similar behaviour over the sample time period. Again, we visually examined the extreme examples eliminated two instances, a maximum velocity of $335.9\ \textrm{km/s}$ was clearly an error in measurement and so has been removed and the second is not clearly defined and may have suffered from limb effects. (All extreme examples are included in the graphs here, but however are excluded from our final statements.)
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\columnwidth]{Figs/length_vs_solarcycle.pdf}
-	\includegraphics[width=\columnwidth]{Figs/life_vs_solarcycle.pdf}
-	\includegraphics[width=\columnwidth]{Figs/velocity_vs_solarcycle.pdf}
-	\caption{\small Macrospicule properties over the sample time period. Notice that the graphs for maximum length and lifetimes, a) top and b) middle, respectively, have general trends with a positive gradient over the sample time period, while the maximum velocity graph, (c, bottom panel) has none of the same trends apparent in the others.}
-	\label{fig:sol-cyc-rels}
-\end{figure}
-
-
-\subsection{Ballistics}
-How the features behave over their life-span is important in terms of possible generation mechanisms, and how they may interact with the transition region. SDO has limited spectral data as AIA is an imager. Therefore, readings are limited to spatial measurements. One interesting question is whether macrospicules have a ballistic nature such that upon reaching their highest point they would then fall back only under the influence of the Sun's gravity. The question is of importance due to the nature of ordinary spicules typically located at granular lanes.
-
-Current research proposes two varieties of spicules, type-1 and type-2, \citealt{Pereira2012}, but \citealt{Zhang2012} debates this point, and finds no such population split. We believe that names of physical phenomena should be based on the underlying physics, not arbitrary behaviour. Type-1 spicules are potentially driven by \emph{p}-mode global oscillations, and spicules typically have lifetimes of $4$ - $10\ \textrm{mins}$ and heights $7$ - $10\ \textrm{mins}$ \citep{dePontieu&Erdelyi2004}.
-
-Type-2 spicules are most likely reconnection events, which helps explain their high velocities, similar lengths to type-1 and typically observed with much shorter lifetimes, $10$ - $150\ \textrm{s}$ \citep{Isobe2008}. Type-2 spicules are observed not to fall back to the solar surface, however, there is debate as to whether these features are physical, or an artefact of observation \citep{Tsiropoula2012}, \citep{Sekse2013} or finally whether their regression is observed in a different wavelength \citep{Pereira2014}.
-
-The question becomes: are these macrospicules giant versions of \emph{p}-mode spicules, or are they blown-up manifestations of reconnection spicules. Alternatively, are they related to these ejecta at all? In order to answer these questions, one needs to understand what the underlying driving mechanism for type-1 and type-2 spicule. Consequently, one needs to find signatures of driver(s) in the formation of macrospicules. An interesting alternative suggestion for generation of macrospicules is a model where multiple spicules form a macrospicule \citep{Xia2005}.
-
-The final case is that macrospicules and spicules are not related in their formation at all. \citealt{Shibata1992} proposed a jet formation model which has become known as the 'Inverted Y' jet model which occurs on much larger scales than spicules. Using Yohkoh's Soft X-Ray Telescope (SXT), they highlighted the X-ray jets had lengths in the $5$-$40\ \textrm{Mm}$ and velocities in the order $30$-$300\ \textrm{km/s}$, notably, similar to the values we have quoted above. This fits in with the observations of \citealt{Moore1977} of X-ray bright points coinciding with H$\alpha$ macrospicules, (also supposed in \citealt{Kamio2010}). Another model presented by \citealt{Jiang2007} proposes magnetic flux emergence as a source for H$\alpha$ and EUV jets. They find lengths similar to those discovered as well, $4$-$22\ \textrm{Mm}$ with a lifetime range of $10$-$34\ \textrm{mins}$ (including cool and hot aspects of the jet). Both values are also comparable to those we observe in this study.
-
-Given this, one might expect that there is a consensus that these are the same objects observed in different wavelengths, however, this is not the case. \citealt{Moore2010} highlight a dichotomy in solar coronal jets, certainly between the standard jets \citep{Shibata1992} and blowout model for jet formation which the authors described. The authors concluded that the blowout jet model results in Helium $30.4\ \textrm{nm}$ macrospicules forming from base arches of the order $10\ \textrm{Mm}$ in width. If we assume that macrospicules observed in H$\alpha$ and Helium $30.4\ \textrm{nm}$ are the same feature as supposed by \cite{LaBonte79} and implied by \citealt{Parenti2002}, then is it reasonable to propose that the blowout jet mechanism also drives EUV macrospicules.
-
-Examining Fig.~\ref{fig:ballistics} there are two particular trends to note. The first is shown in Fig.~\ref{fig:ballistics}a, where the times for the regression back down to the solar limb were taken from the observational values, blue point in the figure, and times calculated using basic gravitational laws, assuming point mass and free-fall under uniform gravitational acceleration from the tip of the macrospicule, are in red. 
-
-We observe similar times for regression back to the limb for the estimates and the recorded times. Clearly there is a greater variance in the measured values compared to the estimates, but this is to be expected. The mean time for the tip to recede back to the limb is $7.5$ min estimated and $6.6\ \textrm{min}$ recorded, with the similar values indicating that gravity is the dominating force behind their fall. The difference between the two sides of the evolution is $6.6\%$ of the average overall lifetime, which is likely not large enough to be significant. 
-
-Let us now make a brief comparison of this behaviour described by the current literature. Recent studies have found that the time taken for a jet to fall back to the solar surface is greater than expected from a ballistic model. \citealt{Nishizuka2011} find that chromospheric jets (small jets, $1$-$4\ \textrm{Mm}$ in length with a magnetic anemone base) share similar motions with the shock-acceleration model demonstrated in \cite{ShibataSuematsu1982}, notably, slower than a ballistic model. \citealt{Moschou2013} also find velocities lower than those under a ballistic model, however, the features highlighted here are much larger, measuring $100$-$190\ \textrm{Mm}$ in length, than macrospicules. \citealt{Feng2012} demonstrate that kinematic motions of the particles in jets follow ballistic trajectories. Therefore it is possible that in macrospicules the plasma-beta is high, and the entire feature follows the ballistic nature of the gas particles. Otherwise, the observed motion may be due to the surrounding magnetic environment. Macrospicules examined here were deliberately chosen in locations where there was a lack of complicated magnetic environment, hence would be allowed to evolve on their own.
-
-
-
-Fig.~\ref{fig:ballistics}b, demonstrates the change in width either side of the greatest extent of the macrospicule as a percentage. We find that after the peak of the macrospicule, the width actually decreases on average with macrospicules being $20\%$ smaller. This could be due to plasma flowing down magnetic field lines causing a thinning within the macrospicule. This could delay the collapse of the macrospicule and cause the slightly longer recorded times as opposed to the estimated times.       
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\columnwidth]{Figs/times_falling.pdf}
-	\includegraphics[width=\columnwidth]{Figs/width_percent.pdf}
-	
-	\caption{\small Estimated times for a point mass falling from the apex of the macrospicule trajectories, a) top, for the macrospicule are red, while the times taken from the data are blue points, top panel. There is little deviation from ballistic model evident in the macrospicules measured times. b), bottom, the percentage change in width. The widths are taken before and after the peak of the length-time plot as a percentage change. The width is smaller, on average, after the peak.}
-	\label{fig:ballistics}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\columnwidth]{Figs/diff_rho0.pdf}
-	\includegraphics[width=\columnwidth]{Figs/scale_h.pdf}
-	\caption{\small a) Here we have used two different $\rho_0$ values. Red indicates $\rho_0 = 1.0 \times 10^{-8}\ \textrm{kg/m}^{3}$ and blue indicates $\rho_0 = 1.0 \times 10^{-11}\ \textrm{kg/m}^{3}$. b) The energy required to form a macrospicule plotted as a function of the maximum length of the macrospicule. The maximum length is plotted against the energy required to move a mass to this height. The scale-height value of $1000\ \textrm{Mm}$ here is used as a proxy for uniform density as this is approximately $10$ times greater than the largest macrospicule in the sample, which, makes the assumption valid.}
-	\label{fig:scale_h}
-\end{figure}
-
-\subsection{Energetics and scale-height}
-Examining the energy required to generate macrospicules is a worthwhile task, in reference to the process to which they are formed. At the limb $g = 276\ \textrm{ms}^2$, hence, the gravitational scale-height will need to be taken into account when performing any calculations. \citealt{Pereira2012} has studied this behaviour in the case of spicules, however, no such study has been performed for macrospicules to date. We have modelled the macrospicules simply as a column of plasma, with no magnetic field influences, and considered the potential energy required to reach the height at which they are observed. Choosing a $\rho_0$ is important, measurements by \citealt{Parenti2002} and \citealt{Withbroe1976} give densities of macrospicules as $1.0 \times 10^{-11}$ kg/m$^{3}$. However, we assume here a scale-height over the extension of the macrospicule and these authors measure the 'body' of the macrospicule. As such, we use a $\rho_0$ taken from \citealt{Vernazza1981}, $\rho_0 = 1.0 \times 10^{-8}\ \textrm{kg/m}^{3}$. Given that we use a scale-height and applying our $\rho_0$ at the footpoint, we will obtain a sensible value for the energy required to form a macrospicule.
-
-The centre of mass was estimated, and the potential energy necessary to move the mass from the limb this point defined as:
-
-\begin{equation}
-R_y = \frac{Le^{-L/H} - He^{-L/H} + H}{1 + e^{-L/H}},
-\end{equation} 
-
-\noindent where $R_y$ is the distance from the solar limb, $H$ is the scale-height and $L$ is the maximum length of the macrospicule.
-
-Integrating over the volume of the macrospicule, taking into account the scale-height, estimated the mass. Applying the mass as a point at $R_y$, the minimum mechanical energy required to form a macrospicule is equal to the potential energy at $R_y$. Fig.~\ref{fig:scale_h} demonstrates how the estimated energy required will change dependent on the scale-height of the plasma contained within the macrospicule.
-
-As is intuitive, the more uniform the density, the higher the energy required to form the macrospicule. Noticeable are the gradients at higher scale-heights, $1.61 \times 10^{16}\ \textrm{J/Mm}$ with uniform scale-height, and, when $H = 0.5\ \textrm{Mm}$ the gradient is  $6.88 \times 10^{11}\ \textrm{J/Mm}$. This is important as the more energy required to form a macrospicule of a given length, the less likely they are to form. Instances of macrospicules in uniform density and with a scale-height of $25$ Mm are similar below heights of $25\ \textrm{Mm}$.
-
-Macrospicules have been proposed as a source of coronal heating. In order to estimate how much mechanical energy could potentially be transferred from the macrospicules into the corona, we will assume that at any given moment, a macrospicule is occurring at the limb. Assuming that measurements taken here are within $\pm10\ \textrm{Mm}$ of the plane of sky, we take the next interval in which a macrospicule occurs as the angular distance, covering the $\pm10\ \textrm{Mm}$ over the plane of sky, starting at the boundary of the previous interval. 
-
-Extrapolating this around the rest of the solar surface and applying the mean macrospicule count per two hour sample, $1.9$, to each interval a power output can be estimated. Assuming further that all mechanical energy is transferred from the macrospicule into the corona, the power output for uniform scale-height macrospicules is calculated to be $0.153 \times 10^{-3}\ \textrm{W/m{2}}$ and decreasing with the scale-height. Given the power requirements for coronal heating in \citealt{AschwandenCHR2007}, macrospicules are an unlikely source for major coronal heating.
-
-
-\section{Conclusion}
-Now, let us summarise the general properties for the population of macrospicules (see Table~\ref{table:final properties}). In general, the values presented here fall between those presented in \citealt{Bohlin1975} and \citealt{Dere89}. The more extreme examples, seen in \citealt{Bohlin1975}, are not found here. We find that the data in \citealt{Dere89} are conservative and we find maximum length and lifetimes which are larger. 
-
-\begin{table*}[t!]
-	\centering
-	\begin{tabular}{c c c c}
-		\hline\hline
-		Study & \cite{Bohlin1975} & \cite{Dere89} & The present study \\    
-		\hline                                
-		Max Length [Mm] & $5.8$-$43.5$ & $1.45$-$16.7$ $\bar{x}$:$8.7$ & $14.0$-$60.4$ $\bar{x}$:$28.1$ \\
-		Width [Mm] & $3.6$-$10.9$ & $2.2$-$6.5$ $\bar{x}$:$4.4$ & $3.1$-$16.1$ $\bar{x}$:$7.6$ \\
-		Lifetime [min] & $8$-$45$ & $> 3$ & $2.7$-$28.1$ $\bar{x}$:$13.6$ \\
-		Max Velocity [km/s] & $10$-$150$ & $20$-$50$ & $54.1$-$105.6$ $\bar{x}$:$109.7$ \\
-		Count & $25$ & $10$ & $101$ \\
-		Cadence [s] & > $180$ & $20$,$60$ & $12$ \\
-		\hline 
-	\end{tabular}
-	\caption{General properties table. Comparing the values given by \cite{Bohlin1975}, \cite{Dere89} and this study.}
-	\label{table:final properties}
-\end{table*}
-
-\begin{table*}[t!]
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
-			\hline 
-			Magnetic Configuration & \multicolumn{3}{c|}{Velocity (km/s)} & \multicolumn{3}{c|}{Length (Mm)} & \multicolumn{3}{c|}{Width (Mm)} & \multicolumn{3}{c|}{Lifetime (min)}\tabularnewline
-			\hline 
-			\hline 
-			& \multicolumn{1}{c|}{Low} & High & Mean & Low & High & Mean & \multicolumn{1}{c|}{Low} & High & Mean & Low & High & Mean\tabularnewline
-			\hline 
-			Coronal Hole & 58.3 & 181.3 & 113.4 & 17.3 & 60.4 & 31.9 & 3.1 & 13.0 & 7.2 & 7.8 & 28.6 & 13.5\tabularnewline
-			\hline 
-			Coronal Hole Boundary & 66.8 & 194.8 & 107.4 & 16.1 & 60.4 & 30.5 & 4.0 & 16.1 & 7.9 & 9.8 & 22.0 & 14.0\tabularnewline
-			\hline 
-			Quiet Sun & 62.8 & 154.3 & 101.2 & 14.0 & 45.3 & 25.6 & 3.4 & 12.6 & 7.8 & 5.6 & 24.0 & 13.5\tabularnewline
-			\hline 
-		\end{tabular}
-		\caption{Properties associated with each region of the solar limb.}
-	\end{center}
-\end{table*}
-
-
-Examining the individual regions, in which the macrospicules occur, it is evident that higher velocities are found in the coronal hole and coronal hole boundaries and so we consider the question of whether there might be a difference in the physics of formation to that in the quiet Sun. Examining the lengths, the coronal hole/boundary macrospicules are longer than those seen in the quiet Sun. Open magnetic field lines in coronal holes are the likely cause allowing the macrospicules to extend higher in these regions. We find little difference in the widths, and, examining mean lifetime values, we find percentage differences from the total sample mean: $3.7\%$ and $2.6\%$ for quiet Sun and coronal hole boundary respectively, with a small increase in percentage difference of $-5.3\%$ for coronal hole macrospicules.
-
-Upon examining the general properties and their relations to each other, we also find that the maximum velocity and maximum length are related, and, that the lifetime and maximum length show signs of correlation. However, the maximum velocity and lifetime appear to show little correlation with the current sample size.
-
-A range of magnetic environments have been shown to yield macrospicules with different basic properties in some cases. This may be due to separate generation processes, although this is just a conjecture. The overlying solar environment is more likely to have an effect, either restricting or allowing extension, which would explain the comparatively longer macrospicules observed in coronal holes.
-
-Considering the change of the properties over the sample time period, we find that the maximum length and lifetimes both show a general correlation with the sample time period. Whereas, the maximum velocity does not follow the same pattern, which is somewhat unexpected due to the maximum length being related to the maximum velocity. Consequently, one might expect the maximum velocity to increase as a function of the sample time period. At present we cannot offer any explanation as to why this is the case, but further modelling studies will hopefully reveal some answers.
-
-We observe similar durations for regression back to the limb for the estimates and the recorded times. Clearly, there is a greater variance in the measured values compared to the estimates, but this is to be expected. The mean time for the tip to recede back to the limb is $7.5\ \textrm{min}$ (estimated) and $6.6\ \textrm{min}$ (recorded), which are similar, indicating that gravity is the dominating force behind their fall. This difference is not large enough to be significant, or draw any conclusions.
-
-Lastly, let us estimate the energy required to generate the macrospicules. We incorporated the scale-height variations over the length of the macrospicule, such that, the density decreases from footpoint to tip. This was applied to take into account non-uniform density when estimating the centre of mass. We find that high scale-heights yield high energy requirements, which decrease with lower value scale-heights. Examining the mean macrospicule energy values for the scale-heights we obtain $1.46 \times 10^{17}\ \textrm{J}$, $4.78 \times 10^{16}\ \textrm{J}$,  $3.09 \times 10^{15}\ \textrm{J}$, $1.46 \times 10^{14}\ \textrm{J}$ and $3.66 \times 10^{13}\ \textrm{J}$ for scale-heights of uniform and $25, 5, 1$ and $0.5\ \textrm{Mm}$, respectively.
-
-
-
-Our simple energetics model yields values for energy which are possibly too small, but are not unreasonable. If we compare these to energies calculated for wave-driven reconnection events in \citealt{Heggland2009}, of the order $10^{17}$-$10^{18}\ \textrm{J}$ , if the scale-height is around 10-25 Mm according to our estimates, the generation of macrospicules may be feasible. However, this model generates jets of $1$ Mm in length, a degree of magnitude away from our measurements. Models have been proposed, such as \citealt{Adams2014}, in which open magnetic field above a reconnection event allows the macrospicules to extend to the heights we observe.
-
-
-It would be preferable to have $8$-$10$ years worth of high-quality data to examine the possible changes in the properties of macrospicules over the solar cycle. Also, investigating the rotational speed of macrospicules, which is not possible without spectral information, would be feasible and would give additional insight. The use of modelling to understand these features further would also be of interest such that we might be able to understand how these features are generated.  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{pycode}[chapter2]
-ch2 = texfigure.Manager(pytex, number=2, base_path='./Chapter2/')
-\end{pycode}
+Spicules are visible on the disk as well, but here they are seen as dark thin structures against the bright lower chromosphere.
+These were initially named mottles and fibrils, but have since been inherently linked with spicules - see \cite{DePointeu2007MF}.
+
+Since these initial propositions, however, there has been doubt cast as to whether this is the case or not. 
+Cite Zhang (2010) found no statistical separation of populations within spicules, but the original authors have shown that Type-2 spicules disappear from Ca II and reappear in the hotter Si IV and Mg II lines \citep{Pereira2014}.
+This would imply that spicules are heating as they accelerate through the atmosphere.
+Whether this is because the underlying formation mechanism is different or because there is sufficient energy in the creation of the spicules to cause heating as they propagate through the atmosphere, has yet to be made clear. % perhaps something like 'creation' might be a better word than 'initialisation' here. They're not Python objects :P
+
+The formation of spicules is still a matter of much debate given our currently limited ability to examine small scales in current observations. 
+However, when observations are unable to provide explicit results, numerical and analytic approaches are utilised to fill in the gaps.
+\cite{DePointeu2004} outline a mechanism for the formation of spicules which originates in the photosphere based on an anaytic model.
+\emph{P}-mode oscillations cannot pass through the photosphere due to the minima in the global temperature.
+However, evanescence allows the waves to propagate into the higher atmosphere, where higher temperatures allow propagation to restart.
+Also essential to this model is the inclination of the background magnetic field.
+The authors report that an inclined field vastly increases the likelihood of waves tunnelling through the atmosphere. 
+The lower density, upper solar atmosphere, causes the photospheric velocity generated by the \emph{p}-modes to leak into the atmosphere and steepen into shocks, which leave an oscillating wake in the chromosphere, the spicule.
+
+However this is only one of many competing theories.
+\cite{Takeuchi2001} demonstrate a magnetic reconnection model driving formation of spicules, whereas \cite{Martinez2011} formed a $3$ dimensional model utilising the Lorentz force to push plasma across the solar surface until it meets vertical magnetic field which forces the plasma upwards.
+\cite{Hollweg1982} demonstrate that a quasi-impulsive source in the photosphere is capable of generating a chain of rebound shocks in the chromosphere, causing the formation of a spicule.
+
+A particularly pertinent model is proposed by \cite{Moore2011spic_recon}, in which magnetic reconnection is instigated by granule-sized 'magnetic bubbles'.
+This is applicable, as spicules are generally observed to form on the intergranular lanes.
+The authors propose that Type-2 spicules are an analogue for X-ray jets (more on which later).
+In this scenario, magnetic bipoles emerge from the photosphere which then interacts with the ambient field of the lower chromosphere, forming a raft of reconnection external to the bipole.
+During this reconnection, the interior of the bipole remains inert, while the outermost sections of the structure are released causing a 'sling shot snapping' of the magnetic reconnected field lines producing an upward jet (Type-2 spicule), Alfven waves propagating up the ambient magnetic field lines and a fast MHD wave upwards across the magntic field.
+
+The advantages of this scenario for reconnection are that the environment which generates these spicules is extremely common in the solar atmosphere.
+The scenario here is particularly convenient as it also answers questions with respect to heating of the solar atmosphere.
+As a result of reconnection between the canopy region which forms over the granules and the more open magnetic fields higher in the atmosphere, shocks and waves are formed, which propagate upwards.
+The dissipation of the energy within these disturbances has been proposed on numerous occasions to be the central source of heating of the corona. % I imagine Robertus will want some references here
+
+What becomes evident, after all of these models are formed, is that none of them generate both Type-1 and Type-2 spicules.
+It is therefore likely that they are indeed two separate features.
+
+\subsection{X-ray Jets and}
+Throughout the solar atmosphere, we observe much larger jet-like features than spicules.
+They have been observed extensively, and not solely in the chromosphere.
+The first observations of more large scale jets were undertaken using the Soft X-Ray telescope on board Yohkoh \citep{Tsuneta1991}.
+\cite{Shimojo1996} undertook the first statistical study of jets, finding a nice round $100$ examples to study.
+With any study looking for specific features, the authors utilised the following selection criteria: 1) that the plasma was collimated and that the movement of the feature was in the direction of the collimation; 2) the aspect ratio of length to width is greater than $3$; and 3) the time between the pre-jet image and the image in which the jet first appears is less than an hour.
+These are an excellent example of selection criteria which aide in forming the search, however, are broad enough not to introduce bias into the sample.
+
+The authors find that the jets are primarily initiated by a microflare/sub-flare at the base/footpoint (the terms are used interchangeably in literature) of the jet, sometimes apparent as a bright point.
+They find their lengths to be of the order $10$ - $400$ Mm and widths are of the order $5$-$500$ Mm.
+Velocities along the direction of collimation are observed to range between $10$ and $1000$ kms$^{-1}$, averaging at approximately $200$ km s$^{-1}$, and lifetimes can be up to $10$ hours.
+In terms of physical evolution of their shapes, the authors find that $76\%$ of the jets demonstrated converging shapes, \emph{i.e.} the width of the jet would be constant over its evolution or decreasing with distance from the footpoint. 
+The constant form were found to come from a wide variety apparent source configuration, whereas the converging form, explicitly formed from energetic points.
+This work has formed the basis of much of the study of jet phenomena, however, this is merely an exploratory study around which future studies have explored.
+
+\subsubsection{Models}
+What has become known as the standard model for the formation of solar jets is demonstrated  by \cite{Shibata1992}.
+Within this paper, the authors use the Soft X-Ray telescope on Yohkoh to examine $20$ jets, and present their spatial properties, very similar to those of \cite{Shimojo1996}, but the authors go on to describe a possible formation schematic.
+The model is based upon the flux emergence from the lower solar atmosphere, and is backed up by data in the Solar Geophysical Data.
+The authors demonstrate that the observations reveal a void at the jet base, similar in appearance to voids observed in reconnection-driven events such as flares and CMEs.
+They proposed that the jets are rooted in the chromosphere, based on an inspection of the emission measure.
+Consequently it is likely that the mass is from the chromosphere.
+The authors go on to posit that the undulating and meandering shape of the jet lends itself to a helically twisting magnetic structure, suggesting that the jet itself emanates from a relaxation of the magentic field along a global flux tube \cite{Shibata1986}.
+Such a reconnection event between twisted and untwisted magnetic field would be capable of producing a jet of this size, lifetime, and more importantly, velocity.
+
+This model for the standard jet requires that there be open magnetic field lines, and that a smaller-scale, twisted, emerging flux loop rise from the lower atmosphere in order to initiate a reconnection event.
+As a result of the reconnection event, material in the emerging loop is than transferred into the open magnetic field lines, 'sling shotting' around the loop it was formerly a part of and up the open field lines, thus creating a collimated beam of plasma.
+The mechanism highlighted in this particular model produces exclusively narrow jets, a couple of megameters in width.
+It also results in the dissipation of large amounts of energy which manifests as brightenings in many observations.
+From the source of the reconnection, energised plasma then dissipates down the loops highlighting the entire structure.
+The visual effect of the long, collimated beam/plasma spire and the newly brightened loop of plasma, reveals an 'inverted-Y' shape or Eiffel tower-like structure, similar to the 'cusp' shape observed in significantly larger features high in the corona round streamers and flares \cite{Vourlidas2006}.
+These terms have gained common usage in literature and will be used hereafter. 
+
+An excellent example of this type of formation is demonstrated in \cite{Nishizuka2011}.
+Within this work, the authors demonstrate what is referred to as an Anemone jet, so called as the dome-like bipole magnetic bubble may be viewed as a feature similar to the sea creature.
+The model they build as a result of this is in three dimensions - consequently, the small scale loops of the standard model could be projected into $3$D as an anemone-like shape.
+The authors observed the jet in Ca II, it formed along an inclined line approximately $45^\circ$ away from normal, in the inverted-y format.
+With the jet forming in Ca II, we can conclude that this particular jet is formed in the upper chromosphere, and with this particular jet the authors observe the formation loop itself.
+The jet feature is found to extend $14$ Mm into the atmosphere with a width of $6$ Mm, and a maximum velocity of $100$ km s$^{-1}$.
+However, this maximum is observed $10$ minutes into the evolution of the jet, contrary to what you might expect.
+
+The standard jet model accurately describes a prominent section of the jet population.
+Those which it does not cover are highlighted in \cite{Moore2010}.
+The specific example that the standard jet model does not cover is the case where the width of the jet is more than that predicted by the standard model.
+\cite{Moore2010} utilise Hinode/XRT to look for X-ray jets occurring in the polar coronal holes, and where possible the authors observed the same features in EUVI as well.
+
+The initial magnetic field topology is largely similar to that of the standard jet, a small-scale loop within an open magnetic field region extending upwards.
+The difference in these models is that the emerging bipole arch in the case of the standard jet remains untwisted and without shear.
+In the case of blowout jets, this arch/loop is sufficiently twisted and sheared that it can drive an explosive eruption.
+In terms of the physical evolution, there is no difference between the two until the emerging flux element triggers a reconnection burst at the boundary between said emerging flux and the open magnetic field lines.
+
+The authors then go on to suggest two resolutions to the reconnection event; the first is that the boundary becomes unstable on its own, and consequently reconnection begins on its own.
+This results in breakout reconnection, expelling the loop's outer magnetic field, which lifts the restriction on sheared flux lower in the system; consequently allowing the core of the emerging flux to erupt upwards.
+This forms a chain event, with emerging core events causing more reconnection and consequent releases and so on, similar to \cite{Antiochos1998}.
+The second permutation is that the sheared core begins to erupt before any reconnection takes place at the boundary.
+In this scenario, an instability in the emerging bipole causes the previously stable core to begin emerging.
+As a result, magnetic pressure at the boundary current sheet between the loop and open magnetic field, increases to the point at which breakout reconnection is triggered.
+
+This work clearly has impact on the current relationships between the various jets of scales larger than spicules (which clearly are their own feature).
+The authors propose that the blowout jets correspond to the macrospicule features in the chromosphere, more on which later.
+As for implications with respect to the division of standard and blowout jets, observations of the formation mechanism would clarify the feature.
+Standard jets would have large originating loops spanning approximately $20$ Mm or not visible at temperatures lower than $10^6$ K, whereas blowout jets need to produce strong signals in H$\alpha$ and He $30.4$, due to the cooler plasma thrown upwards from the unstable magnetic bipole emerging.
+
+One of the most comprehensive sets of jet observations is undertaken by \cite{Majarska2011}, in which the authors observe a jet in an equatorial coronal hole, utilising SUMER on SoHO, EIS and XRT on Hinode and the EUVI instruments on the STEREO A and B.
+The authors find that the jet can be heated by microflares at the moment of reconnection, raising the temperature up to $12$ MK.
+This was obtained using a DEM technique which combined the emission from a range of spectral lines to estimate the temperature.
+The density was approximated at $4 \times 10^9$ cm$^{-3}$ using a similar technique.
+The feature was found during a period of observing brightenings in the quiet Sun and coronal holes, where the subject appeared as a jet-like feature emanating from a pre-existing coronal bright point.
+The authors demonstrate an unequivocal shaping of the origin akin to that of the Shibata standard model.
+The event began with an increase in intensity at the original bright point, extending to a $3$ - $4$ arcsec$^2$ area, which the authors identify as a micro-flare.
+As a result od difference imaging, the authors then conclude that there were several reconnection events during this brightening phase.
+The expanding plasma in the BP is shown to have a multi-thermal structure, with the first blue shifting material spotted in hotter emission lines a full minute before the cooler material appears.
+These reconnection events continue to deposit energy into the jet-like feature, and upon each delivery of energy, sustains an outflow after the initialisation of it with the first reconnection event.
+The slowing down of the outflow also coincides with visible downflows in the underlying BP.
+During these accelerations, the plasma was shown to have a maximum velocity of $310$ kms$^{-1}$, while no red shifted down flow was observed at the same time as the energy deposits which would suggest that this is not a case of a bidirectional jet.
+The jet is seen to last for $18$ minutes, however the first energy deposit occured $27$ minutes before the spire of the jet was visible.
+The authors note that their observations fit particualrly well with the model presented by \cite{Moreno2008}, in which a current sheet is shown to form at the boundaries of the jet.
+
+
+% This section may need to go else where
+What becomes clear is that these large-scale jets can only be triggered by explosive reconnection events, therefore understanding this mechanism is essential to our understanding of solar jets.
+\cite{Archontis2005} demonstrate the mechanism governing the rules of this interaction.
+Essential to any useful numerical simulation is a reasonable set of initial conditions which succinctly defines the environment of the feature.
+In the case of the authors define a background stratification of the gases \emph{i.e.} non-magnetic; a horizontal magnetic tube which is inherently twisted and buoyant; a uniform horizontal magnetic field in the corona and transition region.
+The exact parameters of the background stratification and magnetic tube are defined in \cite{Fan2001}.
+
+The 'box' which contains the simulation, incorporates the top of the solar interior, to a depth of $3.74$ Mm from the photosphere, the bottom of which is set as 0 and extends to $1.7$ Mm, represented as an isothermal zone.
+Over the next $3.7$ Mm of height, the temperature rises steeply mimicking the effects of the transitions region.
+Lastly there is a second isothermal region which extends to a distance of $11.9$ Mm from the photosphere.
+
+The horizontal magnetic tube, which will eventuality emerge through the atmosphere, field is a Gaussian distribution, symmetrical about the longitude and the field lines are helically twisted in a uniform fashion around the central axis.
+The issue with this set-up is that in the case of kink-unstable cases, the model will supress onset of internal current sheets. 
+The stratification of the background gas is applied to the tube by applying a perturbation in the gas pressure, such that the stress tensor has zero divergence and vanished in the case $r/R \gg 1$.
+
+The gas density was within the tube is not however symmetrical about the 'latitudinal' direction.
+In order to illicit a rising response from the magnetic tube, the centre region is given a density $1/\beta$ lower than the region around it as a result of the density perturbations.
+The causes the tube to undertake a transformation into the characteristic $\Omega$-loop shape which emerges into the atmosphere.
+Lastly the coronal magnetic field is straight horizontal and space filling, it is highest in the corona and reduces through the transition region and photosphere.
+
+The simulations show that reconnection is immediate when the two flux objects come into contact, with the current sheet forming between them aligned with the direction of the axis of the flux tube.
+This is greatly accentuated by the horizontal field above, however, once the flux tube magnetic field and the coronal magnetic field are equal, the reconnection lessens to a smaller constant volume. 
+At the current sheet region, the magnetic field lines of the flux tube is anti parallel to those of the coronal magnetic.
+As the outer regions of the flux tube are cancelled away, however, the field in the tube rotates away from anti parallel as is the nature of a twisted flux tubes.
+Hence the boundary behaviour changed from the current sheet to a tangential discontinuity and finally to a rotational one.
+
+The authors present evidence of continuous reconnection at the boundary, the work demonstrates that the first line undergoing reconnection, instead of passing through the boundary of the other end of the flux tube, it passes directly into the coronal region.
+The end point of the field line is then travelling at a new velocity, different to that of the local plasma at the new boundary.
+The implication of this is that field lines at he boundary between the two regions, undergoes continuous reconnection, however, once it has passed though integrates into the coronal plasma.
+The helically twisted nature of the flux tube, allows for multiple reconnection instances.
+Consider looking at the end of the flux rope as a cross sectional area, when the reconnection occurs, a magnetic field line reconnects with the magnetic field in the corona, and is draw straight into the corona while the rest of the line remains attached to the flux tube instead of the entire line detaching.
+As a result of this gradual detachment and the twist, the end of the field line traces out a circular motion in our cross section; first reaching into the coronal then being draw around and through the transition region, underneath the tube, back through the atmosphere and into the corona before lastly returning to the solar interior.
+
+Importantly, high speed jets are observed at the reconnection site, the plasma blasts through the current sheet before interacting with the higher pressure gas above it, therefore guiding it along the inclined magnetic field lines.
+In this case, the jets are observed as curves, and as such, disappear when observed on a horizontal plane.
+The authors then relate this th H$\alpha$ filaments and brightenings or jets in solt X-ray, the energy required to cause brightening is X-ray would be supplied by the interaction of these two flux systems, they also calculate a temperature increase to $10^7$ K.
+
+Recent studies have demonstrated the prevalence of smaller scale jets at the magnetic network boundaries.
+\cite{Tian02014}, and later built on by \cite{Nagrang2016}, highlighted these features using the most recent addition to the solar observational tools available to us.
+The network boundaries are regions where there is a great deal of magnetic complexity and strong field values, and almost certainly a large amount of reconnection will be apparent.
+These strong fluxes emminate from the boundaries of the granules, and therefore, convection cells.
+The evidence of this is apparent when imaging the transition region, the bright lanes approximately $20$ Mm in size, it is possible that these regions appear bright in the transition region due to the heating as a result of reconnective events. 
+
+The authors find explosive upflows in the direct images from IRIS with velocities of $80-250$ kms$^{-1}$ and using the superior resolution of IRIS idenify jet-like features developing from the bright networks.
+These jets are long and thin features,$4$-$15$ Mm in length and ~$0.3$ Mm in width, and demonstrate just upflows, no downflows a evident.
+These events are extremely shortlived, with lifetimes measured at $20$-$80$ seconds, however, there is recurrence observed with jets forming repeatedly in the same location, with time scales in the range $2$-$15$ mins.
+
+Observations using the spectral lines leads them to the conclusion that the jet like features heat to temperatures of the order $10^5$ kms$^{-1}$, in this case the temperature of Si IV $139.377$ nm.
+This Si IV line also allows an analysis of the line broadening which could possibly be due to the field aligned jets, as is proposed in \cite{Archontis2005}.
+The jets are also shown to be an intermittent but effectively continuous source of mass, and therefore energy, into the solar wind.
+As such, the authors propse these network jets as new mechanisms for generating the solar wind.
+
+Short secyion on sims
+Moreno-Insertis 2008
+Wilhelm 2000
+
+
+
+
+
+\section{Macrospicules}
+
+
+The subject of this thesis is a clarification of the classification of macrospicules. 
+They are features not dissimilar to jets, however they have been distinguished from the population of jets in the current literature, which will now be discussed below.
+
+Macrospicules were first reported by \cite{Bohlin1975}, utilising the SkyLab mission.
+This was undertaken using the $30.4$ nm instrument, which took observations of the polar coronal holes.
+The initial images were taken as raw light through particular filters over the lens, the images were also over exposed in order accentuate the appearance of the solar limb.
+The authors found that the newly named macrospicule was visible in He II $30.4$, but was not apparent in Ne VII $46.5$ nm or Mg IX $36.8$ nm, observing the transition region and corona respectively.
+They then classified macrospuicules according to 3 observables: that the macrospicules are confined to the coronal holes; that the macrospicules increasingly inclined away from the normal proportionally to their distance from the solar pole (the authors link this to the supposedly weak, inclined magnetic field again); and lastly that they are only visible in $30.4$ nm. % again?
+ 
+% possibly wack in a frame of the 'frames'
+
+The authors specifically differentiate between macrospicules and the H$\alpha$ spicules previously observed, stating that these new features have no counterpart in that line, citing work by Engvold and Beckers 1975, who were unable to find a correlation between the two lines by direct observation or numerical correlation.
+Having said this, they make the caveat that there is a possibility that the formations of the two features could be largely similar.
+
+With the limitations of the observations at the time, there was much debate as to whether this was actually the case. 
+Following up on the work by Bohlin, \cite{LaBonte79} utilised the Big Bear Solar Observatory to examine the 'limb surges' in H$\alpha$ and Deuterium 3 (D$_3$).
+The authors found that the macrospicules in H$\alpha$ had considerable complexity in their structure, with 'knots, twists and loops' within the confines of the feature.
+But in D$_3$, the authors only observe the brightest parts of the macrospicule, usually at the base of the structure apparent in H$\alpha$.
+Differently in this case, the authors also observe features on the disk and define three categories: the macrospicules appearing similar to filament eruptions, surge-like macrospicules and a flare brightening type.
+Lastly, the paper finds the rate of occurrence of macrospicules to be of the order $~1400$ per solar day. 
+This discussion as to the possible links between the two features goes on to this day, more on which later.
+
+The next seminal work on macrospicules was published in \cite{Dere89}, again using an early space station, SpaceLab 2, as the platform for space based observations.
+In this case a Gregorian telescope was used to take a series of broadband UV observations at the solar limb.
+As a result of this setup the images are a convolution of the intensities from the solar continuum and therefore differentiating between structures is not possible.
+This means that only macrospicules' spatial extent could be observed, and specifically those which appeared above the limb, with no study of their onset.
+Consequently, this study is statistical in its focus with the aim being to ascertain the basic spatial properties of the population.
+
+The authors then go on to compare the values obtained in this study to the two previously mentioned.
+The papers are generally in agreement, specifically Dere and LaBonte, citing lengths ranging between $3.75$ - $24.75$ Mm and similar widths, although Dere et al. find $0.45$ - $6.75$ Mm and LaBonte $0.45$ - $4.5$. Mm.
+The question of velocities is also raised, with values quoted as $20$ - $50$ km s${^{-1}}$ from Dere et al. and $\leq60$ km s${^{-1}}$ from LaBonte.
+These values should possibly be taken with a pinch of salt as the temporal resolution for Dere and Labonte was $20$ or $60$ s and $60$ s respectively, which will greatly influence the measurement of the velocity.
+However, Bohlin et al. find more extreme values than all of the other studies.
+Some of the lengths they find extend as far as $45$ Mm.
+They also find greater widths - $3.75$-$11.25$ Mm - and velocities reaching $150$ km s${^{-1}}$, although again the temporal resolution is poor, $\geq \sim 180$ s.
+Although this early work had its limitations, the groundwork was laid here in order to be more precise when more sophisticated missions would be undertaken in the mid $90$s with more focus on detail and less on statistical properties.
+
+With the launch of SoHO in 1996, the community now had continuous viewing of the solar disk, meaning that consistent observations of macrospicules are now possible.
+On of the first studies utilising the new instruments was undertaken by \cite{Pike1997} using the Coronal Diagnostic Spectrometer (CDS).
+In this case, the instrument scanned from north to south pole, using a mosaic of rastered images, using the He I $58.433$ nm, O V $62.973$ nm and Mg IX $36.806$ lines, corresponding to temperatures of $20,000$, $250,000$ and $1,000,000$ K.
+In these observations the macrospicule is apparent at the limb, demonstrating two brightpoints visible in the footpoints either side of the structure, and a fainter column of plasma extending off the limb.
+The authors find that the macrospicule is visible in the He I and O V lines, however not in the higher temperature magnesium line, showing that macrospicules can be found at transition region temperatures, but will not rise to coronal temperatures.
+The authors find the macrospicule to be $31$ Mm in height and $13.3$ Mm in width, agreeing with previous values.
+
+The bright roots evident in the O V lines begin to form the 'inverted-Y' shape, typical of the standard jet formation mechanism outlined by Shibata.
+As a result of this the authors go on to discuss the nature of the feature and whether it is a macrospicule or X-ray jet.
+The authors conclude that this feature is still classified as a macrospicule, due to the observations in He I and the feature adhering to the properties highlighted in \cite{Bohlin1976}.
+
+Building on the work done by Pike, \cite{Parenti2002} undertook an extremely detailed case study of a macrospicule observed in CDS.
+In this case the observations are still reliant on the macrospicule protruding above the limb, and observed using the full suite of spectra available to the authors.
+When discussing these papers, we must consider the rastering method of CDS.
+The images are comprised of vertical columns of pixels that are exposed for $30 $ s; the instrument then has a cooldown phase before moving onto the next vertical slit.
+This takes approximately $240$ s, which is inappropriate for a feature which on average doesn't have a long lifespan.
+Because of this delay, the pixels in the x direction, from one column to the next, are separated by a time of $272$ s.
+This means that we cannot consider the spatial structure in the x direction as continuous.
+As a result of this the authors use the columns of the image array to identify the temporal resolution of the macrospicule. 
+
+The authors find that the macrospicule extends to $26$ Mm and reaches a maximum velocity of $81.6$ km s${^{-1}}$ and an average outflow velocity of $26$ km s${^{-1}}$.
+The spectroscopic nature of CDS allows for the calculation of temperature and density.
+As the full range of CDS's GIS suite is being used, the density is not strictly a single number and will be dependent on the emission in the various wavelengths.
+The density is highest in O IV, $~1.5 \times 10^10$ and varies throughout the lines but generally dropping to the order of $10^8$ by the Si IX line.
+The temperatures are calculated as ratios between emission lines, \emph{e.g.} O V $62.97$ nm / O IV $55.45$ nm, giving values around $2.0 \times 10^5$ K, which the authors demonstrate is hotter than the surrounding atmosphere at that point, agreeing with previous works by \cite{Habbal1991}. % You don't necessarily need to say so, but be aware that emission ratios are bollocks
+
+
+As instrumentation improved, the use of spectroscopy resulted in the discovery of the rotational behaviour of a macrospicule as demonstrated in \cite{Kamio2010}.
+In this case, the authors are utilising STEREO-A, the Hinode mission and SUMER. 
+STEREO was used to observe the feature in $30.4$ for straight-forward imaging, Hinode for dopplergrams and XRT and SUMER for spectroscopic data.
+
+In the lead up to the particular case the study examines, there were multiple coronal jets occurring at the source of the macrospicule over a $9$-hour period.
+When the macrospicule erupted, again apparent were two footpoints at the base of the feature in the $30.4$ nm STEREO images, however, in this study there is also a brightening in XRT at the same time. 
+This is one of the first concrete examples of the relationship between macrospicules and X-ray jets.
+The authors highlight that the two foot-points then go on to form two threads propagating upwards, into the corona, subsequently utilising the SUMER instrument to detect their motion in detail.
+
+% check this section
+The properties of this particular example in He II $30.4$ are quoted as $130 \pm 30$ kms${^{-1}}$ for the radial extension of the feature and line-of-sight velocities of the order $-15$ and $-25$ kms${^{-1}}$.
+With respect to the X-ray jet behaviour, the velocity is measured at $320 \pm 30$ kms${^{-1}}$ and utilising the LOS velocity in He VIII and Fe XII led the authors to conclude that the structure of the macrospicule and X-ray jet.
+The authors also highlight the regression of the material back to the limb causing an enhancement in He II, a phenomenon they propose is caused by either heating in the upper part of the feature or a result of the density increase caused by the downflow of plasma.
+
+The helical motion of macrospicules is observed in multiple papers.
+\cite{Curdt2011} present observations of macrospicules in the transition region; they present two examples of 'explosive events'.
+In one case the feature is on the disk and in the second is above the limb.
+The discussion at the heart of the paper is differentiating between Rapid Red Extentions/Rapid Blue Extentions (RRE/RBE) pairs and helical motion, due to the fact that they can be misinterpreted in the data.
+In this case, the rotational velocity evident in the doppler images demonstrates symmetrical flow of the order $40$ kms${^{-1}}$ for both examples.
+Using the slit modes of EIS, the authors rule out the possibility of lateral movement as a result of bidirectional RRE/RBEs, calculating that if this were the case, then the jet would be up to $7.2$ Mm in each doppler component.
+This leads to the conclusion that the jet evident at the limb is moving helically, and consequently, that the feature observed on the disk is also a single jet rotating helically.
+
+
+
+
+
+Numerical sims
+Murakowski 2011
