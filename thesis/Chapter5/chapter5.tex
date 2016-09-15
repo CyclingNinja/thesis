@@ -1,4 +1,4 @@
-% !TeX root = ../thesis.\textbf{}tex
+% !TeX root = ../thesis.tex
 %*****************************************************************************************
 %*********************************** Fifth Chapter ***************************************
 %*****************************************************************************************
@@ -11,7 +11,7 @@ ch5 = texfigure.Manager(pytex, number=4, base_path='./Chapter5/')
 \end{pycode}
 
 \section{Introduction}
-Solar jets of various forms are ubiquitous throughout the solar atmosphere, from spicules and macrospicules low in the chromosphere, both of which pass through the transition region, to coronal and X-Ray jets extending into the solar corona \cite{Archonits2008,Majarska2011,Morton2012}. 
+Solar jets of various forms are ubiquitous throughout the solar atmosphere, from spicules and macrospicules low in the chromosphere, both of which pass through the transition region, to coronal and X-Ray jets extending into the solar corona \cite{Archontis2008,Majarska2011,Morton2012}. 
 Investigations into these phenomena have advanced significantly with recent developments in solar telescope technology, applied on missions like Hinode and the Solar Dynamics Observatory (SDO) and the most recent mission Interface Region Imaging Spectrometer (IRIS).
 Features are observed in a range of wavelengths and heights in the atmosphere \cite{Wang1998,Yamaucho2004}. 
 
@@ -27,12 +27,12 @@ More recently, the question surrounding spicules is how they effect the atmosphe
 Any contribution in terms of solar wind acceleration or heat transfer would be scaled up by their sheer number density.
 \cite{Rouppe2015} used coordinated observations with SST and IRIS to study RRE's and RBE's, examining H$\alpha$, Mg II h \& k, C II and Si IV.
 The authors find that these spicule-like extensions observed in H$\alpha$ have counter parts in the hotter Magnesium lines and the upper chromosphere/transition region C II and Si IV, which would certainly imply that these features are heating themselves, or the atmosphere around them.
-These spicules are similar to other features such as surges, the already mentioned RRB's/RBE's and chromospheric jets, all of which need considering with respect to spicules \cite{Tsiropoula2012,Kuridze2015}.
+These spicules are similar to other features such as surges, the already mentioned RRB's/RBE's and chromospheric jets, all of which need considering with respect to spicules \cite{Tsiropoula2012, Kuridze2015}.
 
 
 Higher in the chromosphere, macrospicules are generated, despite their origin laying low in the chromosphere, macrospicules extend through to the transition region and into the corona. 
 Larger counterparts of spicules, initially observed in $1975$ by \cite{Bohlin1975} using the Skylab 2 mission using a He $30.4$ nm filter viewing the upper chromopshere.
-Bohlin stated their lifetimes to be $5$ to $30$ mins and lengths to be approximately $10$ - $50$ arcsec, and these values have been confirmed by more recent studies such as \cite{Bennett2015}.
+Bohlin stated their lifetimes to be $5$ to $30$ mins and lengths to be approximately $10$ - $50$ arcsec, and these values have been confirmed \cref{ch:3}
 
 Macrospicules are generally accepted as multi-thermal structures, featuring a cool core and a hot sheath resulting from formation in the cooler atmosphere, from being observed in H$\alpha$ \citep{LaBonte79} and hotter high chromosphere lines such as in \cite{Parenti2002}.
 They have also been observed to rotate, \cite{Pike_Mason1998} and \cite{Kamio2010}, the latter paper quotes $-120 \pm 15$kms$^{-1}$ blue shift Doppler velocity on the left side of the macrospicule. 
@@ -40,7 +40,7 @@ They have also been observed to rotate, \cite{Pike_Mason1998} and \cite{Kamio201
 There are multiple proposals for the mechanism triggering apparent rotation of the macrospicule. 
 \cite{Curdt2011} propose that the Sun's differential rotation causes macrospicules rotation, whereas, reconnection events cause the relaxation of a small-scale twisted loop, as demonstrated by \cite{Adams2014}.
 Again, with macrospicules extending high into the atmosphere, the question of their effect upon it, is one that needs answering.
-\cite{Pike_Harrison1997} observe outflows from the macrospicule of the order $200$ kms$^{-1}$ in He I and discuss whether these outflows could potentially accelerate the solar wind.
+\cite{Pike1997} observe outflows from the macrospicule of the order $200$ kms$^{-1}$ in He I and discuss whether these outflows could potentially accelerate the solar wind.
 However, work by \cite{Zaqarashvili2014} questions whether jets moving at super-Alfv{\'e}nic speeds might cause a Kelvin-Helmholtz instability to form at the macrospicule/atmosphere boundary, which would, in turn, transport heat into the corona.
 
 A third category of jet-like features, are coronal jets, observed in slightly hotter lines of $17.1$ nm but still visible in EUV, such as those discussed in \cite{Shibata1992} and simulated in \cite{Wyper2016}.
@@ -57,9 +57,9 @@ Lastly, we need to consider X-ray jets.
 Due to limitations on instrumentation at the time, the authors do not cover the extent of the jets, however, they analyse temperatures, $3 - 8$ MK, and density, $0.4 - 4.0$ cm$^{-9}$.
 The authors also discuss flaring at the foot-point of X-ray jets, in that, the temperature is proportional to the size of the initial footpoints.
 
-\cite{Kamio2010} applied a great deal of the background above when studying a macrospicule and X-ray jet forming simultaneously. There is also discussion in \cite{Pike_Harrison1997} and \cite{Kim2007} on the appearance of X-ray jets, alongside small scale jets.
+\cite{Kamio2010} applied a great deal of the background above when studying a macrospicule and X-ray jet forming simultaneously. There is also discussion in \cite{Pike} and \cite{Kim2007} on the appearance of X-ray jets, alongside small scale jets.
 
-In the following sections we comprehensively discuss the physical properties of a case study. In \ref{sec:obs_sect} we present the observations we are using. \ref{sec:time_dist_sect} discusses the evolution of the jet with respect to its extent an the different view of the feature utilising STEREO-A's EUVI. Then move on to a doppler analysis of the jet in \ref{sec:dop_shift_sect}. Lastly, attempt to quantify the effect of the jet on the atmosphere in \ref{sec:temp_map_sect} before making our conclusions.
+In the following sections we comprehensively discuss the physical properties of a case study. In \cref{sec:obs_sect} we present the observations we are using. \ref{sec:time_dist_sect} discusses the evolution of the jet with respect to its extent an the different view of the feature utilising STEREO-A's EUVI. Then move on to a doppler analysis of the jet in \cref{sec:dop_shift_sect}. Lastly, attempt to quantify the effect of the jet on the atmosphere in \cref{sec:temp_map_sect} before making our conclusions.
 
 \begin{pycode}[chapter5]
 import numpy as np
@@ -96,7 +96,7 @@ multi.caption = "a) Observe the two bright points in the proximity of $(79, 60)$
 
 \section{Observations}
 \label{obs_sect}
-We observed a jet-like (hereby referred to as 'the jet') feature at the limb on $21$st June 2016 beginning at $07:30:00$ in CRISP, an instrument installed on the Swedish Solar Telescope (SST) during a period of good seeing \citep{Scharmer2003}.
+We observed a jet-like (hereby referred to as 'the jet') feature at the limb on $21$st June 2016 beginning at $07:30:00$ in CRISP, an instrument installed on the Swedish Solar Telescope (SST) during a period of good seeing, \cite{Scharmer2003}.
 We used the H$\alpha$ filter, core line $656.28$ nm with $35$ slit increments from the core covering a $.32$ nm range, $-0.2$ and $+0.12$, further processed using te Multi-Object Multi-Frame Blind Deconvolution (MOMBFD \cite{vanNoort2005}).
 The observations were of Active Region 11506 with $xc = 893",\ yc = -250"$ in heliographic coordinates on $930x930$ pixel images, with spatial resolution of $0.012$ arcsec/pixel and temporal resolution of $7.5$ sec.
 Due to the constant surveillance under which we have the Sun, we also have simultaneous observations with the Solar Dynamic Observatory (SDO) and the Solar Terrestrial Relations Observatory (STEREO).
@@ -104,7 +104,7 @@ Due to the constant surveillance under which we have the Sun, we also have simul
 Using the Atmospheric Imaging Assembly (AIA), we observe the jet in most of the wavelengths available, $30.4$, $35.5$, $211$, $17.1$ and $13.1$ nm.
 AIA on-board SDO (\cite{AIAspec}) provides $4096 \times 4096$ pixel images with a spatial resolution of $0.6$ arcsec per pixel and a cadence of $12$ sec.
 
-Lastly, we also have observations in STEREO using the Extreme Ultra Violet Imager (EUVI) \citep{Defise2001}. 
+Lastly, we also have observations in STEREO using the Extreme Ultra Violet Imager (EUVI) \cite{Defise2001}. 
 We are fortunate that when these observations were taken, STEREO A was at approximately $90^\circ$ to the Sun-Earth line, as such we also have observations of this feature as an on-disk feature.
 In this case we are using the $30.4$ nm HI instrument, however, the distance from the Earth has now reached a point that the temporal cadence has reduced to $10$ min.
 While this is possibly too high to undertake a detailed examination, we can certainly utilise this method to inform us as to the global behaviour of the macrospicule.
@@ -723,7 +723,7 @@ From the observation of this feature, we can draw the following conclusions
 The feature is observed to extend to $12.6$ Mm in He II $30.4$ nm (and is only found to be shorter in H$\alpha$ due to moving out of the viewing field of view).
 Its lifetime is measured of to be $20$ mins and radial velocities are found to be maximised during the initial acceleration, and are of the order $50 - 60$ km$s^{-1}$ during the first acceleration of the feature.
 However the second acceleration of material proves awkward to measure accurately, however we estimate slightly higher maximum velocities, but similar averages over the extension upwards. 
-This very much puts this feature in the category of macrospicules, agreeing with the recent study by \cite{Bennett2015}.
+This very much puts this feature in the category of macrospicules, agreeing with the values presented in \cref{ch:3}.
 
 However the feature exhibits similar formation mechanisms as a standard jet following the pattern demonstrated in \cite{Shibata1992} and then built on by \cite{Moore2010}, who also presented the blowout jet mechanism.
 With the two visible bright points in the H$\alpha$ images which come to form an, all be it, long thin bright arch before forming the characteristic spire of a the standard jet.
