@@ -4,14 +4,15 @@
 %*****************************************************************************************
 
 
-\label{ch:5}
+
 \chapter{A detailed case study of a jet-like feature at the limb}
+\label{ch:5}
 \begin{pycode}[chapter5]
 ch5 = texfigure.Manager(pytex, number=4, base_path='./Chapter5/')
 \end{pycode}
 
 \section{Introduction}
-Solar jets of various forms are ubiquitous throughout the solar atmosphere, from spicules and macrospicules low in the chromosphere, both of which pass through the transition region, to coronal and X-Ray jets extending into the solar corona \cite{Archontis2008,Majarska2011,Morton2012}. 
+Solar jets of various forms are ubiquitous throughout the solar atmosphere, from spicules and MSs low in the chromosphere, both of which pass through the transition region, to coronal and X-Ray jets extending into the solar corona \cite{Archontis2008,Majarska2011,Morton2012}. 
 Investigations into these phenomena have advanced significantly with recent developments in solar telescope technology, applied on missions like Hinode and the Solar Dynamics Observatory (SDO) and the most recent mission Interface Region Imaging Spectrometer (IRIS).
 Features are observed in a range of wavelengths and heights in the atmosphere \cite{Wang1998,Yamaucho2004}. 
 
@@ -30,7 +31,7 @@ The authors find that these spicule-like extensions observed in H$\alpha$ have c
 These spicules are similar to other features such as surges, the already mentioned RRB's/RBE's and chromospheric jets, all of which need considering with respect to spicules \cite{Tsiropoula2012, Kuridze2015}.
 
 
-Higher in the chromosphere, macrospicules are generated, despite their origin laying low in the chromosphere, macrospicules extend through to the transition region and into the corona. 
+Higher in the chromosphere, MSs are generated, despite their origin laying low in the chromosphere, MSs extend through to the transition region and into the corona. 
 Larger counterparts of spicules, initially observed in $1975$ by \cite{Bohlin1975} using the Skylab 2 mission using a He $30.4$ nm filter viewing the upper chromopshere.
 Bohlin stated their lifetimes to be $5$ to $30$ mins and lengths to be approximately $10$ - $50$ arcsec, and these values have been confirmed \cref{ch:3}
 
@@ -38,8 +39,8 @@ Macrospicules are generally accepted as multi-thermal structures, featuring a co
 They have also been observed to rotate, \cite{Pike_Mason1998} and \cite{Kamio2010}, the latter paper quotes $-120 \pm 15$kms$^{-1}$ blue shift Doppler velocity on the left side of the macrospicule. 
 
 There are multiple proposals for the mechanism triggering apparent rotation of the macrospicule. 
-\cite{Curdt2011} propose that the Sun's differential rotation causes macrospicules rotation, whereas, reconnection events cause the relaxation of a small-scale twisted loop, as demonstrated by \cite{Adams2014}.
-Again, with macrospicules extending high into the atmosphere, the question of their effect upon it, is one that needs answering.
+\cite{Curdt2011} propose that the Sun's differential rotation causes MSs rotation, whereas, reconnection events cause the relaxation of a small-scale twisted loop, as demonstrated by \cite{Adams2014}.
+Again, with MSs extending high into the atmosphere, the question of their effect upon it, is one that needs answering.
 \cite{Pike1997} observe outflows from the macrospicule of the order $200$ kms$^{-1}$ in He I and discuss whether these outflows could potentially accelerate the solar wind.
 However, work by \cite{Zaqarashvili2014} questions whether jets moving at super-Alfv{\'e}nic speeds might cause a Kelvin-Helmholtz instability to form at the macrospicule/atmosphere boundary, which would, in turn, transport heat into the corona.
 
@@ -57,7 +58,7 @@ Lastly, we need to consider X-ray jets.
 Due to limitations on instrumentation at the time, the authors do not cover the extent of the jets, however, they analyse temperatures, $3 - 8$ MK, and density, $0.4 - 4.0$ cm$^{-9}$.
 The authors also discuss flaring at the foot-point of X-ray jets, in that, the temperature is proportional to the size of the initial footpoints.
 
-\cite{Kamio2010} applied a great deal of the background above when studying a macrospicule and X-ray jet forming simultaneously. There is also discussion in \cite{Pike} and \cite{Kim2007} on the appearance of X-ray jets, alongside small scale jets.
+\cite{Kamio2010} applied a great deal of the background above when studying a macrospicule and X-ray jet forming simultaneously. There is also discussion in \cite{Pike1997} and \cite{Kim2007} on the appearance of X-ray jets, alongside small scale jets.
 
 In the following sections we comprehensively discuss the physical properties of a case study. In \cref{sec:obs_sect} we present the observations we are using. \ref{sec:time_dist_sect} discusses the evolution of the jet with respect to its extent an the different view of the feature utilising STEREO-A's EUVI. Then move on to a doppler analysis of the jet in \cref{sec:dop_shift_sect}. Lastly, attempt to quantify the effect of the jet on the atmosphere in \cref{sec:temp_map_sect} before making our conclusions.
 
@@ -273,10 +274,10 @@ plt.ylabel('Distance along the slit')
 sst_slit_fig = ch5.save_figure('sst-slit', fig)
 sst_slit_fig.figure_env_name = r'figure*'
 sst_slit_fig.figure_width = r'\columnwidth'
-sst_slit_fig.placement = 't'
+sst_slit_fig.placement = 'H'
 sst_slit_fig.caption = r'CRISP/SST H$\alpha$ core line slit analysis.'
 
-print(sst_slit_fig.repr_figure(), file=sys.stderr)
+#print(sst_slit_fig.repr_figure(), file=sys.stderr)
 \end{pycode}
 
 \py[chapter5]|sst_slit_fig|
@@ -588,7 +589,7 @@ Noticeable as well, however, is that at what is approximately the boundaries, th
 
 These values are not conclusive, we require temperature maps on a much finer spatial scale, and as well, new techniques to develop to overcome the problems of the extremely broad H$\alpha$ and He II lines causing a blurring of possible values.
 However, in conjunction with the observations presented here of possible shearing or Kelvin Helmholtz instability causing a lack of emission at the boundary of the jet, we can present the hypothesis more confidently.
-In terms of the bigger picture in which spicules/jets/macrospicules contribute to heating of the solar corona, the results produced by this feature are not typical.
+In terms of the bigger picture in which spicules/jets/MSs contribute to heating of the solar corona, the results produced by this feature are not typical.
 With respect to other studies, this feature cannot be considered that quick, or large, or excessively rotational, yet it may be having a measurable effect.
 Hence, applying this kind of comprehensive analysis to multiple jets, particularly rapidly evolving examples, to ascertain their impact on the atmosphere fully is the next area of investigation for these jets.
 An endeavour which will be aided significantly by the operation commencement of DKIST, with its superior everything.
@@ -624,87 +625,87 @@ for i, im in enumerate(ims):
 
 \end{pycode}
 
-\begin{pycode}[chapter5]
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.collections import LineCollection
-from matplotlib import colors
-
-import sunpy.map
-import slit
-
-from astropy.io import fits
-import astropy.units as u
-
-from glob import glob
-
-files = glob('/storage2/temperature_maps/data/full_gauss/*.fits')
-files.sort()
-
-def proc_file(x):
-    with fits.open(x, memmap=True) as f:
-        data = f[0].data[..., 0]
-        header = dict(f[0].header)
-        m = sunpy.map.Map((data, header))
-        m.plotsettings = {'cmap':'coolwarm'}
-        crop = m.submap((857.9, 957.94)*u.arcsec,
-                 (-197.92, -297.92)*u.arcsec)
-    return crop 
-
-
-submaps = []
-for afile in files[28:40]:
-    temp = proc_file(afile)
-    submaps.append(temp)
-
-mc = sunpy.map.Map(submaps, cube=True)
-
-
-image_1 = slit.slit(mc, [909, 911]*u.arcsec, [-245, -242]*u.arcsec, 1, -1, +1)
-
-temp_values = image_1[0]
-temp_inds = image_1[1]
-
-
-xy_slit = [np.array(zip(range(len(temp_inds)), temp_values[0,:,i])) for i in range(temp_values.shape[2])]
-
-def truncate_colormap(cmap, minval=0.0, maxval=1.0, n=100):
-    new_cmap = colors.LinearSegmentedColormap.from_list(
-        'trunc({n},{a:.2f},{b:.2f})'.format(n=cmap.name, a=minval, b=maxval),
-        cmap(np.linspace(minval, maxval, n)))
-    return new_cmap
-
-nmap = truncate_colormap(plt.get_cmap('Oranges'), 0.3, 1.0)
-
-line_segments = LineCollection(xy_slit,
-                               linewidths=0.25,
-                               linestyle='solid',
-                               cmap=nmap)
-
-line_segments.set_array(np.arange(len(temp_values[0,0,:])))
-
-fig, ax = plt.subplots(figsize=texfigure.figsize(pytex))
-
-
-ax.add_collection(line_segments)
-ax_cb = fig.colorbar(line_segments)
-ax_cb.set_label('Time')
-ax.axis([0,5 , 6.4, 6.6])
-ax.set_title('Temperature over slit')
-ax.set_xlabel('Distance across slit')
-ax.set_ylabel('Temperature')
-plt.sci(line_segments)
-plt.draw()
-
-temp_slit = ch5.save_figure('temp-slit', fig)
-temp_slit.caption = "The AIA maps were processed into temperature maps, and a slit was taken at the half height, perpendicular to the axis of evolution. The temperature maps were taken for the time over which the second acceleration of material occured. The colorbar indicates the passage of time and the various lines applicable to the slits is demonstrated."
-
-
-\end{pycode}
-
-\py[chapter5]|multi_db|
-
-\py[chapter5]|temp_slit|
+%\begin{pycode}[chapter5]
+%import numpy as np
+%import matplotlib.pyplot as plt
+%from matplotlib.collections import LineCollection
+%from matplotlib import colors
+%
+%import sunpy.map
+%import slit
+%
+%from astropy.io import fits
+%import astropy.units as u
+%
+%from glob import glob
+%
+%files = glob('/storage2/temperature_maps/data/full_gauss/*.fits')
+%files.sort()
+%
+%def proc_file(x):
+%    with fits.open(x, memmap=True) as f:
+%        data = f[0].data[..., 0]
+%        header = dict(f[0].header)
+%        m = sunpy.map.Map((data, header))
+%        m.plotsettings = {'cmap':'coolwarm'}
+%        crop = m.submap((857.9, 957.94)*u.arcsec,
+%                 (-197.92, -297.92)*u.arcsec)
+%    return crop 
+%
+%
+%submaps = []
+%for afile in files[28:40]:
+%    temp = proc_file(afile)
+%    submaps.append(temp)
+%
+%mc = sunpy.map.Map(submaps, cube=True)
+%
+%
+%image_1 = slit.slit(mc, [909, 911]*u.arcsec, [-245, -242]*u.arcsec, 1, -1, +1)
+%
+%temp_values = image_1[0]
+%temp_inds = image_1[1]
+%
+%
+%xy_slit = [np.array(zip(range(len(temp_inds)), temp_values[0,:,i])) for i in range(temp_values.shape[2])]
+%
+%def truncate_colormap(cmap, minval=0.0, maxval=1.0, n=100):
+%    new_cmap = colors.LinearSegmentedColormap.from_list(
+%        'trunc({n},{a:.2f},{b:.2f})'.format(n=cmap.name, a=minval, b=maxval),
+%        cmap(np.linspace(minval, maxval, n)))
+%    return new_cmap
+%
+%nmap = truncate_colormap(plt.get_cmap('Oranges'), 0.3, 1.0)
+%
+%line_segments = LineCollection(xy_slit,
+%                               linewidths=0.25,
+%                               linestyle='solid',
+%                               cmap=nmap)
+%
+%line_segments.set_array(np.arange(len(temp_values[0,0,:])))
+%
+%fig, ax = plt.subplots(figsize=texfigure.figsize(pytex))
+%
+%
+%ax.add_collection(line_segments)
+%ax_cb = fig.colorbar(line_segments)
+%ax_cb.set_label('Time')
+%ax.axis([0,5 , 6.4, 6.6])
+%ax.set_title('Temperature over slit')
+%ax.set_xlabel('Distance across slit')
+%ax.set_ylabel('Temperature')
+%plt.sci(line_segments)
+%plt.draw()
+%
+%temp_slit = ch5.save_figure('temp-slit', fig)
+%temp_slit.caption = "The AIA maps were processed into temperature maps, and a slit was taken at the half height, perpendicular to the axis of evolution. The temperature maps were taken for the time over which the second acceleration of material occured. The colorbar indicates the passage of time and the various lines applicable to the slits is demonstrated."
+%
+%
+%\end{pycode}
+%
+%\py[chapter5]|multi_db|
+%
+%\py[chapter5]|temp_slit|
 
 \section{Discussion \& Conclusion}
 \label{sec:DandC}
@@ -724,7 +725,7 @@ From the observation of this feature, we can draw the following conclusions
 The feature is observed to extend to $12.6$ Mm in He II $30.4$ nm (and is only found to be shorter in H$\alpha$ due to moving out of the viewing field of view).
 Its lifetime is measured of to be $20$ mins and radial velocities are found to be maximised during the initial acceleration, and are of the order $50 - 60$ km$s^{-1}$ during the first acceleration of the feature.
 However the second acceleration of material proves awkward to measure accurately, however we estimate slightly higher maximum velocities, but similar averages over the extension upwards. 
-This very much puts this feature in the category of macrospicules, agreeing with the values presented in \cref{ch:3}.
+This very much puts this feature in the category of MSs, agreeing with the values presented in \cref{ch:3}.
 
 However the feature exhibits similar formation mechanisms as a standard jet following the pattern demonstrated in \cite{Shibata1992} and then built on by \cite{Moore2010}, who also presented the blowout jet mechanism.
 With the two visible bright points in the H$\alpha$ images which come to form an, all be it, long thin bright arch before forming the characteristic spire of a the standard jet.
@@ -741,7 +742,7 @@ In this case, the jet appears as an absorption feature, against the brighter lim
 This does not mean that the jet does not reach coronal temperatures, in $30.4$ nm the jet appears as absorption below the limb and as emission above it.
 We cannot conclusively say that the jet contributes to the coronal emission by visual inspection.
 
-Therefore, we propose that this is a standard jet, and as a community, we need to fully address the underlying physics of macrospicules.
+Therefore, we propose that this is a standard jet, and as a community, we need to fully address the underlying physics of MSs.
 This is despite the ambiguity about its appearance in the coronal emission lines, but the underlying physics is enough to draw this conclusion.
 
 The spectroscopic readings, as show in \cref{dop_shift_sect}, demonstrates a small, but appreciable perturbation in the rotational velocity of the jet like feature.
