@@ -8,9 +8,9 @@
 
 % The basic information needed to create a title page
 \title{Macrospicules, Jets and the Solar Chromosphere}
-\author{Samuel Bennett and Robertus Erdelyi}
+\author{Samuel Bennett}
 \institute{Solar Physics and Space Plasma Research Centre (SP$^2$RC) \\ University of Sheffield}
-\date{Debrecen Observatory, \today \\ Hungary}
+\date{21{^st} November 2016}
 
 \usetheme{Berlin} % Standard Blue in your face theme
 \renewcommand{\bibname}{References}
@@ -416,13 +416,59 @@
 
 	\begin{frame}{Doppler-problems}
 		\begin{itemize}
-			\item{The line profiles in this region }
-			content...
+			\item{The line profiles in this region change, on-disk to off disk.}
+			\begin{itemize}
+				\item{On disk, the spectral line profile form is absorption.}
+				\item{At the limb, the profile of the spectrum is emission.}
+			\end{itemize}
+			\item{As such, fitting the profile is difficult.}
+			\item{Therefore}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\big Markov-Chain Monte-Carlo
+	\end{frame}
+	
+	
+	\begin{frame}{Markov-Chain Monte-Carlo Modelling}
+		\begin{itemize}
+			\item{We fit both single and double Gaussian line profiles.}
+			\item{The primary issue is resolving between the two emission profiles.}
+			\item{Therefore we fit a distribution of possible fits to both.}
+			\item{Subsequently utilising a Bayesian Information Criterion allows differentiation between the two.}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Doppler Velocities}
+		\begin{itemize}
+			\item{Then, by minimising the two distributions and applying the Doppler equation, we can calculate the LoS velocity of the feature.}
+			\item{During the first acceleration of the feature, no prominent LoS motion was detected.}
+			\item{However during the second acceleration of plasma, we notice some very distinctive behaviour.}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\includegraphics[scale=0.5]{Figs/dopplergram.png}
+	\end{frame}
+
+	\begin{frame}{Doppler Velocities}
+		\begin{itemize}
+			\item{The feature extends upwards during the acceleration phase, looses momentum, and begins to 'unwind' from the tip of the feature.}
+			\item{The redshift then takes over the motion of the entire feature.}
+			\item{After a while the magnetude of this velocity decreases and the feature appears to leave the images.}
+			\item{However, in its place, appears blue shift and the feature proceeds to rotate in the opposite direction.}
 		\end{itemize}
 	\end{frame}
 
 
 
+
+% % % % % % % % concluding 
+
+	\begin{frame}{Conclusion}
+	content...
+	\end{frame}
 
 	\begin{frame}{References}
 	\tiny
