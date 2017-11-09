@@ -11,6 +11,7 @@
 ch5 = texfigure.Manager(pytex, number=4, base_path='./Chapter5/')
 \end{pycode}
 
+
 \section{Introduction}
 Solar jets of various forms are ubiquitous throughout the solar atmosphere, from spicules and MSs low in the chromosphere, both of which pass through the transition region, to coronal and X-Ray jets extending into the solar corona \cite{Archontis2008,Majarska2011,Morton2012}. 
 Investigations into these phenomena have advanced significantly with recent developments in solar telescope technology, applied on missions like Hinode and the Solar Dynamics Observatory (SDO) and the most recent mission Interface Region Imaging Spectrometer (IRIS).
@@ -23,20 +24,20 @@ Type-1 are described as longer lived and less explosive with respect to velocity
 
 Having stated this, \cite{Pereira2014} have revealed that Type-2 spicules disappearance may be as a result of heating and moving out of the passband, due to the fact that they are consequently observed in a hotter line which may imply that these features are not in fact separate populations and \cite{Zhang2012} finds no such distinction in population.
 
-Many formation mechanisms have been proposed for spicules, including reconnection, \emph{p}-mode driving and applying accretion disk models in a solar context, for reviews see \cite{Sterling2000} and \cite{Zaqara_Erdelyi2009}.
+Many formation mechanisms have been proposed for spicules, including reconnection, \emph{p}-mode driving and applying accretion disk models to the plasma sinking at the inter-granular lanes, for reviews see \cite{Sterling2000} and \cite{Zaqara_Erdelyi2009}.
 More recently, the question surrounding spicules is how they effect the atmosphere is particularly pertinent given their vast number. 
-Any contribution in terms of solar wind acceleration or heat transfer would be scaled up by their sheer number density.
+Any contribution in terms of solar wind acceleration or heat transfer would be scaled up by their extremely high number density.
 \cite{Rouppe2015} used coordinated observations with SST and IRIS to study RRE's and RBE's, examining H$\alpha$, Mg II h \& k, C II and Si IV.
 The authors find that these spicule-like extensions observed in H$\alpha$ have counter parts in the hotter Magnesium lines and the upper chromosphere/transition region C II and Si IV, which would certainly imply that these features are heating themselves, or the atmosphere around them.
 These spicules are similar to other features such as surges, the already mentioned RRB's/RBE's and chromospheric jets, all of which need considering with respect to spicules \cite{Tsiropoula2012, Kuridze2015}.
+The authors demonstrate that the high velocities and extents of the RRB's/RBE's are very similar to those previously cited byt \cite{Beckers1972} and \cite{DePontieu2007}. 
 
-
-Higher in the chromosphere, MSs are generated, despite their origin laying low in the chromosphere, MSs extend through to the transition region and into the corona. 
+Higher in the chromosphere, macrospicules (MSs) are generated, despite their origin laying low in the chromosphere, MSs extend through to the transition region and into the corona. 
 Larger counterparts of spicules, initially observed in $1975$ by \cite{Bohlin1975} using the Skylab 2 mission using a He $30.4$ nm filter viewing the upper chromopshere.
 Bohlin stated their lifetimes to be $5$ to $30$ mins and lengths to be approximately $10$ - $50$ arcsec, and these values have been confirmed \cref{ch:3}
 
 Macrospicules are generally accepted as multi-thermal structures, featuring a cool core and a hot sheath resulting from formation in the cooler atmosphere, from being observed in H$\alpha$ \citep{LaBonte79} and hotter high chromosphere lines such as in \cite{Parenti2002}.
-They have also been observed to rotate, \cite{Pike_Mason1998} and \cite{Kamio2010}, the latter paper quotes $-120 \pm 15$kms$^{-1}$ blue shift Doppler velocity on the left side of the macrospicule. 
+They have also been observed to rotate, \cite{Pike_Mason1998} and \cite{Kamio2010}, the latter paper quotes $-120 \pm 15$ kms$^{-1}$ blue-shifted Doppler velocity on the left side of the macrospicule. 
 
 There are multiple proposals for the mechanism triggering apparent rotation of the macrospicule. 
 \cite{Curdt2011} propose that the Sun's differential rotation causes MSs rotation, whereas, reconnection events cause the relaxation of a small-scale twisted loop, as demonstrated by \cite{Adams2014}.
@@ -58,9 +59,13 @@ Lastly, we need to consider X-ray jets.
 Due to limitations on instrumentation at the time, the authors do not cover the extent of the jets, however, they analyse temperatures, $3 - 8$ MK, and density, $0.4 - 4.0$ cm$^{-9}$.
 The authors also discuss flaring at the foot-point of X-ray jets, in that, the temperature is proportional to the size of the initial footpoints.
 
-\cite{Kamio2010} applied a great deal of the background above when studying a macrospicule and X-ray jet forming simultaneously. There is also discussion in \cite{Pike1997} and \cite{Kim2007} on the appearance of X-ray jets, alongside small scale jets.
+\cite{Kamio2010} applied a great deal of the background above when studying a macrospicule and X-ray jet forming simultaneously. 
+There is also discussion in \cite{Pike1997} and \cite{Kim2007} on the appearance of X-ray jets, alongside small scale jets.
 
-In the following sections we comprehensively discuss the physical properties of a case study. In \cref{sec:obs_sect} we present the observations we are using. \ref{sec:time_dist_sect} discusses the evolution of the jet with respect to its extent an the different view of the feature utilising STEREO-A's EUVI. Then move on to a doppler analysis of the jet in \cref{sec:dop_shift_sect}. Lastly, attempt to quantify the effect of the jet on the atmosphere in \cref{sec:temp_map_sect} before making our conclusions.
+In the following sections we comprehensively discuss the physical properties of a case study. In \cref{sec:obs_sect} we present the observations we are using. 
+\ref{sec:time_dist_sect} discusses the evolution of the jet with respect to its extent and the different view of the feature utilising STEREO-A's EUVI. 
+Then move on to a doppler analysis of the jet in \cref{sec:dop_shift_sect}.
+Lastly, attempt to quantify the effect of the jet on the atmosphere in \cref{sec:temp_map_sect} before making our conclusions.
 
 \begin{pycode}[chapter5]
 import numpy as np
@@ -88,7 +93,7 @@ for i, anim in enumerate(ims):
     multi.append(Fig1)
 
 multi.placement = 't!'
-multi.caption = "a) Observe the two bright points in the proximity of $(79, 60)$. The point on the left is significantly brighter than the fainter on the right. We emphasise that the brightening around $(60, 50)$ is not a contributor to this jet. b) In this frame the bright points have extended, the fainter point has now extended up to $~95$ and the core of the brighter left feature has grown with it. c) At this point the two separate points are now indistinguishable and the feature is now extending as one column."
+multi.caption = "a) Examine the two bright points in the proximity of $(79", 60")$. The point on the left is significantly brighter than the fainter on the right. We emphasise that the brightening around $(60", 50")$ is not a contributor to this jet. b) In this frame the bright points have extended, the fainter point has now extended up to $~95"$ and the core of the brighter left feature has grown with it. c) At this point the two separate points are now indistinguishable and the feature is now extending as one column."
 \end{pycode}
 
 \py[chapter5]|multi|
@@ -97,15 +102,15 @@ multi.caption = "a) Observe the two bright points in the proximity of $(79, 60)$
 
 \section{Observations}
 \label{sec:obs_sect}
-We observed a jet-like (hereby referred to as 'the jet') feature at the limb on $21$st June 2016 beginning at $07:30:00$ in CRISP, an instrument installed on the Swedish Solar Telescope (SST) during a period of good seeing, \cite{Scharmer2003}.
-We used the H$\alpha$ filter, core line $656.28$ nm with $35$ slit increments from the core covering a $.32$ nm range, $-0.2$ and $+0.12$, further processed using te Multi-Object Multi-Frame Blind Deconvolution (MOMBFD \cite{vanNoort2005}).
-The observations were of Active Region 11506 with $xc = 893",\ yc = -250"$ in heliographic coordinates on $930x930$ pixel images, with spatial resolution of $0.012$ arcsec/pixel and temporal resolution of $7.5$ sec.
-Due to the constant surveillance under which we have the Sun, we also have simultaneous observations with the Solar Dynamic Observatory (SDO) and the Solar Terrestrial Relations Observatory (STEREO).
+We observed a jet-like (hereby referred to as 'the jet') feature at the limb on $21$st June 2016 beginning at $07:30:00$ UTC in CRISP, an instrument installed on the Swedish Solar Telescope (SST) during a period of good seeing, \cite{Scharmer2003}.
+We used the H$\alpha$ filter, core line $656.28$ nm with $35$ slit increments from the core covering a $.32$ nm range, $-0.2$ nm and $+0.12$ nm, further processed using te Multi-Object Multi-Frame Blind Deconvolution (MOMBFD \cite{vanNoort2005}).
+The observations were of Active Region 11506 with $xc = 893",\ yc = -250"$ in heliographic coordinates on $930 \times 930$ pixel images, with spatial resolution of $0.012$ arcsec/pixel and temporal resolution of $7.5$ sec.
+Due to the range of solar observational platforms available to us, we also have simultaneous observations with the Solar Dynamic Observatory (SDO) and the Solar Terrestrial Relations Observatory (STEREO).
 
 Using the Atmospheric Imaging Assembly (AIA), we observe the jet in most of the wavelengths available, $30.4$, $35.5$, $211$, $17.1$ and $13.1$ nm.
 AIA on-board SDO (\cite{AIAspec}) provides $4096 \times 4096$ pixel images with a spatial resolution of $0.6$ arcsec per pixel and a cadence of $12$ sec.
 
-Lastly, we also have observations in STEREO using the Extreme Ultra Violet Imager (EUVI) \cite{Defise2001}. 
+Lastly, we also have observations in STEREO using the Extreme Ultra Violet Imager (EUVI) [\cite{Defise2001}]. 
 We are fortunate that when these observations were taken, STEREO A was at approximately $90^\circ$ to the Sun-Earth line, as such we also have observations of this feature as an on-disk feature.
 In this case we are using the $30.4$ nm HI instrument, however, the distance from the Earth has now reached a point that the temporal cadence has reduced to $10$ min.
 While this is possibly too high to undertake a detailed examination, we can certainly utilise this method to inform us as to the global behaviour of the macrospicule.
@@ -119,7 +124,7 @@ Let us begin with the evolution of the jet over time.
 We have utilised a self-built, manual, feature measuring tool, which uses a clicking mechanism to select the foot and tip of the macrospicule, calculates the half height and uses this as a guide to measure the width of the feature.
 Using this tool on each frame, and therefore the time cadence of the instrument, we obtain the evolution of the jet and general ballistic information.
 We have used this tool on each wavelength to examine the extent upwards through the corona. 
-Observations in SDO record the entire lifetime of the feature, however the same is not true for observations using the SST, where the observation window in SST closes at $07:55:00$.
+Observations in SDO record the entire lifetime of the feature, however the same is not true for observations using the SST, where the observation window in SST closes at $07:55:00$ UTC.
 
 \subsection{Onset}
 The jet feature is observed as it forms using SST and, fortunately, we can resolve initial stages of the jet formation.
@@ -128,7 +133,7 @@ The jet is observed to initiate in the core of H$\alpha$ with two small bright p
 Evident in \cref{fig:onset1} we find the initial two bright points at the foot of the jet, the bright point of the left being significantly brighter than its countpart on the right.
 By \cref{fig:onset2} shows the development of these two points \emph{i.e.} have now become two columns of brighter plasma.
 In the final formation stage, \cref{fig:onset3} the jet has formed and is now a distinct feature against the background.
-This behaviour is in keeping with the standard jet formation model demonstrated by \cite{Shibata1992}, where the authors describe an 'inverted y' shape of brightened material that is a result of small scale flux emergence reconnection.
+This behaviour is in keeping with the standard jet formation model demonstrated by \cite{Shibata1992}, where the authors describe an `inverted y' shape of brightened material that is a result of small scale flux emergence reconnection.
 
 
 
@@ -136,7 +141,7 @@ This behaviour is in keeping with the standard jet formation model demonstrated 
 Let us examine the raw evolution of the jet in the time distance plot in \cref{fig:t-d-plot}.
 Here we have utilised the measuring tool to measure the extent of the feature in all the wavelengths in which it is visible.
 We find that the overall profile of its evolution contains two distinct peaks in most wavelengths, with the exception of $17.1$ nm.
-The first peak comes at $~07:37$ before a decrease in size and subsequent secondary expansion to its maximum length in H$\alpha$ and $30.4$ nm at approximately $07:49$.
+The first peak comes at $~07:37$ UTC before a decrease in size and subsequent secondary expansion to its maximum length in H$\alpha$ and $30.4$ nm at approximately $07:49$ UTC.
 This strongly implies that there is a second initialising type event in which a new material is accelerated into the atmosphere.
 As such let us turn to the CRISP instrument again.
 
@@ -150,11 +155,11 @@ Considering the observations in multiple wavelengths, we notice the smaller exte
 In these higher temperature lines, the jet appears as a dark line.
 Now, this could be due to the fact that the feature is cool and can't be found in the higher temperatures.
 However, when examining the jet in AIA $30.4$ nm, the feature appears dark beneath the limb but emissive over it.
-It also appears in EUVI $30.4$ m, as a dark feature, therefore we can't assume there is no emission in the higher lines.
+It also appears in EUVI $30.4$ nm, as a dark feature, therefore we can't assume there is no emission in the higher lines.
 This is not unexpected, given its extent in the chromospheric lines, we can to categorise this as a chromospheric feature, as opposed to coronal.
 
 %double check this section
-Evidently, the maximum extent of this feature is in SDO $30.4$ and maximises at $12.6$ Mm although the measurements in H$\alpha$ may exceed this were it to be fully visible.
+Evidently, the maximum extent of this feature is in AIA/SDO $30.4$ nm and maximises at $12.6$ Mm although the measurements in H$\alpha$ may exceed this were it to be fully visible.
 Interestingly, the length of the jet in the coronal lines does not get larger after the second injection on plasma occurs.
 This subsequent acceleration of plasma originates from the same location as that of the initial formation, and on the same scale as the first onset.
 However, this drives the tip of the jet even higher than the initial tip, measuring the velocity accurately is difficult, due to this acceleration is set against the previous bright material.
