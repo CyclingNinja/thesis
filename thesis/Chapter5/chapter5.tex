@@ -153,17 +153,19 @@ Unfortunately, a section of material is in front of the base of the jet and obsc
 
 Considering the observations in multiple wavelengths, we notice the smaller extension visible in the coronal wavelengths.
 In these higher temperature lines, the jet appears as a dark line.
-Now, this could be due to the fact that the feature is cool and can't be found in the higher temperatures.
-However, when examining the jet in AIA $30.4$ nm, the feature appears dark beneath the limb but emissive over it.
-It also appears in EUVI $30.4$ nm, as a dark feature, therefore we can't assume there is no emission in the higher lines.
-This is not unexpected, given its extent in the chromospheric lines, we can to categorise this as a chromospheric feature, as opposed to coronal.
+The appearance could be due to the fact that the feature is cool and cannot be observed at higher temperatures.
+However, when observed in SDO/AIA $30.4$ nm, the feature appears dark over the limb and emissive beyond it.
+Observing the feature in EUVI, the feature appears entirely dark with bright foot points.
+Therefore, we cannot state that there is no emission at higher temperatures. 
+However, this does allow us to categorise the jet as a feature of the chromosphere.
+
 
 %double check this section
-Evidently, the maximum extent of this feature is in AIA/SDO $30.4$ nm and maximises at $12.6$ Mm although the measurements in H$\alpha$ may exceed this were it to be fully visible.
+Evidently, the maximum extent of this feature is in He II $30.4$ nm and maximises at $12.6$ Mm although the measurements in H$\alpha$ may exceed this were it to be fully visible.
 Interestingly, the length of the jet in the coronal lines does not get larger after the second injection on plasma occurs.
 This subsequent acceleration of plasma originates from the same location as that of the initial formation, and on the same scale as the first onset.
 However, this drives the tip of the jet even higher than the initial tip, measuring the velocity accurately is difficult, due to this acceleration is set against the previous bright material.
-An approximation using multiple image steps and using a difference delta produces an average of $46$ kms${^{-1}}$, therefore we can infer that it reaches a higher maximum velocity than the first ejection.
+An approximation using multiple image steps and using a difference delta produces an average of $46$ km s${^{-1}}$, therefore we can infer that it reaches a higher maximum velocity than the first ejection.
 
 The feature is very thin, averaging $1.13$ Mm in H$\alpha$ and $0.787$ Mm in He II. 
 This result is unexpected, it certainly seems to contradict the cool core surrounded by a hot sheath model.
@@ -243,7 +245,7 @@ td_fig.caption = ""
 	\begin{subtable}[b]{\textwidth}
 		\centering
 		\begin{tabular}{ccc}
-		Wavelength, nm & Maximum Length, Mm & Maximum Velocity km/s \\
+		Wavelength (nm) & Maximum Length (Mm) & Maximum Velocity (km/s) \\
 		656.2 & 11.3 & 0.09 \\
 		30.4 & 12.6 & 31.5 \\
 		33.5 & 6.0 & 53.6 \\
@@ -253,7 +255,7 @@ td_fig.caption = ""
 		\end{tabular}
 		\caption{}
 	\end{subtable}
-	\caption{a) Darkgold = H$\alpha$, Blue = 33.5 nm, Orange = 30.4 nm, Purple = 21.1 nm, Yellow = 17.1 nm, Green = 13.1 nm. The CRISP observations end earlier than the whole evolution of the jet, and the top of the jet is cut off by the top of the image. Therefore we ignore flatline at the top of the H$\alpha$ line starting at 07:42. b) Table of maximised basic spatial properties of the jet.}
+	\caption{a) Darkgold = H$\alpha$, Blue = 33.5 nm, Orange = 30.4 nm, Purple = 21.1 nm, Yellow = 17.1 nm, Green = 13.1 nm. The CRISP observations end earlier than the whole evolution of the jet, and the top of the jet is cut off by the top of the image. Therefore we ignore flatline at the top of the H$\alpha$ line starting at $07:42$ UTC. b) Table of maximised basic spatial properties of the jet.}
 \end{figure}
 
 
@@ -290,10 +292,10 @@ sst_slit_fig.caption = r'CRISP/SST H$\alpha$ core line slit analysis.'
 
 
 \subsection{STEREO-A}
-We are fortunate that we can observe the jet feature in the STEREO-A/EUVI, with the position of the spacecraft at approximately $90^\circ$ to the Sun-Earth line.
+Next, consider the observations in EUVI, with the instrument positioned at $90^{\circ}$ to the Sun-Earth line.
 This facilitates the building of a larger picture of the behaviour of the jet, the downside to this however, is that with STEREO-A being at such a distance the cadence is low, $~10$ mins.
 In this case we obtain 4 images in $30.4$ nm in which the jet is observed.
-The jet appears as a dark fibril like feature originating at ***A POINT IN SPACE*** and extending across the disk to a length of $45.1$arcsec.
+The jet appears as a dark fibril like feature originating at approximately $-570, -385$ HPC, and extending across the disk to a length of $45.1$ arcsec.
 Significantly, the component of extension in the East-West direction is not insignificant, approximately $30$ arcsec.
 With this information we calculate that the total length of the feature, taking into account both SDO and STEREO's view, is $25.5$ Mm.
 
@@ -333,15 +335,15 @@ for i, im in enumerate(stereos):
 	multi_ST.append(Fig1)
 
 multi_ST.placement = 't'
-multi_ST.caption = "EUVI $30.4$ nm images from STEREO on $21$st June at a) $07:26:15$, b) $07:36:15$, c) $07:46:15$ and d) $07:56:15$. "
+multi_ST.caption = "EUVI $30.4$ nm images from STEREO on $21$st June at a) $07:26:15$ UTC, b) $07:36:15$ UTC, c) $07:46:15$  UTC and d) $07:56:15$ UTC. "
 \end{pycode}
 
 \py[chapter5]|multi_ST|
 
 
 
-\section{Doppler shift}
-\label{sec:dop_shift_sect}
+\section{Doppler Shift}
+\label{sec:doppler-shift}
 
 Possibly the most valuable information to be gained about the development of jets, is pertaining to it rotational behaviour, therefore, we will use the spectral increments from the CRISP instrument to obtain line-of-sight Doppler velocities.
 There is, however, a hindrance with this.
@@ -367,34 +369,34 @@ In this case the sample is larger than the number of parameters and we are only 
 
 The result of applying the above method to the CRISP/SST spectroscopic dataset is presented in \cref{fig:dop-exam}.
 Immediately apparent, is the banding structured red and blue shifts, the effect is created as a result of the optical depth created when observing at the limb. 
-The jet forms in amongst a blue band of smaller thin structures, making early observations in the dopplergrams difficult.  
+The jet forms in amongst a cluster of blue-shifted smaller thin structures, making early observations in the Dopplergrams difficult.  
 
 \subsection{Analysis}
 This particular feature, as has already been mentioned, has two events in which material is accelerated upwards into the solar atmosphere.
-The first event is not readily visible in the dopplergrams, difficult as it is to pick out against a line of spicule-like features all showing blueshifts, towards the viewewing direction.
+The first event is not readily visible in the dopplergrams, difficult as it is to pick out against a line of spicule-like features all showing blue-shifts, towards the viewewing direction.
 This result is to be expected given the we have demonstrated movement away from the 'camera' in \cref{fig:stereo}.
-Whereas, the second expulsion of material, originating at $07:37$, exhibits the classic behaviour of a rotating feature in dopplergrams, a red/blue split over the body of the feature. 
+Whereas, the second expulsion of material, originating at $07:37$ UTC, exhibits the classic behaviour of a rotating feature in Dopplergrams, a red/blue split over the body of the feature. 
  
 It is clear that the second event comes from a similarly small element to the first and evolves upwards, joining the full formation of the jet, hence why the apparent rotation of the jet does not appear to spread across the rest of the jet as seen in H$\alpha$.
 
-As the jet evolves we see an initial blue shift, matching the acceleration upwards seen in H$\alpha$, and it is only after a few second seconds of evolution that rotational behaviour begins to become evident.
-The first panel in \cref{fig:dop-exam} at $07:37:44$ demonstrates the first panel where there might be in inkling of redshift on the right ride of the feature, with a thin line registering as moving away from the camera.
-Noticeably, this rotation does not begin at the base of the feature, instead, the rotation manifests from the tip downwards over the next two images at $07:37:51$ and $07:37:59$.
+As the jet evolves we see an initial blue-shift, matching the acceleration upwards seen in H$\alpha$, and it is only after a few second seconds of evolution that rotational behaviour begins to become evident.
+The first panel in \cref{fig:dop-exam} at $07:37:44$ UTC demonstrates the first panel where there might be in inkling of red-shift on the right ride of the feature, with a thin line registering as moving away from the camera.
+Noticeably, this rotation does not begin at the base of the feature, instead, the rotation manifests from the tip downwards over the next two images at $07:37:51$ UTC and $07:37:59$ UTC.
 
-By the time the jet reaches $07:39:07$, we begin to observe a thin formation of red shift at the right side of the base of the feature, and by $07:38:15$, the red-shift has entirely taken over the right hand side.
+By the time the jet reaches $07:39:07$ UTC, we begin to observe a thin formation of red-shift at the right side of the base of the feature, subsequently by $07:38:15$ UTC, the red-shift has entirely taken over the right hand side.
 Though once again, the next frame shows progression up the spire of the feature.
 
-We subsequently observe the sift to disappear from the right hand side of the jet, however, the subsequent two images show an element of red shift now on the left of the feature.
-This element consequently develops into longer feature in $07:38:53$ and subsequent images, to the point where red shift now dominates the left hand side of the feature.
+We subsequently observe the sift to disappear from the right hand side of the jet, however, the subsequent two images show an element of red-shift now on the left of the feature.
+This element consequently develops into longer feature in $07:38:53$ UTC and subsequent images, to the point where red-shift now dominates the left hand side of the feature.
 
 This is a result of the magnetic pressure acting as restoring force, and rotating the feature in the opposite direction. 
 However in this case, not to the same magnitude, an expected outcome due to inherent loss of energy from the system.
-By the last panel at $07:39:16$, the feature has returned to a 'neutral' state, as such we can estimate an approximate period of a minute and a half.
+By the last panel at $07:39:16$ UTC, the feature has returned to a 'neutral' state, as such we can estimate an approximate period of a minute and a half.
 
 This behaviour is extremely interesting as it demonstrates a torsional motion of the entire body of the feature, with the structure rotating anti-clockwise and then clockwise.
 This is a result of the release of magnetic tension in the initial reconnection event causing an unwinding of the inherent twist in the initial loop.
-We suggest that, as a result of the speed of the initial acceleration of the plasma material, this untwisting began at the top of the plasma column as is seen in $07:37:51$.
-The peak of this untwisting, when the red shift dominates the RHS at $07:38:15$, with the highest velocity values observed at approximately $3-4$ kms${^{-1}}$ and the 'body' of the feature demonstrating velocities in the range $1.0-1.5$ kms${^{-1}}$.
+We suggest that, as a result of the speed of the initial acceleration of the plasma material, this untwisting began at the top of the plasma column as is seen in $07:37:51$ UTC.
+The peak of this untwisting, when the red-shift dominates the RHS at $07:38:15$ UTC, with the highest velocity values observed at approximately $3-4$ km s${^{-1}}$ and the 'body' of the feature demonstrating velocities in the range $1.0-1.5$ km 9s${^{-1}}$.
 
 The velocity values given here are slow compared to those presented in previous works, however, we believe these to be accurate, and attribute this to the smalls scale of the initial loop.
 A larger scale loop would mean that the magnetic tension would be greater, and hence, experience greater restoring force, inducing higher velocities.
@@ -558,7 +560,7 @@ gs.tight_layout(fig, w_pad=0.9, h_pad=0.5)
 dop_grid = ch5.save_figure('dop-exam', fig)
 dop_grid.figure_width = r'\textwidth'
 dop_grid.placement = 'H'
-dop_grid.caption = 'Above is the result of the dopplergram processing during the evolution of the second ejection of plasma starting at $07:37:00$. All images shown in pixel coordinates.'
+dop_grid.caption = 'Above is the result of the Dopplergram processing during the evolution of the second ejection of plasma starting at $07:37:00$ UTC. All images shown in pixel coordinates.'
 
 
 \end{pycode}
@@ -575,9 +577,9 @@ dop_grid.caption = 'Above is the result of the dopplergram processing during the
 With the increased resolution we can visually inspect the boundary between the jet and atmosphere.
 \cref{fig:demo-bound} details the evolution of the jet in the core of H$\alpha$ in over $115$ seconds.
 At the boundary we observe narrow dark columns in the emission on either side of the jet.
-Given that they appear on either side of the jet column and that the observations are in the core of the $H\alpha$ line, it is unlikely that this would be caused by a doppler-like effect.
+Given that they appear on either side of the jet column and that the observations are in the core of the $H\alpha$ line, it is unlikely that this would be caused by a Doppler-like effect.
 One possibility is that the cause is an instability effect, such as shear or Kelvin-Helmholtz, seen in \cite{Zaqarashvili2014} as the jet moves throughout the higher atmosphere.
-Supporting this hypothesis is that these images were recorded in the 'second phase' of the jet \emph{i.e.} after the second reconnection and the jet extends to its peak in $30.4$ nm. 
+Supporting this hypothesis is that these images were recorded in the 'second phase' of the jet \emph{i.e.} after the second reconnection and the jet extends to its peak in He II$30.4$ nm. 
 As such, it is possible that these columns are a result of plasma being accelerated through the less dense atmosphere.
 
 One of the possible primary results of these instabilities is a dissipation of energy into the surrounding atmosphere, as such we might expect an increase in temperature of the surrounding atmosphere.
@@ -618,7 +620,7 @@ im_4 = ch5.data_file('core_Ha_dark_180.npy')
 ims = [im_1, im_2, im_3, im_4]
 
 multi_db = texfigure.MultiFigure(1, 4, reference="demo-bound")
-multi_db.caption = "Sequence of images detailing an intermediate phase of the jets evolution. Beggining with a) 07:36:19, b) 07:36:19, c) 07:37:36 and d) 07:38:15"
+multi_db.caption = "Sequence of images detailing an intermediate phase of the jets evolution. Beginning with a) 07:36:19 UTC, b) 07:36:19 UTC, c) 07:37:36 UTC and d) 07:38:15 UTC"
 for i, im in enumerate(ims):
 	fig = plt.figure(figsize=texfigure.figsize(pytex, scale=0.25, height_ratio=1.3))
 	ax = plt.gca()
@@ -718,20 +720,20 @@ temp_slit.caption = "The AIA maps were processed into temperature maps, and a sl
 \section{Discussion \& Conclusion}
 \label{sec:DandC}
 
-We observe a jet-like feature at the solar limb on $21$st June 2012 at $07:30:00$ on the solar limb, centred at $910$, $234$ solar x and y.
-We have multiple methods with which to view the feature, CRISPT/SST, the range of AIA/SDO coronal wavelengths and SECCHI/STEREO-A.
+We observe a jet-like feature at the solar limb on $21$st June 2012 at $07:30:00$ UTC on the solar limb, centred at $910$, $234$ solar helio-projective co-ordinates.
+We have multiple methods with which to view the feature, CRISPT/SST, the range of SDO/AIA coronal wavelengths and SECCHI/STEREO-A.
 We have utilised multiple analysis techniques to build a comprehensive picture of the jet-like features motion and the possible impacts on the atmosphere above it.
 
 From the observation of this feature, we can draw the following conclusions
 \begin{itemize}
-	\item{This particular feature is visible in H$\alpha$ and He II $30.4$, and thus, is inherently a chromospheric object.}
-	\item{The jet has two separate ejections of material. Reaching a maximum \emph{length} of $25$ Mm}
+	\item{This particular feature is visible in H$\alpha$ and He II $30.4$ nm, and thus, is inherently a chromospheric object.}
+	\item{The jet has two separate ejections of material. Reaching a maximum \emph{length} of $25$ Mm.}
 	\item{The formation of the jet is observed to be similar to the standard jet formation mechanism.}
-	\item{The jet has a rotational component to its motion}
+	\item{The jet has a rotational component to its motion.}
 \end{itemize}
 
 The feature is observed to extend to $12.6$ Mm in He II $30.4$ nm (and is only found to be shorter in H$\alpha$ due to moving out of the viewing field of view).
-Its lifetime is measured of to be $20$ mins and radial velocities are found to be maximised during the initial acceleration, and are of the order $50 - 60$ km$s^{-1}$ during the first acceleration of the feature.
+Its lifetime is measured of to be $20$ mins and radial velocities are found to be maximised during the initial acceleration, and are of the order $50 - 60$ km s$^{-1}$ during the first acceleration of the feature.
 However the second acceleration of material proves awkward to measure accurately, however we estimate slightly higher maximum velocities, but similar averages over the extension upwards. 
 This very much puts this feature in the category of MSs, agreeing with the values presented in \cref{ch:3}.
 
@@ -745,7 +747,7 @@ Inspite of this features relatively small size, this could be classified as an X
 However the question remains, is this a macrospicule?
 And if so, do we classify the feature as a macrospicule or a standard jet?
 
-One possible differentiator is the appearance in the higher coronal wavelengths.
+In answer to these questions, one possible differentiator is the appearance in the higher coronal wavelengths.
 In this case, the jet appears as an absorption feature, against the brighter limb.
 This does not mean that the jet does not reach coronal temperatures, in $30.4$ nm the jet appears as absorption below the limb and as emission above it.
 We cannot conclusively say that the jet contributes to the coronal emission by visual inspection.
@@ -753,7 +755,7 @@ We cannot conclusively say that the jet contributes to the coronal emission by v
 Therefore, we propose that this is a standard jet, and as a community, we need to fully address the underlying physics of MSs.
 This is despite the ambiguity about its appearance in the coronal emission lines, but the underlying physics is enough to draw this conclusion.
 
-The spectroscopic readings, as show in \cref{dop_shift_sect}, demonstrates a small, but appreciable perturbation in the rotational velocity of the jet like feature.
+The spectroscopic readings, as shown in \cref{sec:doppler-shift}, demonstrates a small, but appreciable perturbation in the rotational velocity of the jet like feature.
 We find that the jet exhibits a torsional behaviour, demonstrating shifts indicating rotation in one direction and then the other.
 The magnitude of these velocities is, however, low.
 we conclude that this is a result of the very small source loop of the feature, although this of course needs further enquiry. 
