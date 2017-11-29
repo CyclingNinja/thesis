@@ -11,20 +11,38 @@ ch4 = texfigure.Manager(pytex, number=4, base_path='./Chapter4/')
 \end{pycode}
 
 \section{Introduction}
-The behaviour of solar non-axisymmetric activity has been studied since the beginning of the last century \cite{Chidambara1932}. It has been recognised that the distribution of sunspot groups is not uniform, they tend to cluster to a certain heliographic longitude \cite{Bumba1965,Balthasar1984,Wilkinson1991}. These early studies of the active longitudes focused mainly on the distribution of sunspot groups or sunspot relative numbers. From the middle of the 20th century it has been suggested that not just the sunspot groups have a non-homogeneous longitudinal distribution. This inhomogeneity has been found in the case of solar flares \cite{Zhang2007}, surface magnetic fields \cite{Benevolenskaya1999}, heliospheric magnetic field \cite{Mursula2004} and, recently, active longitudes have been observed in coronal streamers \cite{Jing2011}.
+Studies of non-uniform distribution of solar activity began with \cite{Chidambara1932}.
+Investigations of sunspot groups distribution finds that they tend to cluster towards a certain heliographic longitude [\cite{Bumba1965,Balthasar1984,Wilkinson1991}].
+These authors present the concept of an active longitude, at which sunspot groups cluster.
+As the field advanced, studies have presented the same concept applied to a range of solar features, \cite{Zhang2007} demonstrated this behaviour with solar flares.
+\cite{Benevolenskaya1999} demonstrate a clustering in surface magnetic fields, and, \cite{Mursula2004} present active longitudes in the heliospheric magnetic field.
+Lastly, and most applicably to this work, \cite{Jing2011} have observed this to be case in coronal streamers.
 
 \newpage
-Macrospicules (hereinafter: MS) are chromospheric objects observed in H$\alpha$ and He $30.4$ nm \cite{Bohlin1975,Wang1998,Murawski2011,Scullion2010}. They are explosive jet-like features extending up to, on average, $29$ Mm and velocities up to approximately $110$ km/s \cite{Zaqara_Erdelyi2009}. Their structure reflects the solar atmosphere they move through, they are proposed to have a cool core, surrounded by a hot sheath \cite{Parenti2002}. They are of particular use in this study, as they are observed from the solar equator to the poles. 
+Macrospicules (hereinafter: MS) are chromospheric objects observed in H$\alpha$ and He $30.4$ nm \cite{Bohlin1975,Wang199 8,Murawski2011,Scullion2010}. 
+They are explosive jet-like features extending up to, on average, $29$ Mm and velocities up to approximately $110$ km/s \cite{Zaqara_Erdelyi2009}. 
+Their structure reflects the solar atmosphere they move through, they are proposed to have a cool core, surrounded by a hot sheath \cite{Parenti2002}. 
+They are of particular use in this study, as they are observed from the solar equator to the poles. 
 
-In this chapter we study the longitudinal and latitudinal spatial distributions of MS. Furthermore, we will explore the relationship between the sunspot groups, non-axisymmetric behaviour or Active Longitude (hereinafter: AL) and longitudinal distributions of MS.
+This chapter will discuss the longitudinal and latitudinal distributions of MS.
+Extending this, we will compare the behaviour of MS to those already observed in the studies highlighted above, particularly solar active regions.
 
 \section{Observations and Databases}
-The MS were observed using the $30.4$ nm spectral window AIA on-board SDO (Solar Dynamic Observatory) \cite{AIAspec}. This takes a $4096 \times 4096$ pixel, full disc, image of the Sun at a cadence of $12$ s. We took typical samples of two hours, twice a month, from June $2010$ until December $2012$. For each image the solar limb was flattened out, making it easier to identify and measure the MS. They are extremely difficult to measure on disk and as such this study concentrates on those occuring at the limb. We record the time at the moment they become visible at the limb and their angular displacement from solar due east. Measuring MS this way we identified 101 examples of MS. The physical dimensions and the heliographic coordinates have been estimated. 
+The MS were observed using the $30.4$ nm SDO/AIA [\cite{AIAspec}]. 
+This takes a $4096 \times 4096$ pixel, full disc, image of the Sun at a cadence of $12$ s. 
+We took typical samples of two hours, twice a month, from June $2010$ until December $2012$.
+For each image the solar limb was flattened out, making it easier to identify and measure the MS.
+They are extremely difficult to measure on disk, and as such, this study concentrates on those occurring at the limb.
+We record the time at the moment they become visible at the limb and their angular displacement from solar due east.
+Measuring MS this way we identified 101 examples of MS. The physical dimensions and the heliographic coordinates have been estimated. 
 
-The source of sunspot data that we use to calculate the most enhanced longitude of sunspot groups (AL) is the Debrecen Photoheliographic Data (DPD) sunspot catalogue \cite{Gyori2011}. This database is the continuation of the classic Greenwich Photoheliographic Results (GPR), the source of numerous works in this field. The sunspot catalogue has been used, providing a time sample from $1974$. This data sample contains information about area and position for every sunspot.
+Debrecen Photoheliographic Data (DPD) sunspot catalogue [\cite{Gyori2011}] has been used as the source of sunspot groups used to calculate the most prevalent active longitudes.
+This database builds on from the Greenwich Photoheliographic Results (GPR), which bas been the basis of many works in the field.
+DPD has been used to provide a sample beginning in $1974$, detailing every sunspots area and position since that epoch.
 
 \section{Statistical Study of the Latitudinal Distribution of MS}
-To study the latitudinal spatial behaviour of MS as a first step, we determine the heliographical latitudes (B). For further analysis, the Carrington latitudes, $B$, have been transformed, into the following system:
+In order to examine the spatial behaviour of MS we must determin the heliographical latitudes (B).
+In order to aid analysis, the Carrington latitudes, $B$, have been transformed into the following system:
 
 \begin{equation}
 \begin{split}
@@ -33,9 +51,19 @@ To study the latitudinal spatial behaviour of MS as a first step, we determine t
 \end{split}
 \end{equation}
 
-The domain of interest of the quantity $\phi$ is $[-1;1]$. The $\phi=0$ point contains the northern and southern poles. The $[0;1]$ sub-domain of $\phi$ represents the northern hemisphere, the ascending $\phi$ values from $0$ to $1$ show the descending latitudes from $90^{\circ}$ to $0^{\circ}$. The southern hemispheres have been considered in the same way.
+The domain of interest of the quantity $\phi$ is $[-1;1]$. 
+The $\phi=0$ point contains the northern and southern poles.
+The $[0;1]$ sub-domain of $\phi$ represents the northern hemisphere, the ascending $\phi$ values from $0$ to $1$ show the descending latitudes from $90^{\circ}$ to $0^{\circ}$. 
+The southern hemispheres have been considered in the same way.
 
-Figure~\ref{ms_dis} shows the result of the statistics above. The histogram depicts a normal distribution. The mean of the distribution is $\overline{\phi}=0.043$, suggesting that most of the MS tend to cluster to the poles. We also found that the northern hemisphere was a slightly more active in this time period. The standard deviation $1\sigma=0.3507$ and $2\sigma=0.7014$. Hence, $68\%$ of the data tend to cluster in a $31.5^{\circ}$ wide belt from the poles. That is to say: $68\%$ of MS are between the $\pm58.5^{\circ}$ and $\pm90^{\circ}$ heliographic latitude, and, $95\%$ of MS are in a $36^{\circ}$ degrees belt from the poles or between the $\pm27^{\circ}$ and $\pm90^{\circ}$ in heliographic latitude. Therefore, MS are able to exercise longitudinal inhomogeneity at higher latitudes.
+Figure~\ref{ms_dis} shows the result of the statistics above. 
+The histogram depicts a normal distribution. 
+$\overline{\phi}=0.043$, this implies that most of the MS tend to cluster to the poles, as has previously been shown to be the case in \ref{ch:3}, confirming the method.
+We also find that the northern hemisphere was a slightly more active in this time period.
+The standard deviation values are $1\sigma=0.3507$ and $2\sigma=0.7014$. 
+Hence, $68\%$ of MSs measured in this data set, cluster in a $31.5^{\circ}$ wide belt from the poles.
+The extension of this is that $68\%$ of MS are between the $\pm58.5^{\circ}$ and $\pm90^{\circ}$ heliographic latitude, and, $95\%$ of MS are in a $36^{\circ}$ degree belt from the poles or between $\pm27^{\circ}$ and $\pm90^{\circ}$ in heliographic latitude.
+Demonstrating that MS exhibit longitudinal inhomogeneity at higher latitudes.
 
 \begin{figure}
 	\centering
@@ -46,7 +74,9 @@ Figure~\ref{ms_dis} shows the result of the statistics above. The histogram depi
 \section{Statistical study of longitudinal distribution of MS}
 \subsection{Activity maps of active longitudes based on sunspots}
 
-According to our previous study \citep{Gyenge2014} the active longitudes' identification method have been considered and the active longitude was found to be distinct in each hemisphere. The present investigation started with a similar method as described in our preceding paper \citep{Gyenge2012}. The areas and positions of all sunspot groups are considered. The solar surface is divided into longitudinal bins of $20^{\circ}$ and the areas of all groups were summed up in each bin: $ A_{i}$ in certain Carrington Rotation (CR) between $2097$ and $2128$, which is the time interval of the MS sample. Next, the longitudinal activity concentration is represented by the quantity $W$ defined by,
+According to \cite{Gyenge2014}, the active longitudes' identification method have been considered and the active longitude was found to be distinct in each hemisphere. 
+
+The present investigation started with a similar method as described in our preceding paper \citep{Gyenge2012}. The areas and positions of all sunspot groups are considered. The solar surface is divided into longitudinal bins of $20^{\circ}$ and the areas of all groups were summed up in each bin: $ A_{i}$ in certain Carrington Rotation (CR) between $2097$ and $2128$, which is the time interval of the MS sample. Next, the longitudinal activity concentration is represented by the quantity $W$ defined by,
 
 \begin{equation}
 W_{i,CR} = \frac{A_{i,CR}}{ \sum_{j=1}^{N} A_{j,CR} },
