@@ -16,7 +16,7 @@ ch5a = texfigure.Manager(pytex, number=4, base_path='./Chapter5/')
 
 
 \section{Introduction}
-Solar jets of various forms are ubiquitous throughout the solar atmosphere, from spicules and MSs low in the chromosphere, both of which pass through the transition region, to coronal and X-Ray jets extending into the solar corona [\cite{Archontis2008,Majarska2011,Morton2012}].
+Solar jets of various forms are ubiquitous throughout the solar atmosphere, from spicules and MS low in the chromosphere, both of which pass through the transition region, to coronal and X-Ray jets extending into the solar corona [\cite{Archontis2008,Majarska2011,Morton2012}].
 However, the lines between these features are still blurred, therefore in this chapter, I will examine, in detail, their formation and subsequent interaction with the solar atmosphere.
 Investigations into these phenomena have advanced significantly with recent developments in solar telescope technology, applied on missions like Hinode and the Solar Dynamics Observatory (SDO) and the most recent mission Interface Region Imaging Spectrometer (IRIS).
 Jet-like features are observed in a range of wavelengths, and therefore, heights in the atmosphere [\cite{Wang1998,Yamaucho2004}].
@@ -26,13 +26,13 @@ Macrospicules are generally accepted as multi-thermal structures, featuring a co
 They have also been observed to rotate, \cite{Pike_Mason1998} and \cite{Kamio2010}, the latter paper quotes $-120 \pm 15$ kms$^{-1}$ blue-shifted Doppler velocity on the left side of the macrospicule. 
 
 There are multiple proposals for the mechanism triggering apparent rotation of the macrospicule. 
-\cite{Curdt2011} propose that the Sun's differential rotation causes MSs rotation, whereas, reconnection events cause the relaxation of a small-scale twisted loop, as demonstrated by \cite{Adams2014}.
-Again, with MSs extending high into the atmosphere, the question of their effect upon it, is one that needs answering.
+\cite{Curdt2011} propose that the Sun's differential rotation causes MS rotation, whereas, reconnection events cause the relaxation of a small-scale twisted loop, as demonstrated by \cite{Adams2014}.
+Again, with MS extending high into the atmosphere, the question of their effect upon it, is one that needs answering.
 \cite{Pike1997} observe outflows from the MS of the order $200$ kms$^{-1}$ in He I and discuss whether these outflows could potentially accelerate the solar wind.
 However, work by \cite{Zaqarashvili2014} questions whether jets moving at super-Alfv{\'e}nic speeds might cause a Kelvin-Helmholtz instability to form at the macrospicule/atmosphere boundary, which would, in turn, transport heat into the corona.
 
-\cite{Kamio2010} applied a great deal of the background above when studying a macrospicule and X-ray jet forming simultaneously. 
-There is also discussion in \cite{Pike1997} and \cite{Kim2007} on the appearance of X-ray jets, alongside small scale jets.
+\cite{Kamio2010} applied a great deal of the background above when studying a macrospicule and X-Ray jet forming simultaneously. 
+There is also discussion in \cite{Pike1997} and \cite{Kim2007} on the appearance of X-Ray jets, alongside small scale jets.
 
 In the following sections we comprehensively discuss the physical properties of a case study. In \cref{sec:obs-sect} we present the observations we are using. 
 \ref{sec:time_dist_sect} discusses the evolution of the jet with respect to its extent and the different view of the feature utilising STEREO-A's EUVI. 
@@ -76,7 +76,7 @@ multi.caption = "a) Examine the two bright points in the proximity of $(79\", 60
 
 \section{Observations}
 \label{sec:obs-sect}
-We observed a jet-like (hereby referred to as 'the jet') feature at the limb on $21$st June 2016 beginning at $07:30:00$ UTC in CRISP, an instrument installed on the Swedish Solar Telescope (SST) during a period of good seeing, [\cite{Scharmer2003}].
+We observed a jet-like feature at the limb on $21$st June 2016 beginning at $07:30:00$ UTC in CRISP, an instrument installed on the Swedish Solar Telescope (SST) during a period of good seeing, [\cite{Scharmer2003}].
 We used the H$\alpha$ filter, core line $656.28$ nm with $35$ slit increments from the core covering a $.32$ nm range, $-0.2$ nm and $+0.12$ nm, further processed using te Multi-Object Multi-Frame Blind Deconvolution (MOMBFD 
 \cite{vanNoort2005}).
 The observations were of Active Region 11506 with $xc = 893",\ yc = -250"$ in heliographic coordinates on $930 \times 930$ pixel images, with spatial resolution of $0.012$ arcsec/pixel and temporal resolution of $7.5$ sec.
@@ -152,7 +152,7 @@ plt.plot(e_times_211, lengths_211, color='purple', label='21.1 nm')
 plt.plot(e_times_304, lengths_304, color='orange', label='30.4 nm')
 plt.plot(e_times_335, lengths_335, color='blue', label='33.5 nm')
 plt.plot(e_times_Ha, lengths_Ha, color='darkgoldenrod', label='656.28 nm')
-plt.xlabel('Time [UCT]')
+plt.xlabel('Time [UTC]')
 plt.ylabel('Length [Mm]')
 plt.title('Length of the Jet over time')
 fig.autofmt_xdate()
@@ -208,7 +208,7 @@ This strongly implies that there is a second initialising type event in which a 
 As such let us turn to the CRISP instrument again.
 
 With its higher resolution, a slit based analysis of the jet can be observed in \cref{fig:sst-slit}.
-Notice two distinct curves in the image, the first onset is at approximately $17$ and the second at a bright point originating at $~85$.
+Notice two distinct curves in the image, the first onset is at approximately $131$ s and the second at a bright point originating at $~655$ s.
 We find that in this second phase of the jet, plasma extends higher into the atmosphere.
 This result is unusual as previous observations of recurrent jets have shown decay in subsequent initialisation events in observations such as \cite{Jiang2007}.
 Unfortunately, a section of material is in front of the base of the jet and obscures our view of the second event.
@@ -238,7 +238,7 @@ This thin spire is an expected outcome of the standard model of jet formation, m
 
 
 
-\begin{pycode}[chapter5]
+\begin{pycode}[chapter5a]
 import numpy as np
 import sunpy.cm
 import matplotlib.pyplot as plt
@@ -247,26 +247,28 @@ from astropy import visualization
 
 norm=ImageNormalize(stretch=visualization.AsinhStretch(1))
 
-sst_slit_path = ch5.data_file('2016-01-22 14:59:58.507931.npz')
+sst_slit_path = ch5a.data_file('2016-01-22 14:59:58.507931.npz')
 
 afile = np.load(sst_slit_path)
 data = afile['arr_2']
 
 fig = plt.figure(figsize=texfigure.figsize(pytex))
-plt.imshow(np.rot90(data[2])[::-1, 100:], cmap='viridis', aspect='auto', origin='lower', norm=norm)
+datarr = np.rot90(data[2])[::-1, 100:]
+extent = [0, datarr.shape[1]*7.7, 0, datarr.shape[0]*0.012]
+plt.imshow(datarr, cmap='viridis', aspect='auto', origin='lower', norm=norm, extent=extent)
 plt.colorbar()
-plt.xlabel('Time in SST cadence (7.7 s)')
-plt.ylabel('Distance along the slit')
-sst_slit_fig = ch5.save_figure('sst-slit', fig)
-sst_slit_fig.figure_env_name = r'figure*'
-sst_slit_fig.figure_width = r'\columnwidth'
-sst_slit_fig.placement = 'H'
-sst_slit_fig.caption = r'CRISP/SST H$\alpha$ core line slit analysis.'
+plt.xlabel('Time [seconds]')
+plt.ylabel('Distance along slit [arcsec]')
+fig.tight_layout(pad=1.1)
+sstslitfig = ch5a.save_figure('sst-slit', fig)
+sstslitfig.figure_env_name = r'figure*'
+sstslitfig.figure_width = r'\columnwidth'
+sstslitfig.caption = r'SST/CRISP H$\alpha$ line core time-distance diagram along the centre of the jet spire.'
 
-#print(sst_slit_fig.repr_figure(), file=sys.stderr)
+#print(sstslitfig.repr_figure(), file=sys.stderr)
 \end{pycode}
 
-\py[chapter5]|sst_slit_fig|
+\py[chapter5a]|sstslitfig|
 
 
 
@@ -514,7 +516,7 @@ dop_grid.caption = 'Above is the result of the dopplergram processing during the
 \subsection{Analysis}
 This particular feature, as has already been mentioned, has two events in which material is accelerated upwards into the solar atmosphere.
 The first event is not readily visible in the dopplergrams, difficult as it is to pick out against a line of spicule-like features all showing blue-shifts, towards the viewewing direction.
-This result is to be expected given the we have demonstrated movement away from the 'camera' in \cref{fig:stereo}.
+This result is to be expected given the we have demonstrated movement away from the `camera' in \cref{fig:stereo}.
 Whereas, the second expulsion of material, originating at $07:37$ UTC, exhibits the classic behaviour of a rotating feature in dopplergrams, a red/blue split over the body of the feature. 
  
 It is clear that the second event comes from a similarly small element to the first and evolves upwards, joining the full formation of the jet, hence why the apparent rotation of the jet does not appear to spread across the rest of the jet as seen in H$\alpha$.
@@ -531,12 +533,12 @@ This element consequently develops into longer feature in $07:38:53$ UTC and sub
 
 This is a result of the magnetic pressure acting as restoring force, and rotating the feature in the opposite direction. 
 However in this case, not to the same magnitude, an expected outcome due to inherent loss of energy from the system.
-By the last panel at $07:39:16$ UTC, the feature has returned to a 'neutral' state, as such we can estimate an approximate period of a minute and a half.
+By the last panel at $07:39:16$ UTC, the feature has returned to a `neutral' state, as such we can estimate an approximate period of a minute and a half.
 
 This behaviour is extremely interesting as it demonstrates a torsional motion of the entire body of the feature, with the structure rotating anti-clockwise and then clockwise.
 This is a result of the release of magnetic tension in the initial reconnection event causing an unwinding of the inherent twist in the initial loop.
 We suggest that, as a result of the speed of the initial acceleration of the plasma material, this untwisting began at the top of the plasma column as is seen in $07:37:51$ UTC.
-The peak of this untwisting, when the red-shift dominates the RHS at $07:38:15$ UTC, with the highest velocity values observed at approximately $3-4$ km s${^{-1}}$ and the 'body' of the feature demonstrating velocities in the range $1.0-1.5$ km 9s${^{-1}}$.
+The peak of this untwisting, when the red-shift dominates the RHS at $07:38:15$ UTC, with the highest velocity values observed at approximately $3-4$ km s${^{-1}}$ and the `body' of the feature demonstrating velocities in the range $1.0-1.5$ km 9s${^{-1}}$.
 
 The velocity values given here are slow compared to those presented in previous works, however, we believe these to be accurate, and attribute this to the smalls scale of the initial loop.
 A larger scale loop would mean that the magnetic tension would be greater, and hence, experience greater restoring force, inducing higher velocities.
@@ -559,7 +561,7 @@ With the increased resolution we can visually inspect the boundary between the j
 At the boundary we observe narrow dark columns in the emission on either side of the jet.
 Given that they appear on either side of the jet column and that the observations are in the core of the $H\alpha$ line, it is unlikely that this would be caused by a Doppler-like effect.
 One possibility is that the cause is an instability effect, such as shear or Kelvin-Helmholtz, seen in \cite{Zaqarashvili2014} as the jet moves throughout the higher atmosphere.
-Supporting this hypothesis is that these images were recorded in the 'second phase' of the jet \emph{i.e.} after the second reconnection and the jet extends to its peak in He II$30.4$ nm. 
+Supporting this hypothesis is that these images were recorded in the `second phase' of the jet \emph{i.e.} after the second reconnection and the jet extends to its peak in He II$30.4$ nm. 
 As such, it is possible that these columns are a result of plasma being accelerated through the less dense atmosphere.
 
 One of the possible primary results of these instabilities is a dissipation of energy into the surrounding atmosphere, as such we might expect an increase in temperature of the surrounding atmosphere.
@@ -579,7 +581,7 @@ Noticeable as well, however, is that at what is approximately the boundaries, th
 
 These values are not conclusive, we require temperature maps on a much finer spatial scale, and as well, new techniques to develop to overcome the problems of the extremely broad H$\alpha$ and He II lines causing a blurring of possible values.
 However, in conjunction with the observations presented here of possible shearing or Kelvin Helmholtz instability causing a lack of emission at the boundary of the jet, we can present the hypothesis more confidently.
-In terms of the bigger picture in which spicules/jets/MSs contribute to heating of the solar corona, the results produced by this feature are not typical.
+In terms of the bigger picture in which spicules/jets/MS contribute to heating of the solar corona, the results produced by this feature are not typical.
 With respect to other studies, this feature cannot be considered that quick, or large, or excessively rotational, yet it may be having a measurable effect.
 Hence, applying this kind of comprehensive analysis to multiple jets, particularly rapidly evolving examples, to ascertain their impact on the atmosphere fully is the next area of investigation for these jets.
 An endeavour which will be aided significantly by the operation commencement of DKIST, with its superior everything.
@@ -715,15 +717,15 @@ From the observation of this feature, we can draw the following conclusions
 The feature is observed to extend to $12.6$ Mm in He II $30.4$ nm (and is only found to be shorter in H$\alpha$ due to moving out of the viewing field of view).
 Its lifetime is measured of to be $20$ mins and radial velocities are found to be maximised during the initial acceleration, and are of the order $50 - 60$ km s$^{-1}$ during the first acceleration of the feature.
 However the second acceleration of material proves awkward to measure accurately, however we estimate slightly higher maximum velocities, but similar averages over the extension upwards. 
-This very much puts this feature in the category of MSs, agreeing with the values presented in \cref{ch:3}.
+This very much puts this feature in the category of MS, agreeing with the values presented in \cref{ch:3}.
 
 However the feature exhibits similar formation mechanisms as a standard jet following the pattern demonstrated in \cite{Shibata1992} and then built on by \cite{Moore2010}, who also presented the blowout jet mechanism.
 With the two visible bright points in the H$\alpha$ images which come to form an, all be it, long thin bright arch before forming the characteristic spire of a the standard jet.
-Unfortunatley, Hinode's XRT instrument was in a power down mode during the formation of this feature and RHESSI did not record the event, as such, we are missing crucial X-ray data.
+Unfortunatley, Hinode's XRT instrument was in a power down mode during the formation of this feature and RHESSI did not record the event, as such, we are missing crucial X-Ray data.
 
-If an increase in the X-ray radiation were to be found, the question as to the categorisation of such a feature becomes important.
+If an increase in the X-Ray radiation were to be found, the question as to the categorisation of such a feature becomes important.
 Given that we observe several of the key indicators of a standard jet, could this not also be classified as a standard jet? 
-Inspite of this features relatively small size, this could be classified as an X-ray jet.
+Inspite of this features relatively small size, this could be classified as an X-Ray jet.
 However the question remains, is this a macrospicule?
 And if so, do we classify the feature as a macrospicule or a standard jet?
 
@@ -732,7 +734,7 @@ In this case, the jet appears as an absorption feature, against the brighter lim
 This does not mean that the jet does not reach coronal temperatures, in $30.4$ nm the jet appears as absorption below the limb and as emission above it.
 We cannot conclusively say that the jet contributes to the coronal emission by visual inspection.
 
-Therefore, we propose that this is a standard jet, and as a community, we need to fully address the underlying physics of MSs.
+Therefore, we propose that this is a standard jet, and as a community, we need to fully address the underlying physics of MS.
 This is despite the ambiguity about its appearance in the coronal emission lines, but the underlying physics is enough to draw this conclusion.
 
 The spectroscopic readings, as shown in \cref{sec:doppler-shift}, demonstrates a small, but appreciable perturbation in the rotational velocity of the jet like feature.
