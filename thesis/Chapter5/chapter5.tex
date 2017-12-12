@@ -232,7 +232,7 @@ An approximation using multiple image steps and using a difference delta produce
 The feature is very thin, averaging $1.13$ Mm in H$\alpha$ and $0.787$ Mm in He II. 
 This result is unexpected, it certainly seems to contradict the cool core surrounded by a hot sheath model.
 However the errors on the measurement in SDO/AIA recordings are $\pm1.5$ Mm, when taking into account human measurement error and resolution of the instrument.
-Where as measurement error on the CRISP/SST images is $\pm0.0885$ Mm, thus, we are more inclined to believe the measurement according to CRISP.
+Where as measurement error on the SST/CRISP images is $\pm0.0885$ Mm, thus, we are more inclined to believe the measurement according to CRISP.
 This thin spire is an expected outcome of the standard model of jet formation, more on which later.
 
 
@@ -276,7 +276,7 @@ sstslitfig.caption = r'SST/CRISP H$\alpha$ line core time-distance diagram along
 Next, consider the observations in EUVI, with the instrument positioned at $90^{\circ}$ to the Sun-Earth line.
 This facilitates the building of a larger picture of the behaviour of the jet, the downside to this however, is that with STEREO-A being at such a distance the cadence is low, $~10$ mins.
 In this case we obtain 4 images in $30.4$ nm in which the jet is observed.
-The jet appears as a dark fibril like feature originating at approximately $-570, -385$ HPC, and extending across the disk to a length of $45.1$ arcsec.
+The jet appears as a dark fibril like feature originating at approximately $-570''$ to $-385''$ longitude , and extending across the disk to a length of $45.1$ arcsec.
 Significantly, the component of extension in the East-West direction is not insignificant, approximately $30$ arcsec.
 With this information we calculate that the total length of the feature, taking into account both SDO and STEREO's view, is $25.5$ Mm.
 
@@ -348,7 +348,7 @@ The process is the same for both single and double Gaussian fitting and as such 
 BIC has limitations when the number of parameters is of the same order of the size of the sample and differentiating between multiple complex models.
 In this case the sample is larger than the number of parameters and we are only testing two possible models, as such, we can use the test with confidence in the results.
 
-The result of applying the above method to the CRISP/SST spectroscopic dataset is presented in \cref{fig:dop-exam}.
+The result of applying the above method to the SST/CRISP spectroscopic dataset is presented in \cref{fig:dop-exam}.
 Immediately apparent, is the banding structured red and blue shifts, the effect is created as a result of the optical depth created when observing at the limb. 
 The jet forms in amongst a cluster of blue-shifted smaller thin structures, making early observations in the dopplergrams difficult.  
 
@@ -544,51 +544,6 @@ The peak of this untwisting, when the red-shift dominates the RHS at $07:38:15$ 
 The velocity values given here are slow compared to those presented in previous works, however, we believe these to be accurate, and attribute this to the smalls scale of the initial loop.
 A larger scale loop would mean that the magnetic tension would be greater, and hence, experience greater restoring force, inducing higher velocities.
 
-  
-
-
-
-
-
-
-
-
-
-\section{Effect on the atmosphere}
-\label{sec:temp-map-sect}
-
-With the increased resolution we can visually inspect the boundary between the jet and atmosphere.
-\cref{fig:demo-bound} details the evolution of the jet in the core of H$\alpha$ in over $115$ seconds.
-At the boundary we observe narrow dark columns in the emission on either side of the jet.
-Given that they appear on either side of the jet column and that the observations are in the core of the $H\alpha$ line, it is unlikely that this would be caused by a Doppler-like effect.
-One possibility is that the cause is an instability effect, such as shear or Kelvin-Helmholtz, seen in \cite{Zaqarashvili2014} as the jet moves throughout the higher atmosphere.
-Supporting this hypothesis is that these images were recorded in the `second phase' of the jet \emph{i.e.} after the second reconnection and the jet extends to its peak in He II$30.4$ nm. 
-As such, it is possible that these columns are a result of plasma being accelerated through the less dense atmosphere.
-
-One of the possible primary results of these instabilities is a dissipation of energy into the surrounding atmosphere, as such we might expect an increase in temperature of the surrounding atmosphere.
-To this end we will utilise the temperature calculation method highlighted in \cite{Leonard2014}.
-
-The authors use a Differential Emission Measure (DEM) to obtain a temperature response from the SDO/AIA measurements.
-The temperature response is a combination of the wavelength response from the instrument and the contribution function which describes the emission from a given temperature.
-When using such a scheme, we need to decide on a general DEM profile to be applied to all pixels.
-The method uses a Gaussian scan across the emission in each line and property of the Gaussian; mean, amplitude and width. 
-Utilising a narrow Gaussian seems to provide the most accurate values when compared to synthetic observations.
-
-\cref{fig:temp-slit} demonstrates the behavioural change of the temperature across the normal of the feature by slit based analysis.
-By performing this analysis over the time domain of the second ejection of plasma material, we will acertain whether the feature has any impact on the atmosphere.
-The difficulty with this form if measurement is that the feature itself is not particularly wide, $~1$ Mm, and therefore is has only one or two pixels of actual jet material for us to examine.
-The jet is located around the $3rd$ and $4th$ pixels of the x axis, and as we would expect we see a moderate dip, when compared to the surroundings. 
-Noticeable as well, however, is that at what is approximately the boundaries, there is a peak in temperature, before it drops as distance increases with respect to the jet.
-
-These values are not conclusive, we require temperature maps on a much finer spatial scale, and as well, new techniques to develop to overcome the problems of the extremely broad H$\alpha$ and He II lines causing a blurring of possible values.
-However, in conjunction with the observations presented here of possible shearing or Kelvin Helmholtz instability causing a lack of emission at the boundary of the jet, we can present the hypothesis more confidently.
-In terms of the bigger picture in which spicules/jets/MS contribute to heating of the solar corona, the results produced by this feature are not typical.
-With respect to other studies, this feature cannot be considered that quick, or large, or excessively rotational, yet it may be having a measurable effect.
-Hence, applying this kind of comprehensive analysis to multiple jets, particularly rapidly evolving examples, to ascertain their impact on the atmosphere fully is the next area of investigation for these jets.
-An endeavour which will be aided significantly by the operation commencement of DKIST, with its superior everything.
- 
-
-
 \begin{pycode}[chapter5]
 import numpy as np
 from glob import glob
@@ -602,17 +557,17 @@ im_4 = ch5.data_file('core_Ha_dark_180.npy')
 
 ims = [im_1, im_2, im_3, im_4]
 
-multi_db = texfigure.MultiFigure(1, 4, reference="demo-bound")
+multi_db = texfigure.MultiFigure(2, 2, reference="demo-bound")
 multi_db.caption = "Sequence of images detailing an intermediate phase of the jets evolution. Beginning with a) 07:36:19 UTC, b) 07:36:19 UTC, c) 07:37:36 UTC and d) 07:38:15 UTC"
 for i, im in enumerate(ims):
-	fig = plt.figure(figsize=texfigure.figsize(pytex, scale=0.25, height_ratio=1.3))
+	fig = plt.figure(figsize=texfigure.figsize(pytex, scale=0.5, height_ratio=1.3))
 	ax = plt.gca()
 	ax.tick_params(axis='both', colors='white', labelcolor='black')
 	afile = np.load(im)
 	val_max = np.max(afile)
 	plt.imshow(afile, cmap='Greys_r', vmin=0.16*val_max, vmax=val_max, origin='lower', interpolation='none')
 	Fig1 = ch5.save_figure('demo_bound{}'.format(i+1), fig)
-	Fig1.subfig_width = r"0.2\textwidth"
+	Fig1.subfig_width = r"0.49\textwidth"
 	Fig1.caption = ""
 	multi_db.append(Fig1)
 
@@ -700,11 +655,45 @@ temp_slit.caption = "The AIA maps were processed into temperature maps, and a sl
 
 \py[chapter5]|temp_slit|
 
+
+\section{Effect on the atmosphere}
+\label{sec:temp-map-sect}
+
+With the increased resolution we can visually inspect the boundary between the jet and atmosphere.
+\cref{fig:demo-bound} details the evolution of the jet in the core of H$\alpha$ in over $115$ seconds.
+At the boundary we observe narrow dark columns in the emission on either side of the jet.
+Given that they appear on either side of the jet column and that the observations are in the core of the $H\alpha$ line, it is unlikely that this would be caused by a Doppler-like effect.
+One possibility is that the cause is an instability effect, such as shear or Kelvin-Helmholtz, seen in \cite{Zaqarashvili2014} as the jet moves throughout the higher atmosphere.
+Supporting this hypothesis is that these images were recorded in the `second phase' of the jet \emph{i.e.} after the second reconnection and the jet extends to its peak in He II $30.4$ nm. 
+As such, it is possible that these columns are a result of plasma being accelerated through the less dense atmosphere.
+
+One of the possible primary results of these instabilities is a dissipation of energy into the surrounding atmosphere, as such we might expect an increase in temperature of the surrounding atmosphere.
+To this end we will utilise the temperature calculation method highlighted in \cite{Leonard2014}.
+
+The authors use a Differential Emission Measure (DEM) to obtain a temperature response from the SDO/AIA measurements.
+The temperature response is a combination of the wavelength response from the instrument and the contribution function which describes the emission from a given temperature.
+When using such a scheme, we need to decide on a general DEM profile to be applied to all pixels.
+The method uses a Gaussian scan across the emission in each line and property of the Gaussian; mean, amplitude and width. 
+Utilising a narrow Gaussian seems to provide the most accurate values when compared to synthetic observations.
+
+\cref{fig:temp-slit} demonstrates the behavioural change of the temperature across the normal of the feature by slit based analysis.
+By performing this analysis over the time domain of the second ejection of plasma material, we will acertain whether the feature has any impact on the atmosphere.
+The difficulty with this form if measurement is that the feature itself is not particularly wide, $~1$ Mm, and therefore is has only one or two pixels of actual jet material for us to examine.
+The jet is located around the $3$rd and $4$th pixels of the x axis, and as we would expect we see a moderate dip, when compared to the surroundings. 
+Noticeable as well, however, is that at what is approximately the boundaries, there is a peak in temperature, before it drops as distance increases with respect to the jet.
+
+These values are not conclusive, we require temperature maps on a much finer spatial scale, and as well, new techniques to develop to overcome the problems of the extremely broad H$\alpha$ and He II lines causing a blurring of possible values.
+However, in conjunction with the observations presented here of possible shearing or Kelvin Helmholtz instability causing a lack of emission at the boundary of the jet, we can present the hypothesis more confidently.
+In terms of the bigger picture in which spicules/jets/MS contribute to heating of the solar corona, the results produced by this feature are not typical.
+With respect to other studies, this feature cannot be considered that quick, or large, or excessively rotational, yet it may be having a measurable effect.
+Hence, applying this kind of comprehensive analysis to multiple jets, particularly rapidly evolving examples, to ascertain their impact on the atmosphere fully is the next area of investigation for these jets.
+An endeavour which will be aided significantly by the operation commencement of DKIST, with its superior everything.
+
 \section{Discussion \& Conclusion}
 \label{sec:DandC}
 
-We observe a jet-like feature at the solar limb on $21$st June 2012 at $07:30:00$ UTC on the solar limb, centred at $910$, $234$ solar helio-projective co-ordinates.
-We have multiple methods with which to view the feature, CRISPT/SST, the range of SDO/AIA coronal wavelengths and SECCHI/STEREO-A.
+We observe a jet-like feature at the solar limb on $21$st June 2012 at $07:30:00$ UTC on the solar limb, centred at $910$, $234$ solar helioprojective co-ordinates.
+We have multiple methods with which to view the feature, SST/CRISP, the range of SDO/AIA coronal wavelengths and STEREO-A/SECCHI.
 We have utilised multiple analysis techniques to build a comprehensive picture of the jet-like features motion and the possible impacts on the atmosphere above it.
 
 From the observation of this feature, we can draw the following conclusions
