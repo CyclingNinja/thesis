@@ -1,1 +1,4 @@
 *ipynb filter=dropout_ipynb
+thesis/Chapter2/data/aia_lev1_304a_2010_11_11t01_06_08_13z_image_lev1.fits filter=lfs diff=lfs merge=lfs -text
+thesis/Chapter2/data/aia_lev1_304a_2010_11_11t01_07_08_13z_image_lev1.fits filter=lfs diff=lfs merge=lfs -text
+thesis/Chapter2/data/aia_lev1_304a_2010_11_11t01_09_08_12z_image_lev1.fits filter=lfs diff=lfs merge=lfs -text

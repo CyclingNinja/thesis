@@ -10,31 +10,17 @@
 \begin{pycode}[chapter5]
 ch5 = texfigure.Manager(pytex, number=4, base_path='./Chapter5/')
 \end{pycode}
+\begin{pycode}[chapter5a]
+ch5a = texfigure.Manager(pytex, number=4, base_path='./Chapter5/')
+\end{pycode}
 
 
 \section{Introduction}
-Solar jets of various forms are ubiquitous throughout the solar atmosphere, from spicules and MSs low in the chromosphere, both of which pass through the transition region, to coronal and X-Ray jets extending into the solar corona \cite{Archontis2008,Majarska2011,Morton2012}. 
+Solar jets of various forms are ubiquitous throughout the solar atmosphere, from spicules and MSs low in the chromosphere, both of which pass through the transition region, to coronal and X-Ray jets extending into the solar corona [\cite{Archontis2008,Majarska2011,Morton2012}].
+However, the lines between these features are still blurred, therefore in this chapter, I will examine, in detail, their formation and subsequent interaction with the solar atmosphere.
 Investigations into these phenomena have advanced significantly with recent developments in solar telescope technology, applied on missions like Hinode and the Solar Dynamics Observatory (SDO) and the most recent mission Interface Region Imaging Spectrometer (IRIS).
-Features are observed in a range of wavelengths and heights in the atmosphere \cite{Wang1998,Yamaucho2004}. 
-
-Low in the chromosphere the predominant feature is the spicule, these small scale jets are generally found forming over inter-granular lanes and reaching heights of $1$ - $5$ Mm.
-They are also very short lived, lifetimes generally only reaching ~$10$ mins.
-More importantly there is currently debate as to whether the population of spicules is divided into two forms, Type-1 and Type-2. 
-Type-1 are described as longer lived and less explosive with respect to velocity, whereas Type-2 reach higher velocities and higher into the atmosphere, however, are not observed to fall back into the chromosphere \cite{DePontieu2007,Beckers1972,Sterling2000}. 
-
-Having stated this, \cite{Pereira2014} have revealed that Type-2 spicules disappearance may be as a result of heating and moving out of the passband, due to the fact that they are consequently observed in a hotter line which may imply that these features are not in fact separate populations and \cite{Zhang2012} finds no such distinction in population.
-
-Many formation mechanisms have been proposed for spicules, including reconnection, \emph{p}-mode driving and applying accretion disk models to the plasma sinking at the inter-granular lanes, for reviews see \cite{Sterling2000} and \cite{Zaqara_Erdelyi2009}.
-More recently, the question surrounding spicules is how they effect the atmosphere is particularly pertinent given their vast number. 
-Any contribution in terms of solar wind acceleration or heat transfer would be scaled up by their extremely high number density.
-\cite{Rouppe2015} used coordinated observations with SST and IRIS to study RRE's and RBE's, examining H$\alpha$, Mg II h \& k, C II and Si IV.
-The authors find that these spicule-like extensions observed in H$\alpha$ have counter parts in the hotter Magnesium lines and the upper chromosphere/transition region C II and Si IV, which would certainly imply that these features are heating themselves, or the atmosphere around them.
-These spicules are similar to other features such as surges, the already mentioned RRB's/RBE's and chromospheric jets, all of which need considering with respect to spicules \cite{Tsiropoula2012, Kuridze2015}.
-The authors demonstrate that the high velocities and extents of the RRB's/RBE's are very similar to those previously cited byt \cite{Beckers1972} and \cite{DePontieu2007}. 
-
-Higher in the chromosphere, macrospicules (MSs) are generated, despite their origin laying low in the chromosphere, MSs extend through to the transition region and into the corona. 
-Larger counterparts of spicules, initially observed in $1975$ by \cite{Bohlin1975} using the Skylab 2 mission using a He $30.4$ nm filter viewing the upper chromopshere.
-Bohlin stated their lifetimes to be $5$ to $30$ mins and lengths to be approximately $10$ - $50$ arcsec, and these values have been confirmed \cref{ch:3}
+Jet-like features are observed in a range of wavelengths, and therefore, heights in the atmosphere [\cite{Wang1998,Yamaucho2004}].
+With the instrumentation available to us, a similar treatment will be given to this feature. 
 
 Macrospicules are generally accepted as multi-thermal structures, featuring a cool core and a hot sheath resulting from formation in the cooler atmosphere, from being observed in H$\alpha$ \citep{LaBonte79} and hotter high chromosphere lines such as in \cite{Parenti2002}.
 They have also been observed to rotate, \cite{Pike_Mason1998} and \cite{Kamio2010}, the latter paper quotes $-120 \pm 15$ kms$^{-1}$ blue-shifted Doppler velocity on the left side of the macrospicule. 
@@ -42,40 +28,26 @@ They have also been observed to rotate, \cite{Pike_Mason1998} and \cite{Kamio201
 There are multiple proposals for the mechanism triggering apparent rotation of the macrospicule. 
 \cite{Curdt2011} propose that the Sun's differential rotation causes MSs rotation, whereas, reconnection events cause the relaxation of a small-scale twisted loop, as demonstrated by \cite{Adams2014}.
 Again, with MSs extending high into the atmosphere, the question of their effect upon it, is one that needs answering.
-\cite{Pike1997} observe outflows from the macrospicule of the order $200$ kms$^{-1}$ in He I and discuss whether these outflows could potentially accelerate the solar wind.
+\cite{Pike1997} observe outflows from the MS of the order $200$ kms$^{-1}$ in He I and discuss whether these outflows could potentially accelerate the solar wind.
 However, work by \cite{Zaqarashvili2014} questions whether jets moving at super-Alfv{\'e}nic speeds might cause a Kelvin-Helmholtz instability to form at the macrospicule/atmosphere boundary, which would, in turn, transport heat into the corona.
-
-A third category of jet-like features, are coronal jets, observed in slightly hotter lines of $17.1$ nm but still visible in EUV, such as those discussed in \cite{Shibata1992} and simulated in \cite{Wyper2016}.
-\cite{Shibata1994} propose that these jets are reconnection events, where reconnection is triggered by flux emergence at the base of a small-scale loop.
-However, after this initial reconnection, there are several models as to how the system evolves.
-\cite{Moore2010} demonstrate a dichotomy in formation mechanism of coronal jets, between the standard 'inverted Y' model by Shibata and the blow-out jet model. 
-The blow-out model differs from the standard model due the reconnection leading to a 'curtain' of plasma flow as opposed to the 'spire' from the standard model.
-The difference between the two models originates in initial configuration of the overlying arch. 
-In standard jets the arch has no appreciable shear, whereas for a blowout jet the arch is twisted and sheared sufficiently to drive the explosive outflow which forms the jet.
-Coronal jets have also been shown to accelerate particles into interplanetary space \cite{Li2011} and there is also evidence for repeat onset jets, with several re-occurrences, \cite{Chifor2008} demonstrate repeat on set of jets driven by flux cancellation.
-
-Lastly, we need to consider X-ray jets.
-\cite{Shimojo2000} define their physical properties studying 16 separate jet events.
-Due to limitations on instrumentation at the time, the authors do not cover the extent of the jets, however, they analyse temperatures, $3 - 8$ MK, and density, $0.4 - 4.0$ cm$^{-9}$.
-The authors also discuss flaring at the foot-point of X-ray jets, in that, the temperature is proportional to the size of the initial footpoints.
 
 \cite{Kamio2010} applied a great deal of the background above when studying a macrospicule and X-ray jet forming simultaneously. 
 There is also discussion in \cite{Pike1997} and \cite{Kim2007} on the appearance of X-ray jets, alongside small scale jets.
 
-In the following sections we comprehensively discuss the physical properties of a case study. In \cref{sec:obs_sect} we present the observations we are using. 
+In the following sections we comprehensively discuss the physical properties of a case study. In \cref{sec:obs-sect} we present the observations we are using. 
 \ref{sec:time_dist_sect} discusses the evolution of the jet with respect to its extent and the different view of the feature utilising STEREO-A's EUVI. 
-Then move on to a doppler analysis of the jet in \cref{sec:dop_shift_sect}.
-Lastly, attempt to quantify the effect of the jet on the atmosphere in \cref{sec:temp_map_sect} before making our conclusions.
+Then move on to a doppler analysis of the jet in \cref{sec:doppler-shift}.
+Lastly, attempt to quantify the effect of the jet on the atmosphere in \cref{sec:temp-map-sect} before making our conclusions.
 
-\begin{pycode}[chapter5]
+\begin{pycode}[chapter5a]
 import numpy as np
 import sunpy.map
 import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import ImageGrid
 
-onset_path_113 = ch5.data_file('crop_113.npy')
-onset_path_114 = ch5.data_file('crop_114.npy')
-onset_path_115 = ch5.data_file('crop_115.npy')
+onset_path_113 = ch5a.data_file('crop_113.npy')
+onset_path_114 = ch5a.data_file('crop_114.npy')
+onset_path_115 = ch5a.data_file('crop_115.npy')
 
 ims = [np.load(onset_path_113), np.load(onset_path_114), np.load(onset_path_115)]
 
@@ -83,11 +55,13 @@ ims = [np.load(onset_path_113), np.load(onset_path_114), np.load(onset_path_115)
 multi = texfigure.MultiFigure(1, 3, reference="onset")
 
 for i, anim in enumerate(ims):
-    fig = plt.figure(figsize=texfigure.figsize(pytex, scale=0.3, height_ratio=1.3))
+    fig = plt.figure(figsize=texfigure.figsize(pytex, scale=0.3, height_ratio=1.2))
+    
 
     plt.imshow(anim, cmap='sdoaia304', origin='lower')
+    fig.tight_layout(pad=1.1)
 
-    Fig1 = ch5.save_figure('onset{}'.format(i+1), fig)
+    Fig1 = ch5a.save_figure('onset{}'.format(i+1), fig)
     Fig1.subfig_width = r"0.3\textwidth"
     Fig1.caption = ""
     multi.append(Fig1)
@@ -96,14 +70,15 @@ multi.placement = 't!'
 multi.caption = "a) Examine the two bright points in the proximity of $(79\", 60\")$. The point on the left is significantly brighter than the fainter on the right. We emphasise that the brightening around $(60\", 50\")$ is not a contributor to this jet. b) In this frame the bright points have extended, the fainter point has now extended up to $~95\"$ and the core of the brighter left feature has grown with it. c) At this point the two separate points are now indistinguishable and the feature is now extending as one column."
 \end{pycode}
 
-\py[chapter5]|multi|
+\py[chapter5a]|multi|
 
 
 
 \section{Observations}
-\label{sec:obs_sect}
-We observed a jet-like (hereby referred to as 'the jet') feature at the limb on $21$st June 2016 beginning at $07:30:00$ UTC in CRISP, an instrument installed on the Swedish Solar Telescope (SST) during a period of good seeing, \cite{Scharmer2003}.
-We used the H$\alpha$ filter, core line $656.28$ nm with $35$ slit increments from the core covering a $.32$ nm range, $-0.2$ nm and $+0.12$ nm, further processed using te Multi-Object Multi-Frame Blind Deconvolution (MOMBFD \cite{vanNoort2005}).
+\label{sec:obs-sect}
+We observed a jet-like (hereby referred to as 'the jet') feature at the limb on $21$st June 2016 beginning at $07:30:00$ UTC in CRISP, an instrument installed on the Swedish Solar Telescope (SST) during a period of good seeing, [\cite{Scharmer2003}].
+We used the H$\alpha$ filter, core line $656.28$ nm with $35$ slit increments from the core covering a $.32$ nm range, $-0.2$ nm and $+0.12$ nm, further processed using te Multi-Object Multi-Frame Blind Deconvolution (MOMBFD 
+\cite{vanNoort2005}).
 The observations were of Active Region 11506 with $xc = 893",\ yc = -250"$ in heliographic coordinates on $930 \times 930$ pixel images, with spatial resolution of $0.012$ arcsec/pixel and temporal resolution of $7.5$ sec.
 Due to the range of solar observational platforms available to us, we also have simultaneous observations with the Solar Dynamic Observatory (SDO) and the Solar Terrestrial Relations Observatory (STEREO).
 
@@ -125,53 +100,6 @@ We have utilised a self-built, manual, feature measuring tool, which uses a clic
 Using this tool on each frame, and therefore the time cadence of the instrument, we obtain the evolution of the jet and general ballistic information.
 We have used this tool on each wavelength to examine the extent upwards through the corona. 
 Observations in SDO record the entire lifetime of the feature, however the same is not true for observations using the SST, where the observation window in SST closes at $07:55:00$ UTC.
-
-\subsection{Onset}
-The jet feature is observed as it forms using SST and, fortunately, we can resolve initial stages of the jet formation.
-The jet is observed to initiate in the core of H$\alpha$ with two small bright points forming, and an ensuing jet developing above it. 
-\cref{fig:onset} captures the early evolution of the jet in detail.
-Evident in \cref{fig:onset1} we find the initial two bright points at the foot of the jet, the bright point of the left being significantly brighter than its countpart on the right.
-By \cref{fig:onset2} shows the development of these two points \emph{i.e.} have now become two columns of brighter plasma.
-In the final formation stage, \cref{fig:onset3} the jet has formed and is now a distinct feature against the background.
-This behaviour is in keeping with the standard jet formation model demonstrated by \cite{Shibata1992}, where the authors describe an `inverted y' shape of brightened material that is a result of small scale flux emergence reconnection.
-
-
-
-\subsection{Evolution}
-Let us examine the raw evolution of the jet in the time distance plot in \cref{fig:t-d-plot}.
-Here we have utilised the measuring tool to measure the extent of the feature in all the wavelengths in which it is visible.
-We find that the overall profile of its evolution contains two distinct peaks in most wavelengths, with the exception of $17.1$ nm.
-The first peak comes at $~07:37$ UTC before a decrease in size and subsequent secondary expansion to its maximum length in H$\alpha$ and $30.4$ nm at approximately $07:49$ UTC.
-This strongly implies that there is a second initialising type event in which a new material is accelerated into the atmosphere.
-As such let us turn to the CRISP instrument again.
-
-With its higher resolution, a slit based analysis of the jet can be observed in \cref{fig:sst-slit}.
-Notice two distinct curves in the image, the first onset is at approximately $17$ and the second at a bright point originating at $~85$.
-We find that in this second phase of the jet, plasma extends higher into the atmosphere.
-This result is unusual as previous observations of recurrent jets have shown decay in subsequent initialisation events in observations such as \cite{Jiang2007}.
-Unfortunately, a section of material is in front of the base of the jet and obscures our view of the second event.
-
-Considering the observations in multiple wavelengths, we notice the smaller extension visible in the coronal wavelengths.
-In these higher temperature lines, the jet appears as a dark line.
-The appearance could be due to the fact that the feature is cool and cannot be observed at higher temperatures.
-However, when observed in SDO/AIA $30.4$ nm, the feature appears dark over the limb and emissive beyond it.
-Observing the feature in EUVI, the feature appears entirely dark with bright foot points.
-Therefore, we cannot state that there is no emission at higher temperatures. 
-However, this does allow us to categorise the jet as a feature of the chromosphere.
-
-
-%double check this section
-Evidently, the maximum extent of this feature is in He II $30.4$ nm and maximises at $12.6$ Mm although the measurements in H$\alpha$ may exceed this were it to be fully visible.
-Interestingly, the length of the jet in the coronal lines does not get larger after the second injection on plasma occurs.
-This subsequent acceleration of plasma originates from the same location as that of the initial formation, and on the same scale as the first onset.
-However, this drives the tip of the jet even higher than the initial tip, measuring the velocity accurately is difficult, due to this acceleration is set against the previous bright material.
-An approximation using multiple image steps and using a difference delta produces an average of $46$ km s${^{-1}}$, therefore we can infer that it reaches a higher maximum velocity than the first ejection.
-
-The feature is very thin, averaging $1.13$ Mm in H$\alpha$ and $0.787$ Mm in He II. 
-This result is unexpected, it certainly seems to contradict the cool core surrounded by a hot sheath model.
-However the errors on the measurement in SDO/AIA recordings are $\pm1.5$ Mm, when taking into account human measurement error and resolution of the instrument.
-Where as measurement error on the CRISP/SST images is $\pm0.0885$ Mm, thus, we are more inclined to believe the measurement according to CRISP.
-This thin spire is an expected outcome of the standard model of jet formation, more on which later.
 
 \begin{pycode}[chapter5]
 import pickle
@@ -245,18 +173,69 @@ td_fig.caption = ""
 	\begin{subtable}[b]{\textwidth}
 		\centering
 		\begin{tabular}{ccc}
-		Wavelength (nm) & Maximum Length (Mm) & Maximum Velocity (km/s) \\
-		656.2 & 11.3 & 0.09 \\
-		30.4 & 12.6 & 31.5 \\
-		33.5 & 6.0 & 53.6 \\
-		21.1 & 5.5 & 50.1 \\
-		17.1 & 5.6 & 51.9 \\
-		13.1 & 5.6 & 36.6 \\
+			Wavelength (nm) & Maximum Length (Mm) & Maximum Velocity (km/s) \\
+			656.2 & 11.3 & 0.09 \\
+			30.4 & 12.6 & 31.5 \\
+			33.5 & 6.0 & 53.6 \\
+			21.1 & 5.5 & 50.1 \\
+			17.1 & 5.6 & 51.9 \\
+			13.1 & 5.6 & 36.6 \\
 		\end{tabular}
 		\caption{}
 	\end{subtable}
 	\caption{a) Darkgold = H$\alpha$, Blue = 33.5 nm, Orange = 30.4 nm, Purple = 21.1 nm, Yellow = 17.1 nm, Green = 13.1 nm. The CRISP observations end earlier than the whole evolution of the jet, and the top of the jet is cut off by the top of the image. Therefore we ignore flatline at the top of the H$\alpha$ line starting at $07:42$ UTC. b) Table of maximised basic spatial properties of the jet.}
 \end{figure}
+
+\subsection{Onset}
+The jet feature is observed as it forms using SST and, fortunately, we can resolve initial stages of the jet formation.
+The jet is observed to initiate in the core of H$\alpha$ with two small bright points forming, and an ensuing jet developing above it. 
+\cref{fig:onset} captures the early evolution of the jet in detail.
+Evident in \cref{fig:onset1} we find the initial two bright points at the foot of the jet, the bright point of the left being significantly brighter than its countpart on the right.
+By \cref{fig:onset2} shows the development of these two points \emph{i.e.} have now become two columns of brighter plasma.
+In the final formation stage, \cref{fig:onset3} the jet has formed and is now a distinct feature against the background.
+This behaviour is in keeping with the standard jet formation model demonstrated by \cite{Shibata1992}, where the authors describe an `inverted y' shape of brightened material that is a result of small scale flux emergence reconnection.
+
+
+
+
+
+\subsection{Evolution}
+Let us examine the raw evolution of the jet in the time distance plot in \cref{fig:t-d-plot}.
+Here we have utilised the measuring tool to measure the extent of the feature in all the wavelengths in which it is visible.
+We find that the overall profile of its evolution contains two distinct peaks in most wavelengths, with the exception of $17.1$ nm.
+The first peak comes at $~07:37$ UTC before a decrease in size and subsequent secondary expansion to its maximum length in H$\alpha$ and $30.4$ nm at approximately $07:49$ UTC.
+This strongly implies that there is a second initialising type event in which a new material is accelerated into the atmosphere.
+As such let us turn to the CRISP instrument again.
+
+With its higher resolution, a slit based analysis of the jet can be observed in \cref{fig:sst-slit}.
+Notice two distinct curves in the image, the first onset is at approximately $17$ and the second at a bright point originating at $~85$.
+We find that in this second phase of the jet, plasma extends higher into the atmosphere.
+This result is unusual as previous observations of recurrent jets have shown decay in subsequent initialisation events in observations such as \cite{Jiang2007}.
+Unfortunately, a section of material is in front of the base of the jet and obscures our view of the second event.
+
+Considering the observations in multiple wavelengths, we notice the smaller extension visible in the coronal wavelengths.
+In these higher temperature lines, the jet appears as a dark line.
+The appearance could be due to the fact that the feature is cool and cannot be observed at higher temperatures.
+However, when observed in SDO/AIA $30.4$ nm, the feature appears dark over the limb and emissive beyond it.
+Observing the feature in EUVI, the feature appears entirely dark with bright foot points.
+Therefore, we cannot state that there is no emission at higher temperatures. 
+However, this does allow us to categorise the jet as a feature of the chromosphere.
+
+
+%double check this section
+Evidently, the maximum extent of this feature is in He II $30.4$ nm and maximises at $12.6$ Mm although the measurements in H$\alpha$ may exceed this were it to be fully visible.
+Interestingly, the length of the jet in the coronal lines does not get larger after the second injection on plasma occurs.
+This subsequent acceleration of plasma originates from the same location as that of the initial formation, and on the same scale as the first onset.
+However, this drives the tip of the jet even higher than the initial tip, measuring the velocity accurately is difficult, due to this acceleration is set against the previous bright material.
+An approximation using multiple image steps and using a difference delta produces an average of $46$ km s${^{-1}}$, therefore we can infer that it reaches a higher maximum velocity than the first ejection.
+
+The feature is very thin, averaging $1.13$ Mm in H$\alpha$ and $0.787$ Mm in He II. 
+This result is unexpected, it certainly seems to contradict the cool core surrounded by a hot sheath model.
+However the errors on the measurement in SDO/AIA recordings are $\pm1.5$ Mm, when taking into account human measurement error and resolution of the instrument.
+Where as measurement error on the CRISP/SST images is $\pm0.0885$ Mm, thus, we are more inclined to believe the measurement according to CRISP.
+This thin spire is an expected outcome of the standard model of jet formation, more on which later.
+
+
 
 
 \begin{pycode}[chapter5]
@@ -347,7 +326,7 @@ multi_ST.caption = "EUVI $30.4$ nm images from STEREO on $21$st June at a) $07:2
 
 Possibly the most valuable information to be gained about the development of jets, is pertaining to it rotational behaviour, therefore, we will use the spectral increments from the CRISP instrument to obtain line-of-sight Doppler velocities.
 There is, however, a hindrance with this.
-There are two seperate forms of the emmission spectra within the image.
+There are two separate forms of the emission spectra within the image.
 The region where the jet initialises, is on disk, and as a result the spectral analysis reveals an absorption spectra.
 
 \subsection{MCMC Method}
@@ -369,13 +348,174 @@ In this case the sample is larger than the number of parameters and we are only 
 
 The result of applying the above method to the CRISP/SST spectroscopic dataset is presented in \cref{fig:dop-exam}.
 Immediately apparent, is the banding structured red and blue shifts, the effect is created as a result of the optical depth created when observing at the limb. 
-The jet forms in amongst a cluster of blue-shifted smaller thin structures, making early observations in the Dopplergrams difficult.  
+The jet forms in amongst a cluster of blue-shifted smaller thin structures, making early observations in the dopplergrams difficult.  
+
+
+\begin{pycode}[chapter5]
+import sunpy
+import slit
+
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+from matplotlib import colors
+from mpl_toolkits.axes_grid1 import ImageGrid
+from matplotlib import gridspec
+from matplotlib.collections import LineCollection
+
+import numpy as np
+import numpy.ma as ma
+
+import astropy.units as u
+import datetime
+from datetime import timedelta
+from astropy.constants import c
+from sunkitsst.read_cubes import read_cubes
+from glob import glob
+
+# some funcitons
+def get_time(ind, time_0):
+	current_time = time_0 + timedelta(seconds=7.7)*ind
+	return current_time
+	
+def truncate_colormap(cmap, minval=0.0, maxval=1.0, n=100):
+	new_cmap = colors.LinearSegmentedColormap.from_list(
+				'trunc({n},{a:.2f},{b:.2f})'.format(n=cmap.name, a=minval, b=maxval),
+				 cmap(np.linspace(minval, maxval, n)))
+	return new_cmap
+
+#dop_frames = [76,77,78,79,80,81,82,83,85]
+dop_frames = [76,77,78,79,80,81,82,83,85,86,87,88,89]
+frame_numbers = np.arange(75,90)
+
+# read in some datas
+dop_files = []
+for i in frame_numbers:
+	dop_files.append(ch5.data_file('dops/dop_arr_test0{}.npy'.format(i)))
+dop_files.sort()
+
+t0_ha = datetime.datetime(2012,6,21,7,15,9)
+t0_dop = get_time(100, t0_ha)
+
+dops = np.zeros((len(dop_files), 331, 120))
+for i, afile in enumerate(dop_files):
+	dops[i] = np.load(afile)
+
+# process the the dops to get vels
+l0 = 6562.8*u.Angstrom
+dops = dops*u.Angstrom
+dops = (l0-dops)/l0*c
+dops = dops.to(u.km/u.s)
+
+# get the variables for the slit analysis
+# lets use a perfectly horizontal slit
+x1 = 45
+x2 = 65
+y1 = y2 = 130
+N = 0
+
+### make the graph for time and slit
+slit_inds = slit.slit_count(x1, y1, x2, y2, 0, 0, N)
+
+# index the arrays properly
+inds_x = np.array([slit_inds[:,:,0]])
+inds_y = np.array([slit_inds[:,:,1]])
+ind_dop = dops[:,inds_y, inds_x]
+
+dop_fin = ind_dop[:,0]
+
+# get the dopplergrams associated with the rotation
+slit_list = []
+for i, n in enumerate(frame_numbers):
+	temp = dop_fin[i]
+	temp[temp > 20*dop_fin.unit] = np.NaN
+	slit_list.append(temp)
+
+xy_slit = [np.array(zip(range(len(slit_inds[0])), s[0].value)) for s in slit_list]
+
+
+n_cmap = truncate_colormap(plt.get_cmap('Oranges'), 0.3, 1.0)
+
+
+# new figure using subplot2grid specificially
+fig = plt.figure(figsize=texfigure.figsize(pytex, height_ratio=1.5))
+gs = gridspec.GridSpec(3,8)
+ax1 = plt.subplot(gs[0,0:2])
+ax2 = plt.subplot(gs[0,2:4])
+ax3 = plt.subplot(gs[0,4:6])
+ax4 = plt.subplot(gs[0,6:8])
+ax5 = plt.subplot(gs[1,0:2])
+ax6 = plt.subplot(gs[1,2:4])
+ax7 = plt.subplot(gs[1,4:6])
+ax8 = plt.subplot(gs[1,6:8])
+ax9 = plt.subplot(gs[2,0:2])
+ax10 = plt.subplot(gs[2,2:4])
+ax11 = plt.subplot(gs[2,4:6])
+ax12 = plt.subplot(gs[2,6:8])
+
+ax_list = [ax1, ax2, ax3, ax4, ax5, ax6,
+		   ax7, ax8, ax9, ax10, ax11, ax12]
+
+for n, an_ax in zip(dop_frames, ax_list):
+	i = np.where(frame_numbers == n)[0][0]
+	time_dop = get_time(n, t0_dop).strftime('%H:%M:%S')
+	temp_dop = dops[i].value
+	y_shift = 40
+	im = an_ax.imshow(temp_dop[:250,40:], vmax=15, vmin=-15,
+	cmap='RdBu_r', origin='lower',
+	norm=mpl.colors.SymLogNorm(1),
+	interpolation='none')
+	an_ax.plot([x1, x2], [y2-y_shift,y2-y_shift], color='k')
+	an_ax.set_title('{}'.format(time_dop), fontsize=10)
+	an_ax.set_xlim(left=1, right=80)
+	an_ax.set_ylim(bottom=1, top=225)
+	an_ax.locator_params(axis='x', nbins=4)
+	im.cmap.set_under('w')
+	im.cmap.set_over('w')
+
+cb = fig.colorbar(im, ax=ax12, pad=0.1, fraction=0.111)
+cb.set_label('Velocity {}'.format(dop_fin.unit._repr_latex_()))
+cb.set_ticks([-15,-9,-6,-3,-2,-1,0,1,2,3,6,9,15])
+
+# line collection section
+n_cmap = truncate_colormap(plt.get_cmap('Oranges'), 0.3, 1.0)
+
+# fig, ax = plt.subplots()
+line_segments = LineCollection(xy_slit,
+							   linewidths = 0.5,
+							   linestyle='solid',
+							   cmap=n_cmap)
+							   
+line_segments.set_array(np.arange(1,len(slit_list)+1))
+#ax10.add_collection(line_segments)
+#ax10.axis([1,xy_slit[0].shape[0]-1,-1.6,1.6])
+#ax10.axhline(0, color='k', linewidth=0.5)
+
+#axcb = fig.colorbar(line_segments)
+#axcb.set_label('Frame Number')
+#axcb.set_ticks(range(1, len(xy_slit)+1))
+#ax10.set_title('Slit across')
+#ax10.set_xlabel('Distance Along Slit [pixels]')
+#ax10.set_ylabel('Velocity {}'.format(dop_fin.unit._repr_latex_()))
+#plt.sci(line_segments)
+
+gs.tight_layout(fig, w_pad=0.9, h_pad=0.5)
+
+dop_grid = ch5.save_figure('dop-exam', fig)
+dop_grid.figure_width = r'\textwidth'
+dop_grid.placement = 'H'
+dop_grid.caption = 'Above is the result of the dopplergram processing during the evolution of the second ejection of plasma starting at $07:37:00$ UTC. All images shown in pixel coordinates.'
+
+
+\end{pycode}
+
+\py[chapter5]|dop_grid|
+
 
 \subsection{Analysis}
 This particular feature, as has already been mentioned, has two events in which material is accelerated upwards into the solar atmosphere.
 The first event is not readily visible in the dopplergrams, difficult as it is to pick out against a line of spicule-like features all showing blue-shifts, towards the viewewing direction.
 This result is to be expected given the we have demonstrated movement away from the 'camera' in \cref{fig:stereo}.
-Whereas, the second expulsion of material, originating at $07:37$ UTC, exhibits the classic behaviour of a rotating feature in Dopplergrams, a red/blue split over the body of the feature. 
+Whereas, the second expulsion of material, originating at $07:37$ UTC, exhibits the classic behaviour of a rotating feature in dopplergrams, a red/blue split over the body of the feature. 
  
 It is clear that the second event comes from a similarly small element to the first and evolves upwards, joining the full formation of the jet, hence why the apparent rotation of the jet does not appear to spread across the rest of the jet as seen in H$\alpha$.
 
@@ -406,173 +546,13 @@ A larger scale loop would mean that the magnetic tension would be greater, and h
 
 
 
-\begin{pycode}[chapter5]
-import sunpy
-import slit
-
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-from matplotlib import colors
-from mpl_toolkits.axes_grid1 import ImageGrid
-from matplotlib import gridspec
-from matplotlib.collections import LineCollection
-
-import numpy as np
-import numpy.ma as ma
-
-import astropy.units as u
-import datetime
-from datetime import timedelta
-from astropy.constants import c
-from sunkitsst.read_cubes import read_cubes
-from glob import glob
-
-# some funcitons
-def get_time(ind, time_0):
-    current_time = time_0 + timedelta(seconds=7.7)*ind
-    return current_time
-
-def truncate_colormap(cmap, minval=0.0, maxval=1.0, n=100):
-    new_cmap = colors.LinearSegmentedColormap.from_list(
-        'trunc({n},{a:.2f},{b:.2f})'.format(n=cmap.name, a=minval, b=maxval),
-        cmap(np.linspace(minval, maxval, n)))
-    return new_cmap
-
-
-#dop_frames = [76,77,78,79,80,81,82,83,85]
-dop_frames = [76,77,78,79,80,81,82,83,85,86,87,88,89]
-frame_numbers = np.arange(75,90)
-
-# read in some datas
-dop_files = []
-for i in frame_numbers:
-    dop_files.append(ch5.data_file('dops/dop_arr_test0{}.npy'.format(i)))
-dop_files.sort()
-
-t0_ha = datetime.datetime(2012,6,21,7,15,9)
-t0_dop = get_time(100, t0_ha)
-
-dops = np.zeros((len(dop_files), 331, 120))
-for i, afile in enumerate(dop_files):
-    dops[i] = np.load(afile)
-
-# process the the dops to get vels
-l0 = 6562.8*u.Angstrom
-dops = dops*u.Angstrom
-dops = (l0-dops)/l0*c
-dops = dops.to(u.km/u.s)
-
-# get the variables for the slit analysis
-# lets use a perfectly horizontal slit
-x1 = 45
-x2 = 65
-y1 = y2 = 130
-N = 0
-
-
-### make the graph for time and slit
-slit_inds = slit.slit_count(x1, y1, x2, y2, 0, 0, N)
-
-# index the arrays properly
-inds_x = np.array([slit_inds[:,:,0]])
-inds_y = np.array([slit_inds[:,:,1]])
-ind_dop = dops[:,inds_y, inds_x]
-
-dop_fin = ind_dop[:,0]
-
-# get the dopplergrams associated with the rotation
-slit_list = []
-for i, n in enumerate(frame_numbers):
-    temp = dop_fin[i]
-    temp[temp > 20*dop_fin.unit] = np.NaN
-    slit_list.append(temp)
-
-xy_slit = [np.array(zip(range(len(slit_inds[0])), s[0].value)) for s in slit_list]
-
-
-n_cmap = truncate_colormap(plt.get_cmap('Oranges'), 0.3, 1.0)
-
-
-# new figure using subplot2grid specificially
-fig = plt.figure(figsize=texfigure.figsize(pytex, height_ratio=1.5))
-gs = gridspec.GridSpec(3,8)
-ax1 = plt.subplot(gs[0,0:2])
-ax2 = plt.subplot(gs[0,2:4])
-ax3 = plt.subplot(gs[0,4:6])
-ax4 = plt.subplot(gs[0,6:8])
-ax5 = plt.subplot(gs[1,0:2])
-ax6 = plt.subplot(gs[1,2:4])
-ax7 = plt.subplot(gs[1,4:6])
-ax8 = plt.subplot(gs[1,6:8])
-ax9 = plt.subplot(gs[2,0:2])
-ax10 = plt.subplot(gs[2,2:4])
-ax11 = plt.subplot(gs[2,4:6])
-ax12 = plt.subplot(gs[2,6:8])
- 
-ax_list = [ax1, ax2, ax3, ax4, ax5, ax6,
-           ax7, ax8, ax9, ax10, ax11, ax12]
-
-for n, an_ax in zip(dop_frames, ax_list):
-    i = np.where(frame_numbers == n)[0][0]
-    time_dop = get_time(n, t0_dop).strftime('%H:%M:%S')
-    temp_dop = dops[i].value
-    y_shift = 40
-    im = an_ax.imshow(temp_dop[:250,40:], vmax=15, vmin=-15,
-                      cmap='RdBu_r', origin='lower',
-                      norm=mpl.colors.SymLogNorm(1),
-                      interpolation='none')
-    an_ax.plot([x1, x2], [y2-y_shift,y2-y_shift], color='k')
-    an_ax.set_title('{}'.format(time_dop), fontsize=10)
-    an_ax.set_xlim(left=1, right=80)
-    an_ax.set_ylim(bottom=1, top=225)
-    an_ax.locator_params(axis='x', nbins=4)
-    im.cmap.set_under('w')
-    im.cmap.set_over('w')
-
-cb = fig.colorbar(im, ax=ax12, pad=0.1, fraction=0.111)
-cb.set_label('Velocity {}'.format(dop_fin.unit._repr_latex_()))
-cb.set_ticks([-15,-9,-6,-3,-2,-1,0,1,2,3,6,9,15])
-
-# line collection section
-n_cmap = truncate_colormap(plt.get_cmap('Oranges'), 0.3, 1.0)
-
-# fig, ax = plt.subplots()
-line_segments = LineCollection(xy_slit,
-                               linewidths = 0.5,
-                               linestyle='solid',
-                               cmap=n_cmap)
-
-line_segments.set_array(np.arange(1,len(slit_list)+1))
-#ax10.add_collection(line_segments)
-#ax10.axis([1,xy_slit[0].shape[0]-1,-1.6,1.6])
-#ax10.axhline(0, color='k', linewidth=0.5)
-
-#axcb = fig.colorbar(line_segments)
-#axcb.set_label('Frame Number')
-#axcb.set_ticks(range(1, len(xy_slit)+1))
-#ax10.set_title('Slit across')
-#ax10.set_xlabel('Distance Along Slit [pixels]')
-#ax10.set_ylabel('Velocity {}'.format(dop_fin.unit._repr_latex_()))
-#plt.sci(line_segments)
-
-gs.tight_layout(fig, w_pad=0.9, h_pad=0.5)
-
-dop_grid = ch5.save_figure('dop-exam', fig)
-dop_grid.figure_width = r'\textwidth'
-dop_grid.placement = 'H'
-dop_grid.caption = 'Above is the result of the Dopplergram processing during the evolution of the second ejection of plasma starting at $07:37:00$ UTC. All images shown in pixel coordinates.'
-
-
-\end{pycode}
-
-\py[chapter5]|dop_grid|
 
 
 
 
 
 \section{Effect on the atmosphere}
-\label{sec:temp_map_sect}
+\label{sec:temp-map-sect}
 
 With the increased resolution we can visually inspect the boundary between the jet and atmosphere.
 \cref{fig:demo-bound} details the evolution of the jet in the core of H$\alpha$ in over $115$ seconds.
@@ -642,14 +622,14 @@ from matplotlib.collections import LineCollection
 from matplotlib import colors
 
 import sunpy.map
-import slit
+import slit 
 
 from astropy.io import fits
 import astropy.units as u
 
 from glob import glob
 
-files = glob('/storage2/temperature_maps/data/full_gauss/*.fits')
+files = glob('/home/sam/Documents/temp_maps/*.fits')
 files.sort()
 
 def proc_file(x):
@@ -664,7 +644,7 @@ def proc_file(x):
 
 
 submaps = []
-for afile in files[28:40]:
+for afile in files:
     temp = proc_file(afile)
     submaps.append(temp)
 

@@ -8,6 +8,9 @@
 
 \chapter{Jets and Macrospicules}
 \label{ch:2}
+\begin{pycode}[chapter2]
+ch2 = texfigure.Manager(pytex, number=2, base_path='./Chapter2/', data_dir="./Chapter2/data/")
+\end{pycode}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PAPER TEXT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -62,12 +65,12 @@ However, there are currently two competing theories, wave-driven, as highlighted
 \cite{Sterling2000} presents four possible scenarios for the formation of spicules.
 Three of which utilise a pressure pulse in the photosphere or low chromosphere and higher in the chromosphere. 
 In the simple case, a perturbation at the base of a flux tube, then steepens into a gas-dynamic shock, which is driven higher into the atmosphere upon interaction with the transition region.
-Lastly, \cite{Sterling2000} describes low and high frequency Alfv{\`e}n waves, \emph{i.e.} axisymmetric twists on the vertical flux tube in the azimuthal direction.
+Lastly, \cite{Sterling2000} describes low and high frequency Alfv{\'e}n waves, \emph{i.e.} axisymmetric twists on the vertical flux tube in the azimuthal direction.
 This twisting of the magnetic field then leads to a shock forming the spire of the spicule.
 
 A particularly pertinent model is proposed by \cite{Moore2011spic_recon}, in which magnetic reconnection is instigated by granule-sized 'magnetic bubbles'.
 As spicules are generally observed to form on the intergranular lanes, this model is particularly pertinent. 
-The authors propose that Type-2 spicules are an analogue for X-ray jets (\ref{sec:xjets}).
+The authors propose that Type-2 spicules are an analogue for X-ray jets (\cref{sec:xjets}).
 In this scenario, magnetic bipoles emerge from the photosphere which then interacts with the ambient field of the lower chromosphere, forming a raft of reconnection external to the bipole. 
 
 The advantages of this magnetic field configuration, is that it is extremely common in the solar atmosphere.
@@ -100,17 +103,52 @@ They then classified macrospuicules according to 3 observables: that the macrosp
 \cite{Bohlin1975} specifically differentiate between macrospicules and the H$\alpha$ macrospicules previously observed, stating that these new features have no counterpart in that line, citing \cite{Engvold1975}, who were unable to find a correlation between the two lines by direct observation or numerical correlation.
 Having said this, they make the caveat that there is a possibility that the formations of the two features could be largely similar.
 
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.7]{Chapter2/Figs/MS1}
-	\includegraphics[scale=0.7]{Chapter2/Figs/MS2}
-	\caption{The macrospicule examined by \cite{Kayshap2013}. Utilising the $30.4$ nm imager on AIA, the authors closely examine the bright point at the base of the jet.}
-\end{figure}
+\begin{pycode}[chapter2]
+import sunpy.map
+import matplotlib.pyplot as plt
+import astropy.units as u
 
+files = ch2.data_file("aia_*")
+
+maps = sunpy.map.Map(files)
+
+maps = sunpy.map.Map([m.submap((-40, 40)*u.arcsec, (950, 1060)*u.arcsec) for m in maps])
+
+title = "SDO/AIA {wave} {date:%H:%M:%S}"
+xlabel = 'Heliographic Longitude [{unit}]'
+ylabel = 'Heliographic Latitude [{unit}]'
+	
+multi = texfigure.MultiFigure(2, 2, reference="ms")
+
+for i, smap in enumerate(maps):
+	fig = plt.figure(figsize=texfigure.figsize(pytex, scale=0.5, height_ratio=1.2))
+	ax = plt.subplot(projection=smap)
+	smap.plot(axes=ax)
+	ax.set_title(title.format(wave=smap.wavelength._repr_latex_(),
+	date=smap.date))
+	ax.set_xlabel(xlabel.format(unit=smap.spatial_units[0]))
+	ax.set_ylabel(ylabel.format(unit=smap.spatial_units[1]))
+	ax.grid(False)
+	x, y = ax.coords
+	x.set_major_formatter('s')
+	y.set_major_formatter('s')
+	x.set_ticks(color='k')
+	y.set_ticks(color='k')
+	fig.tight_layout(pad=3.7)
+	
+	Fig = ch2.save_figure('ms{}'.format(i+1), fig)
+	Fig.subfig_width = r"0.49\textwidth"
+	Fig.caption = ''
+	multi.append(Fig)
+multi.caption = "The macrospicule examined by \cite{Kayshap2013}. Utilising the $30.4$ nm imager on AIA, the authors closely examine the bright point at the base of the jet."
+
+\end{pycode}
+
+\py[chapter2]|multi|
 
 With the limitations of the observations at that time, there was much debate as to whether this was actually the case. 
-Following up on the work by \cite{Bohlin1975}, \cite{LaBonte79} utilised the Big Bear Solar Observatory to examine the 'limb surges' in H$\alpha$ and Deuterium 3 (D$_3$).
-The authors found that the macrospicules in H$\alpha$ had considerable complexity in their structure, with 'knots, twists and loops' within the confines of the feature.
+Following up on the work by \cite{Bohlin1975}, \cite{LaBonte79} utilised the Big Bear Solar Observatory to examine the `limb surges' in H$\alpha$ and Deuterium 3 (D$_3$).
+The authors found that the macrospicules in H$\alpha$ had considerable complexity in their structure, with `knots, twists and loops' within the confines of the feature.
 But in D$_3$, the authors only observe the brightest parts of the macrospicule, usually at the base of the structure apparent in H$\alpha$.
 Differently in this case, the authors also observe features on the disk and define three categories: the macrospicules appearing similar to filament eruptions, surge-like macrospicules and a flare brightening type.
 Lastly, the paper finds the rate of occurrence of macrospicules to be of the order $~1400$ per solar day. 
@@ -125,7 +163,7 @@ Consequently, this study was statistical in its focus with the aim of being to a
 \cite{Dere89} then go on to compare the values obtained in this study to the two previously mentioned.
 The papers are generally in agreement, specifically Dere and LaBonte, citing lengths ranging between $3.75$ - $24.75$ Mm and similar widths, although Dere et al. find $0.45$ - $6.75$ Mm and LaBonte $0.45$ - $4.5$. Mm.
 The question of velocities is also raised, with values quoted as $20$ - $50$ km s${^{-1}}$ from Dere et al. and $\leq60$ km s${^{-1}}$ from \cite{LaBonte79}.
-These values should possibly be taken with a pinch of salt as the temporal resolution for Dere and Labonte was $20$ or $60$ s and $60$ s respectively, which will greatly influence the measurement of the velocity.
+These values should possibly be taken with a pinch of salt as the temporal resolution for Dere and LaBonte was $20$ or $60$ s and $60$ s respectively, which will greatly influence the measurement of the velocity.
 However, \cite{Bohlin1975}. found more extreme values than all of the other studies.
 Some of the lengths they find extend as far as $45$ Mm.
 They also find greater widths - $3.75$-$11.25$ Mm - and velocities reaching $150$ km s${^{-1}}$, although again the temporal resolution is poor, $\geq \sim 180$ s.
@@ -138,14 +176,14 @@ In these observations the macrospicule is apparent at the limb, demonstrating tw
 \cite{Pike1997} find that the macrospicule is visible in the He I and O V lines, however not in the higher temperature magnesium line, showing that macrospicules can be found at transition region temperatures, but will not rise to coronal temperatures.
 The authors find the macrospicule to be $31$ Mm in height and $13.3$ Mm in width, agreeing with previous values.
 
-The bright roots evident in the O V lines begin to form the 'inverted-Y' shape, typical of the standard jet formation mechanism outlined by \cite{Shibata1992} (more to follow).
+The bright roots evident in the O V lines begin to form the `inverted-Y' shape, typical of the standard jet formation mechanism outlined by \cite{Shibata1992} (more to follow).
 As a result of this, \cite{Pike1997} go on to discuss the nature of the feature and whether it is a macrospicule or X-ray jet.
 \cite{Pike1997} conclude that this feature is still classified as a macrospicule, due to the observations in He I and the feature adhering to the properties highlighted in \cite{Bohlin1975}.
 
 Building on the work done by \cite{Pike1997}, \cite{Parenti2002} undertook an extremely detailed case study of a macrospicule observed in CDS.
 In this case the observations are still reliant on the macrospicule protruding above the limb, and observed using the full suite of spectra available to the authors.
 When discussing these papers, we must consider the rastering method of CDS.
-The images are comprised of vertical columns of pixels that are exposed for $30 $ s; the instrument then has a cooldown phase before moving onto the next vertical slit.
+The images are comprised of vertical columns of pixels that are exposed for $30 $ s; the instrument then has a cool down phase before moving onto the next vertical slit.
 This takes approximately $240$ s, which is inappropriate for a feature which on average doesn't have a long lifespan.
 Because of this delay, the pixels in the x direction, from one column to the next, are separated by a time of $272$ s.
 This means that we cannot consider the spatial structure in the x direction as continuous.
@@ -167,16 +205,19 @@ This is one of the first concrete examples of the relationship between macrospic
 The authors highlight that the two foot-points then go on to form two threads propagating upwards, into the corona, subsequently utilising the SUMER instrument to detect their motion in detail.
 
 % check this section
-The properties of this particular example in He II $30.4$ are quoted as $130 \pm 30$ km s${^{-1}}$ for the radial extension of the feature and line-of-sight velocities of the order $-15$ and $-25$ km s${^{-1}}$.
+The properties of this particular example in He II $30.4$ nm are quoted as $130 \pm 30$ km s${^{-1}}$ for the radial extension of the feature and line-of-sight velocities of the order $-15$ and $-25$ km s${^{-1}}$.
 With respect to the X-ray jet behaviour, the velocity is measured at $320 \pm 30$ km s${^{-1}}$ and utilising the LOS velocity in He VIII and Fe XII led \cite{Kamio2010} to conclude that the structure of the macrospicule and X-ray jet and interlinked.
 \cite{Kamio2010} also highlight the regression of the material back to the limb causing an enhancement in He II, a phenomenon they propose is caused by either heating in the upper part of the feature or a result of the density increase caused by the downflow of plasma.
+
+\cite{Bennett2015} present a statistical study (which will be detailed in \cref{ch:3}) of macrospicules using SDO/AIA He II $30.4$ nm, the authors utilise the ramp to the solar maxima in $2012$ to test how macrospicules respond to the solar cycle.
+The result that the maximum extensions of macrospicules increase to towards the solar max is the built upon by \cite{Kiss2017} who extend the data set and finds that the lengths increase and decrease on a $1$ - $2$ year cycle.
 
 The helical motion of macrospicules is reported in multiple papers.
 \cite{Curdt2011} present observations of macrospicules in the transition region; they present two examples of 'explosive events'.
 In one case the feature is on the disk and in the second is above the limb.
 The discussion at the heart of the paper is differentiating between (RRE/RBE) pairs and helical motion, as observed in \cite{Kuridze2015}, due to the fact that they can be misinterpreted in the data.
-In this case, the rotational velocity evident in the doppler images demonstrates symmetrical flow of the order $40$ km s${^{-1}}$ for both examples.
-Using the slit modes of EIS, the authors rule out the possibility of lateral movement as a result of bidirectional RRE/RBEs, calculating that if this were the case, then the jet would be up to $7.2$ Mm in each doppler component.
+In this case, the rotational velocity evident in the dopplergram images demonstrates symmetrical flow of the order $40$ km s${^{-1}}$ for both examples.
+Using the slit modes of EIS, the authors rule out the possibility of lateral movement as a result of bidirectional RRE/RBEs, calculating that if this were the case, then the jet would be up to $7.2$ Mm in each Doppler component.
 This leads to the conclusion that the jet evident at the limb is moving helically, and consequently, that the feature observed on the disk is also a single jet rotating helically.
 
 This is not the only formation mechanism for macrospicules proposed by the solar physics community; \cite{Murawski2011} describe an upward velocity pulse mechanism.
@@ -201,19 +242,19 @@ The authors find that the jet can be heated by microflares at the moment of reco
 The feature was found during a period of observing brightening in the quiet Sun and coronal holes, where the subject appeared as a jet-like feature emanating from a pre-existing coronal bright point.
 
 %TODO this paragraph needs trimming
-The authors demonstrate an unequivocal shaping of the origin akin to that of the Shibata standard model (\ref{sec:models})
+The authors demonstrate an unequivocal shaping of the origin akin to that of the Shibata standard model (\cref{sec:models})
 The event began with an increase in intensity at the original bright point, extending to a $3$ - $4$ arcsec$^2$ area, which the authors identify as a micro-flare.
 As a result of difference imaging, the authors then concluded that there were several reconnection events during this brightening phase.
 The expanding plasma in the BP is shown to have a multi-thermal structure, with the first blue-shifted material spotted in hotter emission lines a full minute before the cooler material appears.
 These reconnection events continue to deposit energy into the jet-like feature, and upon each delivery of energy, an outflow occurs.
 The slowing down of the outflow also coincides with visible downflows in the underlying BP.
 During these accelerations, the plasma was shown to have a maximum velocity of $310$ km s$^{-1}$, while no red-shifted down flow was observed at the same time as the energy deposits, which would suggest that this is not a case of a bidirectional jet.
-The jet is seen to last for $18$ minutes, however the first energy deposit occured $27$ minutes before the spire of the jet was visible.
+The jet is seen to last for $18$ minutes, however the first energy deposit occurred $27$ minutes before the spire of the jet was visible.
 The authors note that their observations fit particularly well with the model presented by \cite{Moreno2008}, in which a current sheet is shown to form at the boundaries of the jet.
 
 Reconnection alone is disputed as a driving mechanism, \cite{Cirtain2007} propose that a series of reconnection events are driven by Alvf{\'e}n waves.
-The authors observe initial acceleration of the jet material at $800$ km s$^{-1}$, close to the Alf{\`e}n speed, coinciding with the relaxation of the magnetic field.
-These mass outflows appear multiple times during the same jet, as such, the authors conclude that the reconnection is likely being driven by Alfv{\`e}n waves.
+The authors observe initial acceleration of the jet material at $800$ km s$^{-1}$, close to the Alf{\'e}n speed, coinciding with the relaxation of the magnetic field.
+These mass outflows appear multiple times during the same jet, as such, the authors conclude that the reconnection is likely being driven by Alfv{\'e}n waves.
 
 Recent studies have demonstrated the prevalence of smaller scale jets at the magnetic network boundaries.
 \cite{Tian2014}, and later built on by \cite{Narang2016}, highlighted these features using the most recent addition to the solar observational tools available to us, IRIS.
@@ -230,7 +271,7 @@ As such, \cite{Narang2016} propose these network jets as new mechanism for gener
 \label{sec:xjets}
 Throughout the solar atmosphere, we observe much larger jet-like features than spicules.
 They have been observed extensively, and not solely in the chromosphere.
-The first observations of more large scale jets were undertaken using the Soft X-Ray telescope on board Yohkoh [\cite{Tsuneta1991}].
+The first observations of more large scale jets were undertaken using the soft X-Ray telescope on board Yohkoh [\cite{Tsuneta1991}].
 \cite{Shimojo1996} undertook the first statistical study of jets, finding a nice round $100$ examples to study.
 With any study looking for specific features, the authors utilised the following selection criteria: 1) that the plasma was collimated and that the movement of the feature was in the direction of the collimation; 2) the aspect ratio of length to width is greater than $3$; and 3) the time between the pre-jet image and the image in which the jet first appears is less than an hour.
 These are an excellent example of selection criteria which aide in forming the search, however, they are broad enough not to introduce bias into the sample.
@@ -247,7 +288,7 @@ This work has formed the basis of much of the study of jet phenomena, however, t
 Numerical simulations play an essential role in developing our understanding the nature of jet formation as observing the chromosphere can be a complex challenge.
 
 What has become known as the standard model for the formation of solar jets is demonstrated  by \cite{Shibata1992}.
-Within this paper, the authors use the Soft X-Ray telescope on Yohkoh to examine $20$ jets, and present their spatial properties, very similar to those of \cite{Shimojo1996}, but the authors go on to describe a possible formation schematic.
+Within this paper, the authors use the soft X-Ray telescope on Yohkoh to examine $20$ jets, and present their spatial properties, very similar to those of \cite{Shimojo1996}, but the authors go on to describe a possible formation schematic.
 The model is based upon the flux emergence from the lower solar atmosphere, and is backed up by data in the Solar Geophysical Data.
 The authors demonstrate that the observations reveal a void at the jet base, similar in appearance to voids observed in reconnection-driven events such as flares and CMEs.
 They proposed that the jets are rooted in the chromosphere, based on an inspection of the emission measure.
@@ -256,11 +297,11 @@ The authors go on to posit that the undulating and meandering shape of the jet l
 Such a reconnection event between twisted and untwisted magnetic field would be capable of producing a jet of this size, lifetime, and more importantly, velocity.
 
 This model for the standard jet requires that there be open magnetic field lines, and that a smaller-scale, twisted, emerging flux loop rise from the lower atmosphere in order to initiate a reconnection event.
-As a result of the reconnection event, material in the emerging loop is then transferred into the open magnetic field lines, 'sling shotting' around the loop it was formerly a part of and up the open field lines, thus creating a collimated beam of plasma.
+As a result of the reconnection event, material in the emerging loop is then transferred into the open magnetic field lines, `sling shotting' around the loop it was formerly a part of and up the open field lines, thus creating a collimated beam of plasma.
 The mechanism highlighted in this particular model produces exclusively narrow jets, a couple of megameters in width.
 It also results in the dissipation of large amounts of energy which manifests as brightenings in many observations.
 From the source of the reconnection, energised plasma then dissipates down the loops highlighting the entire structure.
-The visual effect of the long, collimated beam/plasma spire and the newly brightened loop of plasma, reveals an 'inverted-Y' shape or Eiffel tower-like structure, similar to the 'cusp' shape observed in significantly larger features high in the corona round streamers and flares [\cite{Vourlidas2006}].
+The visual effect of the long, collimated beam/plasma spire and the newly brightened loop of plasma, reveals an `inverted-Y' shape or Eiffel tower-like structure, similar to the `cusp' shape observed in significantly larger features high in the corona round streamers and flares [\cite{Vourlidas2006}].
 These terms have gained common usage in literature and will be used hereafter. 
 
 An excellent example of this type of formation is demonstrated in \cite{Nishizuka2011}.
@@ -292,8 +333,6 @@ This work clearly has an impact on the current relationships between the various
 The authors propose that the blowout jets correspond to the macrospicule features in the chromosphere, more on which later.
 As for implications with respect to the division of standard and blowout jets, observations of the formation mechanism would clarify the feature.
 Standard jets would have large originating loops spanning approximately $20$ Mm or are not visible at temperatures lower than $10^6$ K, whereas blowout jets need to produce strong signals in H$\alpha$ and He $30.4$, due to the cooler plasma thrown upwards from the unstable magnetic bipole emerging.
-
-
 
 
 
